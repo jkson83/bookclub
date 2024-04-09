@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>EVERYBOOKS 어드민</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '4' };
+	</script>
+</head>
+
+<body class="b2b">
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2b"></div>
+		<section class="main-conts">
+			<h2>학생 관리</h2>
+			<ul class="page-nav">
+				<li class="current"><a href="#">회원 관리</a></li>
+			</ul>
+			<div class="sub-title">
+        <h3>부모 정보</h3>
+			</div>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+            <tr>
+              <tr>
+                <th scope="row"><label for="select01">소속</label><span class="ico-req"><span class="hide">필수</span></span></th>
+                <td>
+                  <div class="frm-area">
+                    <select id="select01">
+                      <option value="">목동점</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+            </tr>
+						<tr>
+							<th scope="row"><label for="inp01">학부모 이름</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" id="inp01" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp02">이메일</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area mail-area">
+									<input type="text" id="inp02" class="inp-text">
+                  <span>@</span>
+                  <input type="text" class="inp-text" title="도메인 입력">
+                  <select title="도메인 선택">
+                    <option value="">직접입력</option>
+                  </select>
+                  <button class="btn base tbl"><span>중복 확인</span></button><!-- 24.01.22 '이메일 인증' 버튼 -> '중복 확인' 버튼명 변경 -->
+									<button class="btn base tbl"><span>인증메일 재발송</span></button><!-- 24.01.22 '인증번호 재발송' -> 인증메일 재발송' 버튼명 변경-->
+								</div>
+							</td>
+						</tr>
+						<!-- 24.01.22 인증번호 입력 삭제 -->
+						<tr>
+							<th scope="row"><label for="inp04">비밀번호</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" id="inp04" class="inp-text">
+                  <p class="note">영문, 숫자 조합 6~20자</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp05">비밀번호 확인</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" id="inp05" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp06">연락처</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" id="inp06" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="uiDate_1">가입일</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+                <div class="ui-date-wrap full">
+                    <div class="ui-datepicker">
+                      <input type="text" id="uiDate_1" class="inp-base date" value="" min="2020-12-05" max="2025-05-20" title="날짜입력" readonly="">
+                      <button type="button" class="ui-datepicker-btn" data-target="uiDate_1">
+                        <span class="a11y-hidden">가입일 선택</span>
+                      </button>
+                    </div>
+                 </div>
+             </td> 
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp07">기타사항</label></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" id="inp07" class="inp-text">
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div>
+          <button class="btn base primary"><span>저장</span></button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

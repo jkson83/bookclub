@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>EVERYBOOKS 어드민</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '6' };
+	</script>
+</head>
+
+<body class="b2b">
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2b"></div>
+		<section class="main-conts">
+			<h2>LMS</h2>
+			<ul class="page-nav">
+				<li><a href="#">LMS</a></li>
+				<li class="current"><a href="#">학습자 정보</a></li>
+			</ul>
+      <div class="sub-title">
+        <h3>학습자 정보</h3>
+      </div>
+      <div class="tbl-base type2 mgt10">
+        <table>
+          <colgroup>
+            <col style="width:150px;">
+            <col style="width:auto;">
+            <col style="width:100px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">지점</th>
+              <th scope="col">학습자 이름</th>
+              <th scope="col">가입일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>신촌점</td>
+              <td class="txt-l">김길동</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>회원정보 상세</span></button>
+				</div>
+			</div>
+      <div class="sub-title">
+        <h3>전체 학습 리포트</h3>
+      </div>
+      <div class="tbl-base type2">
+        <table>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">독서습관</th>
+              <th scope="col">누적 독서 수</th>
+              <th scope="col">학습한 어휘 수</th>
+              <th scope="col">해결한 문제 수</th>
+              <th scope="col">스티커 수</th>
+              <th scope="col">출석 횟수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <tr>
+                <td>10</td>
+                <td>5</td>
+                <td>120</td>
+                <td>107</td>
+                <td>22</td>
+                <td>12</td>
+              </tr>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sub-title">
+        <h3>학습 리포트</h3>
+      </div>
+      <!-- <div class="sub-title type2 mgt10">
+        <h4>학습 년도</h4>
+        <select>
+          <option value="">2023년</option>
+        </select>
+      </div>
+      <div class="month-area">
+        <button type="button" class="btn base tbl" disabled><span>1월</span></button>
+        <button type="button" class="btn base tbl" disabled><span>2월</span></button>
+        <button type="button" class="btn base tbl" disabled><span>3월</span></button>
+        <button type="button" class="btn base tbl" disabled><span>4월</span></button>
+        <button type="button" class="btn base tbl" disabled><span>5월</span></button>
+        <button type="button" class="btn base tbl"><span>6월</span></button>
+        <button type="button" class="btn base tbl"><span>7월</span></button>
+        <button type="button" class="btn base tbl" disabled><span>8월</span></button>
+        <button type="button" class="btn base tbl" disabled><span>9월</span></button>
+        <button type="button" class="btn base tbl" disabled><span>10월</span></button>
+        <button type="button" class="btn base tbl" disabled><span>11월</span></button>
+        <button type="button" class="btn base tbl" disabled><span>12월</span></button>
+      </div> -->
+      <div class="sub-title type2 mgt10">
+        <h4>학습 단계</h4>
+        <select>
+          <option value="">STEP1</option>
+        </select>
+        <select>
+          <option value="">BOOK1</option>
+        </select>
+      </div>
+      <div class="tbl-base type2">
+        <table>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">누적 독서 수</th>
+              <th scope="col">학습한 어휘 수</th>
+              <th scope="col">해결한 문제 수</th>
+              <th scope="col">스티커 수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5</td>
+              <td>120</td>
+              <td>107</td>
+              <td>22</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <ul class="current-situation">
+        <li>
+          <div class="thumb"><img src="../resource/images/1.jpg" alt=""></div>
+          <div class="data">
+            <ul>
+              <li><strong>도서명</strong> : Dancing Princess</li>
+              <li>
+                <strong>학습 진행율</strong>
+                <div class="bar-wrap">
+                  <span class="bar" style="width:60%;"></span>
+                  <strong>60%</strong>
+                </div>
+              </li>
+              <li><strong>획득한 스티커 수</strong> : 12개</li>
+            </ul>
+            <div class="tbl-base type2">
+              <table>
+                <colgroup>
+                  <col style="width:20%;">
+                  <col>
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">학습</th>
+                    <th scope="col">결과</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="col" rowspan="3">읽기</th>
+                    <th scope="col">이북</th>
+                    <td>완료</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">오디오북</th>
+                    <td>완료</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">소리내어읽기</th>
+                    <td>완료</td>
+                  </tr>
+                  <tr>
+                    <th scope="col" rowspan="4">독해</th>
+                    <th scope="col">독서확인학습</th>
+                    <td>80점</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">문해력 게임<br>(1단계)</th>
+                    <td>90%</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">문해력 게임<br>(2단계)</th>
+                    <td>90점</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">글쓰기</th>
+                    <td>완료</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 그래프 영역 -->
+          <div class="graph"></div>
+        </li>
+        <li>
+          <div class="thumb"><img src="../resource/images/1.jpg" alt=""></div>
+          <div class="data">
+            <ul>
+              <li><strong>도서명</strong> : 학습 도서명을 표시</li>
+              <li>
+                <strong>학습 진행율</strong>
+                <div class="bar-wrap">
+                  <span class="bar" style="width:60%;"></span>
+                  <strong>60%</strong>
+                </div>
+              </li>
+            </ul>
+            <div class="tbl-base type2">
+              <table>
+                <colgroup>
+                  <col style="width:20%;">
+                  <col>
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">학습</th>
+                    <th scope="col">결과</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="col" rowspan="3">읽기</th>
+                    <th scope="col">이북</th>
+                    <td>완료</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">오디오북</th>
+                    <td>완료</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">소리내어읽기</th>
+                    <td>완료</td>
+                  </tr>
+                  <tr>
+                    <th scope="col" rowspan="4">독해</th>
+                    <th scope="col">독서확인학습</th>
+                    <td>80점</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">문해력 게임<br>(1단계)</th>
+                    <td>90%</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">문해력 게임<br>(2단계)</th>
+                    <td>90점</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">글쓰기</th>
+                    <td>완료</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 그래프 영역 -->
+          <div class="graph"></div>
+        </li>
+      </ul>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>목록</span></button>
+				</div>
+			</div>
+      <div class="sub-title">
+        <h4>
+          학습자 관리 코멘트
+          <span class="title-info">학습자에게 노출되지 않는 관리용 기록 기능</span>
+        </h4>
+      </div>
+      <div class="frm-area mgt10">
+        <textarea class="inp-textarea" style="height:200px"></textarea>
+      </div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>저장</span></button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

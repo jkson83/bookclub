@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>드래그 앤 드랍 게임</title>
+      <style>
+  body ,*{
+      font-family: Arial, sans-serif;
+      text-align: center;
+      box-sizing: border-box;
+  }
+  
+  h1 {
+      margin-bottom: 20px;
+  }
+  
+  #drag-container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+  }
+  
+  .drag-item {
+      width: 100px;
+      height: 50px;
+      background-color: #3498db;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+  }
+  .drag-item.active{
+    opacity:0.5;
+  }
+  
+  #drop-container {
+      display: flex;
+      justify-content: space-around;
+  }
+  
+  .drop-zone {
+      width: 100px;
+      height: 50px;
+      border: 2px dashed #e74c3c;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+  }
+  
+      </style>
+      
+	    <script type="text/javascript" src="../_ui_include/head.js"></script><!-- //Include: head -->
+      <script>
+$(document).ready(function() {
+    $(".original-item").draggable({
+      // helper: "clone",
+      snap: ".drop-zone",
+      snapMode: "both",
+      revert: "invalid",
+      drag: function(event, ui){
+        var dropItem = $(this)
+        dropItem.addClass('active')
+      },
+      start: function(event, ui){
+        var dropItem = $(this)
+      },
+      stop: function(event, ui){
+        var dropItem = $(this)
+        dropItem.removeClass("active");
+      }
+    });
+
+    $(".drop-zone").droppable({
+      accept: ".original-item",
+      drop: function(event, ui) {
+        var draggedItem = ui.helper; // ui.helper를 사용하여 복사본을 가져옴
+        var dropZone = $(this);
+        var correctAnswer = dropZone.data("answer");
+        if (draggedItem.data("answer") === correctAnswer) {
+            dropZone.css("border-color", "green");
+            dropZone.droppable("disable");
+        } else {
+            draggedItem.css({
+              'position':'relative',
+              'top':0,
+              'left':0,
+              'transition': 'all .3s'              
+            });
+        }
+        var item = $('.drop-zone');
+        var answer = $('.ui-droppable-disabled')
+        if(item.length === answer.length){
+          $('#result').text('정답')
+        } else{
+          $('#result').text('정답아님')
+        }
+      },
+    });
+});
+      </script>
+  </head>
+  <body>
+      <h1>드래그 앤 드랍 게임</h1>
+      <div id="drag-container">
+          <div class="drag-item original-item" data-answer="1">Item 1</div>
+          <div class="drag-item original-item" data-answer="2">Item 2</div>
+          <div class="drag-item original-item" data-answer="3">Item 3</div>
+      </div>
+      <div id="drop-container">
+          <div class="drop-zone" data-answer="1"></div>
+          <div class="drop-zone" data-answer="2"></div>
+          <div class="drop-zone" data-answer="3"></div>
+      </div>
+      <div id="result"></div>
+  </body>
+  </html>
+  

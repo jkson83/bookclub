@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EVERYBOOKS</title>
+    <link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+    <script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.global.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.common.js"></script>
+    <script type="text/javascript">
+        pageInfo = { mid: '2', sid: '2' }; 
+    </script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+    <header class="gnb-wrap" id="header">
+        <div>
+            <h1><span class="hide">EVERYBOOKS</span></h1>
+            <div class="links">
+                <a href="#"><span>홈페이지 바로가기</span></a>
+                <button type="button" class="logout">로그아웃</button>
+            </div> 
+        </div>
+    </header>
+    <main class="main-wrap" id="content">
+        <div class="sub-nav"></div>
+        <section class="main-conts">
+            <h2>대표 펀드관리</h2>
+            <ul class="page-nav">
+                <li><a href="#">자사 메인 관리</a></li>
+                <li class="current"><a href="#">대표 펀드 관리</a></li>
+            </ul>
+            <div class="tbl-base mgt10">
+                <table>                   
+                    <colgroup> 
+                        <col style="width:290px;">
+                        <col style="width:auto;">                      
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="row">항목 1<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" style="width:100%;">
+                                    <p class="note">0 / 30자</p>
+                                </div>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <th scope="row">항목 2</th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" style="width:100%;">
+                                    <p class="note">0 / 30자</p>
+                                </div>
+                            </td>
+                        </tr>                                        
+                    </thead>
+                </table>
+            </div>
+            <div class="sub-title">
+                <h3>Sub Title</h3>
+                <p class="msg">! $항목명$을 선택해 주세요.</p>
+            </div>
+            <div class="tbl-base mgt10">
+                <table>                   
+                    <colgroup> 
+                        <col style="width:290px;">
+                        <col style="width:auto;">                      
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>
+                                <div class="frm-area multi">
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0201" name="">
+                                        <label for="flag0201" class="lb-checkbox"><span>검색어 1</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0202" name="" >
+                                        <label for="flag0202" class="lb-checkbox"><span>검색어 2</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0203" name="" checked>
+                                        <label for="flag0203" class="lb-checkbox"><span>검색어 3</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0204" name="" checked>
+                                        <label for="flag0204" class="lb-checkbox"><span>검색어 4</span></label>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>                                              
+                    </thead>
+                </table>
+            </div>
+            <div class="tbl-btns">
+                <button class="btn base cancel"><span>삭제</span></button>
+                <div>
+                    <button class="btn base"><span>취소(목록)</span></button>
+                    <button class="btn base primary"><span>저장</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+    </footer>
+    
+    <div class="loaderWrap">
+        <div class="loader">
+            <div>Loading...</div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

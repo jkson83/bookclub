@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap writing private">
+    <div class="writing-head">
+      <h1 class="writing-tit">글쓰기</h1>
+      <button type="button" class="btn-back">뒤로가기</button> 
+    </div> 
+    <!--// writing-head -->
+
+    <div class="writing-tip">
+      <p>작성한 글쓰기가 관리자에 의해서 비공개 처리가 되었어요.</p>
+      <p>※ 사유 : 부적절한 내용 게시</p>
+    </div>
+
+    <div class="writing-cont finish">
+      <div class="writing-cont-inner">
+        <div class="writing-cont-box">
+          <div class="text-area">
+            <p class="view-tit">혹부리 영감</p>
+            <div class="view-img-area">
+              <img src="../../resources/img/12.jpg">
+            </div>
+            <div class="view-txt-area">
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+            </div>
+          </div>
+          <div class="view-btn-wrap"> 
+            <button type="button"><span class="hide">수정하기</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

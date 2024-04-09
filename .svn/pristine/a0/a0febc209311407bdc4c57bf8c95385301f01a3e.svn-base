@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVERYBOOKS</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '6', sid: '3'};
+	</script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2c"></div>
+		<section class="main-conts">
+			<h2>문의하기</h2>
+			<ul class="page-nav">
+        <li><a href="#">고객지원</a></li>
+				<li class="current"><a href="#">문의하기</a></li>
+			</ul>
+      <div class="tbl-base mgt10">
+        <table>
+          <colgroup>
+            <col style="width:290px;">
+            <col style="width:auto;">
+            <col style="width:290px;">
+            <col style="width:auto;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">분류</th>
+              <td colspan="3">회원가입</td>
+            </tr>
+            <tr>
+              <th scope="row">재목</th>
+              <td colspan="3">아이가 11살인데 회원가입이 가능한가요?</td>
+            </tr>
+            <tr>
+              <th scope="row">등록일시</th>
+              <td>2023-12-07 01:00</td>
+              <th scope="row">작성자</th>
+              <td>홍길동</td>
+            </tr>
+            <tr>
+              <th scope="row">첨부파일</th>
+              <td><a href="#">파일명.확장자</a></td>
+              <th scope="row">이메일</th>
+              <td>aaa@aaa.com</td>
+            </tr>
+            <tr>
+              <th scope="row">문의 내용</th>
+              <td colspan="3">아이가 11살인데 회원가입이 가능한가요?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tbl-base mgt40">
+        <table>
+          <colgroup>
+            <col style="width:290px;">
+            <col style="width:auto;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">처리상태</th>
+              <td>미답변</td>
+            </tr>
+            <tr>
+              <th scope="row">답변자</th>
+              <td>관리자</td>
+            </tr>
+            <tr>
+              <th><label for="textarea01">답변</label></th>
+              <td>
+                <div class="frm-area">
+                  <textarea class="inp-textarea" style="height:200px">네 가능합니다.</textarea>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tbl-btns">
+        <button type="button" class="btn base cancel"><span>삭제</span></button>
+        <div>
+            <button type="button" class="btn base"><span>취소</span></button>
+            <button type="button" class="btn base primary"><span>저장</span></button>
+        </div>
+    </div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

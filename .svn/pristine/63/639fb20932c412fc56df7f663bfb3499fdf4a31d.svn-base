@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <script type="text/javascript" src="../_ui_include/web_header.js"></script>
+    <div id="container" class="container">
+      
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#none" class="home"><span class="hidden ">HOME</span></a></li>
+          <li><a href="#none">앱 다운로드</a></li>
+          <li class="current"><a href="#none">이용방법</a></li>
+        </ul>
+      </div>
+  
+      <div class="sc-sub-area v2">
+        <h2 class="sc-sub-tit">이용방법</h2>
+        <p>에브리북클럽 디지털 콘텐츠<br><b>이렇게 이용할 수 있어요!</b></p>
+      </div>
+      
+      <div class="section">
+        <div class="tablet-box num-type">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="swiper-content">
+                  <div class="swiper-img-box">
+                    <img src="../../resources/img/web/app_use_img01.png" alt="">
+                  </div>
+                  <div class="swiper-txt">
+                    <strong>앱 로그인 화면</strong>
+                    <p>APP 다운로드 후 학습을 진행할 학생을 선택해 주세요.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-content">
+                  <div class="swiper-img-box">
+                    <img src="../../resources/img/web/app_use_img02.png" alt="">
+                  </div>
+                  <div class="swiper-txt">
+                    <strong>에브리북클럽 메인</strong>
+                    <p>이 달의 도서 4권과 학습 진도율, 학습 리포트, 나의 스티커, 출석표를 확인할 수 있어요.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-content">
+                  <div class="swiper-img-box">
+                    <img src="../../resources/img/web/app_use_img03.png" alt="">
+                  </div>
+                  <div class="swiper-txt">
+                    <strong>독서 및 독서 확인 학습</strong>
+                    <p>눈으로 읽는 이북은 물론 오디오북, 독후 확인 게임을 통해 즐겁게 책을 읽을 수 있어요.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-content">
+                  <div class="swiper-img-box">
+                    <img src="../../resources/img/web/app_use_img04.png" alt="">
+                  </div>
+                  <div class="swiper-txt">
+                    <strong>문해력 게임 진행</strong>
+                    <p>문해력 게임과 글쓰기를 통해 독서에 나온 어휘들을 완벽하게 습득할 수 있어요.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-content">
+                  <div class="swiper-img-box">
+                    <img src="../../resources/img/web/app_use_img05.png" alt="">
+                  </div>
+                  <div class="swiper-txt">
+                    <strong>성장맵 확인</strong>
+                    <p>독서 진도율에 따라 변화하는 나만의 성장맵을 확인해 보세요.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-button-wrap">
+            <button type="button" class="swiper-button-prev"><span class="hidden ">이전</span></button>
+            <button type="button" class="swiper-button-next"><span class="hidden ">다음</span></button>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- bottom banner -->
+      <div class="btm-banner">
+        <div class="in">
+          <p>우리아이 독서습관 지금 바로 시작해보세요!</p>
+          <button type="button" class="btn lg primary">에브리북클럽 시작하기</button>
+        </div>
+      </div>
+      <!--// bottom banner -->
+    </div>
+    <script type="text/javascript" src="../_ui_include/footer.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-container', { 
+          slidesPerView: 1,
+          spaceBetween: 0,
+          autoplay: true,
+          delay: 2500,
+          centeredSlides: true,
+          loop : false,
+          loopAdditionalSlides : 1, 
+          pagination: { 
+            el: ".swiper-pagination",
+            clickable: true,  
+            renderBullet: function(index, className) {
+              return '<li class="'+className+'"><span>' + 0+(index+1) +'</span></li>';
+            }
+          },
+          navigation: {
+            nextEl: ".swiper-button-next", 
+            prevEl: ".swiper-button-prev",
+          },
+        });
+    </script>
+  </div>
+</body>
+</html>

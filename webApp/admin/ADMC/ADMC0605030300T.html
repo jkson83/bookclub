@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVERYBOOKS</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '5', sid: '1' };
+	</script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2c"></div>
+		<section class="main-conts">
+			<h2>도서</h2>
+			<ul class="page-nav">
+				<li><a href="#">CMS(컨텐츠 관리)</a></li>
+				<li class="current"><a href="#">도서</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">도서 분류</th>
+							<td>구독도서</td>
+							<th scope="row">등록일</th>
+							<td>2023.12.25</td>
+						</tr>
+						<tr>
+							<th scope="row">STEP</th>
+							<td colspan="3">STEP1</td>
+						</tr>
+						<tr>
+							<th scope="row">BOOK</th>
+							<td colspan="3">Book5</td>
+						</tr>
+						<tr>
+							<th scope="row">제목</th>
+							<td colspan="3">이북 도서명1</td>
+						</tr>
+						<tr>
+							<th scope="row">분류</th>
+							<td colspan="3">지식정보</td>
+						</tr>
+						<tr>
+              <!-- [기획] 10/20 -->
+							<th scope="row">IB 주제</th>
+							<td colspan="3">나 그리고 우리</td>
+						</tr>
+						<tr>
+              <!-- [기획] 10/20 -->
+							<th scope="row">주제</th>
+							<td colspan="3">나에 대해서</td>
+						</tr>
+						<tr>
+							<th scope="row">작가</th>
+							<td colspan="3">이미도</td>
+						</tr>
+						<tr>
+							<th scope="row">장르</th>
+							<td colspan="3">인물</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+        <button class="btn base cancel"><span>삭제</span></button>
+				<div>
+					<button class="btn base"><span>취소</span></button>
+					<button class="btn base primary"><span>저장</span></button>
+				</div>
+			</div>
+
+      <div class="ui-tab mgt40" data-id="bookTab">
+        <div class="ui-tab-btns">
+          <button type="button" data-tab="0" class="ui-tab-btn"><span>이북</span></button>
+          <button type="button" data-tab="1" class="ui-tab-btn"><span>도서확인 학습</span></button>
+          <button type="button" data-tab="2" class="ui-tab-btn"><span>소리내어 읽기</span></button>
+          <button type="button" data-tab="3" class="ui-tab-btn"><span>문해력 게임</span></button>
+        </div>
+        <div class="ui-tab-pnls">
+          <section class="ui-tab-pnl" data-tab="0">
+            <h3 class="hide">이북</h3>
+            <!-- [기획] 10/20 -->
+            <div class="sub-title mgt0">
+              <p class="count">총 <span>4</span>건</p>
+            </div>
+            <div class="tbl-base type2">
+              <table>
+                <colgroup>
+                  <col style="width:88px;">
+                  <col style="width:auto;">
+                  <col style="width:100px;">
+                  <col style="width:100px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">이북 제목</th>
+                    <th scope="col">등록자</th>
+                    <th scope="col">등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="txt-l"><a href="#">이북 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="txt-l"><a href="#">이북 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="txt-l"><a href="#">이북 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="txt-l"><a href="#">이북 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl-btns">
+              <div>
+                <button class="btn base primary"><span>등록</span></button>
+              </div>
+            </div>
+          </section>
+          <section class="ui-tab-pnl" data-tab="1">
+            <h3 class="hide">도서확인 학습</h3>
+            <!-- [기획] 10/20 -->
+            <div class="sub-title mgt0">
+              <p class="count">총 <span>4</span>건</p>
+            </div>
+            <div class="tbl-base type2">
+              <table>
+                <colgroup>
+                  <col style="width:88px;">
+                  <col style="width:88px;">
+                  <col style="width:150px;">
+                  <col style="width:auto;">
+                  <col style="width:100px;">
+                  <col style="width:100px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">대분류</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">학습제목</th>
+                    <th scope="col">등록자</th>
+                    <th scope="col">등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>선택하기</td>
+                    <td>글을 읽고 O,X 선택</td>
+                    <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>선 긋기</td>
+                    <td>선 긋기</td>
+                    <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>선택하기</td>
+                    <td>문제를 읽고 그림이나 글 선택하기</td>
+                    <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>선 긋기</td>
+                    <td>선 긋기</td>
+                    <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl-btns">
+              <div>
+                <button class="btn base primary"><span>등록</span></button>
+              </div>
+              <div class="pager">
+                <a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+                <span class="num">
+                  <a href="#">1</a>
+                  <a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                </span>
+                <a href="#" class="btn next"><span class="hide">다음으로</span></a>
+              </div>
+            </div>
+          </section>
+          <section class="ui-tab-pnl" data-tab="2">
+            <h3 class="hide">소리내어 읽기</h3>
+            <div class="sub-title mgt0">
+              <p class="count">총 <span>4</span>건</p>
+            </div>
+            <div class="tbl-base type2">
+              <table>
+                <colgroup>
+                  <col style="width:88px;">
+                  <col style="width:auto;">
+                  <col style="width:100px;">
+                  <col style="width:100px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">학습제목</th>
+                    <th scope="col">등록자</th>
+                    <th scope="col">등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="txt-l"><a href="#">소리내어 읽기 관리 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="txt-l"><a href="#">이북 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="txt-l"><a href="#">이북 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="txt-l"><a href="#">이북 제목 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl-btns">
+              <div>
+                <button class="btn base primary"><span>등록</span></button>
+              </div>
+              <div class="pager">
+                <a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+                <span class="num">
+                  <a href="#">1</a>
+                  <a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                </span>
+                <a href="#" class="btn next"><span class="hide">다음으로</span></a>
+              </div>
+            </div>
+          </section>
+          <section class="ui-tab-pnl" data-tab="3">
+            <h3 class="hide">문해력 게임</h3>
+            <div class="sub-title mgt0">
+              <p class="count">총 <span>4</span>건</p>
+            </div>
+            <div class="tbl-base type2">
+              <table>
+                <colgroup>
+                  <col style="width:88px;">
+                  <col style="width:130px;">
+                  <col style="width:auto;">
+                  <col style="width:auto;">
+                  <col style="width:100px;">
+                  <col style="width:100px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">대분류</th>
+                    <th scope="col">TYPE</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">등록자</th>
+                    <th scope="col">등록일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>준비운동 (1단계)</td>
+                    <td>이미지를 선택하여  단어를 학습하기</td>
+                    <td class="txt-l"><a href="#">문해력 게임 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>준비운동 (1단계)</td>
+                    <td>텍스트를 선택하여 단어를 학습하기</td>
+                    <td class="txt-l"><a href="#">문해력 게임 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>게임단계 (2단계)</td>
+                    <td>글자 선택하거나 쓰기(typing)</td>
+                    <td class="txt-l"><a href="#">문해력 게임 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>게임단계 (2단계)</td>
+                    <td>워드 서치 (선 긋기)</td>
+                    <td class="txt-l"><a href="#">문해력 게임 100</a></td>
+                    <td>관리자A</td>
+                    <td>yyyy.mm.dd</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl-btns">
+              <div>
+                <button class="btn base primary"><span>등록</span></button>
+              </div>
+              <div class="pager">
+                <a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+                <span class="num">
+                  <a href="#">1</a>
+                  <a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                </span>
+                <a href="#" class="btn next"><span class="hide">다음으로</span></a>
+              </div>
+            </div>
+          </section>
+      </div>
+    </div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+<script>
+   (() => {
+        'use strict';
+        BOOK.tab.init({ id:'bookTab', current:1 });
+    })();
+</script>
+</body>
+</html>

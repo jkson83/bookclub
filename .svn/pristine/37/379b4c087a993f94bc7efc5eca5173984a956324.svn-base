@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVERYBOOKS</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '6', sid: '3'};
+	</script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2c"></div>
+		<section class="main-conts">
+			<h2>문의하기</h2>
+			<ul class="page-nav">
+        <li><a href="#">고객지원</a></li>
+				<li class="current"><a href="#">문의하기</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">분류</th>
+							<td>
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp01" name="rpBtn" checked="">
+										<label for="rp01" class="lb-radio"><span>전체</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp02" name="rpBtn">
+										<label for="rp02" class="lb-radio"><span>회원가입</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp03" name="rpBtn">
+										<label for="rp03" class="lb-radio"><span>정기구독</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp04" name="rpBtn">
+										<label for="rp04" class="lb-radio"><span>앱 이용</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp05" name="rpBtn">
+										<label for="rp05" class="lb-radio"><span>도서구매</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp06" name="rpBtn">
+										<label for="rp06" class="lb-radio"><span>기타</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">조건</th>
+							<td>
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp07" name="rpBtn02" checked="">
+										<label for="rp07" class="lb-radio"><span>작성자</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp08" name="rpBtn02">
+										<label for="rp08" class="lb-radio"><span>제목</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp01">검색어</label></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp01" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">등록일</th>
+							<td>
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp09" name="rpBtn03" checked="">
+										<label for="rp09" class="lb-radio"><span>전체</span></label>
+									</span>
+									<strong>최근</strong>
+									<span class="lb-item">
+										<input type="radio" id="rp10" name="rpBtn03">
+										<label for="rp10" class="lb-radio"><span>1개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp11" name="rpBtn03">
+										<label for="rp11" class="lb-radio"><span>3개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp12" name="rpBtn03">
+										<label for="rp12" class="lb-radio"><span>6개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp13" name="rpBtn03">
+										<label for="rp13" class="lb-radio"><span>1년</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">저리상태</th>
+							<td>
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp14" name="rpBtn04" checked="">
+										<label for="rp14" class="lb-radio"><span>전체</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp15" name="rpBtn04">
+										<label for="rp15" class="lb-radio"><span>Y</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp16" name="rpBtn04">
+										<label for="rp16" class="lb-radio"><span>N</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>조회</span></button>
+				</div>
+			</div>
+			<div class="sub-title">
+				<p class="count">총 <span>100</span>건</p>
+			</div>
+			<div class="tbl-base type2 mgt10">
+				<table>
+					<colgroup>
+						<col style="width:88px;">
+						<col style="width:100px;">
+						<col style="width:auto">
+						<col style="width:100px;">
+						<col style="width:150px;">
+						<col style="width:100px;">
+						<col style="width:150px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">분류</th>
+							<th scope="col">제목</th>
+							<th scope="col">작성자</th>
+							<th scope="col">등록일시</th>
+							<th scope="col">처리상태</th>
+							<th scope="col">답변일시</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>100</td>
+							<td>회원가입</td>
+							<td class="txt-l"><a href="#">아이가 11살인데 회원가입이 가능한가요?</a></td>
+							<td>홍길동</td>
+							<td>2022.12.22 01:01</td>
+							<td><span>답변완료</span></td>
+							<td>2022.12.22 01:01</td>
+						</tr>
+						<tr>
+							<td>99</td>
+							<td>회원가입</td>
+							<td class="txt-l"><a href="#">아이가 11살인데 회원가입이 가능한가요?</a></td>
+							<td>홍길동</td>
+							<td>2022.12.22 01:01</td>
+							<td><span class="color-red">미답변</span></td>
+							<td>2022.12.22 01:01</td>
+						</tr>
+						<tr>
+							<td>98</td>
+							<td>회원가입</td>
+							<td class="txt-l"><a href="#">아이가 11살인데 회원가입이 가능한가요?</a></td>
+							<td>홍길동</td>
+							<td>2022.12.22 01:01</td>
+							<td><span>답변완료</span></td>
+							<td>2022.12.22 01:01</td>
+						</tr>
+						<tr>
+							<td>97</td>
+							<td>회원가입</td>
+							<td class="txt-l"><a href="#">아이가 11살인데 회원가입이 가능한가요?</a></td>
+							<td>홍길동</td>
+							<td>2022.12.22 01:01</td>
+							<td><span>답변완료</span></td>
+							<td>2022.12.22 01:01</td>
+						</tr>
+						<tr>
+							<td>96</td>
+							<td>회원가입</td>
+							<td class="txt-l"><a href="#">아이가 11살인데 회원가입이 가능한가요?</a></td>
+							<td>홍길동</td>
+							<td>2022.12.22 01:01</td>
+							<td><span>답변완료</span></td>
+							<td>2022.12.22 01:01</td>
+						</tr>
+						<tr>
+							<td>95</td>
+							<td>회원가입</td>
+							<td class="txt-l"><a href="#">아이가 11살인데 회원가입이 가능한가요?</a></td>
+							<td>홍길동</td>
+							<td>2022.12.22 01:01</td>
+							<td><span>답변완료</span></td>
+							<td>2022.12.22 01:01</td>
+						</tr>
+						<tr>
+							<td>94</td>
+							<td>회원가입</td>
+							<td class="txt-l"><a href="#">아이가 11살인데 회원가입이 가능한가요?</a></td>
+							<td>홍길동</td>
+							<td>2022.12.22 01:01</td>
+							<td><span>답변완료</span></td>
+							<td>2022.12.22 01:01</td>
+						</tr>
+						<tr>
+							<td>93</td>
+							<td>회원가입</td>
+							<td class="txt-l"><a href="#">아이가 11살인데 회원가입이 가능한가요?</a></td>
+							<td>홍길동</td>
+							<td>2022.12.22 01:01</td>
+							<td><span>답변완료</span></td>
+							<td>2022.12.22 01:01</td>
+						</tr>
+						<tr>
+							<td>92</td>
+							<td>회원가입</td>
+							<td class="txt-l"><a href="#">아이가 11살인데 회원가입이 가능한가요?</a></td>
+							<td>홍길동</td>
+							<td>2022.12.22 01:01</td>
+							<td><span>답변완료</span></td>
+							<td>2022.12.22 01:01</td>
+						</tr>
+						<tr>
+							<td>91</td>
+							<td>회원가입</td>
+							<td class="txt-l"><a href="#">아이가 11살인데 회원가입이 가능한가요?</a></td>
+							<td>홍길동</td>
+							<td>2022.12.22 01:01</td>
+							<td><span>답변완료</span></td>
+							<td>2022.12.22 01:01</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div class="pager">
+					<a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+					<span class="num">
+						<a href="#">1</a>
+						<a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+					</span>
+					<a href="#" class="btn next"><span class="hide">다음으로</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

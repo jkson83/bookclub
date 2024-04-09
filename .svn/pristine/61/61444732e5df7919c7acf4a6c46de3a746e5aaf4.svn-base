@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap question q-read">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div>
+
+    <!-- 질문 영역 -->
+    <div class="question-box read-aloud">
+      <div class="read-img-box">
+        <button class="q-sound">질문 듣기</button>
+        <div class="read-img-area">
+          <img src="../../resources/img/app/select_pic3.png" alt="">
+        </div>
+      </div>
+      <div class="read-highlight-txt">
+        <div class="read-highlight-inner scroll">
+          <span class="highlight-text">“엄마한테 아침 뽀뽀도 안 해 주고 어디 갔나했어.”<br></span>
+          <span class="highlight-text">엄마가 일부러 입을 삐죽 내밀었어요.<br></span>
+          <span class="highlight-text">“조금 있다가요.”<br></span>
+          <span class="highlight-text">루카가 대수롭지 않게 대답했어요.<br></span>
+          <span class="highlight-text">엄마가 다시 말했어요.<br></span>
+          <span class="highlight-text">“너 주려고 나무딸기를 땄단다.”<br></span>
+          <span class="highlight-text">“그래요?”<br></span>
+          <span class="highlight-text">“여기 두고 갈 테니, 친구랑 나눠 먹으렴.”<br></span>
+          <br><br>
+          <span class="highlight-text">그 좋아하는 나무딸기도 본 체 만 체,</span>
+          <span class="highlight-text">“여기 두고 갈 테니, 친구랑 나눠 먹으렴.”<br></span>
+        </div>
+      </div>
+    </div>
+    <!-- //질문 영역 -->
+
+    <!-- 들어보기/소리내어읽기/학습완료하기 버튼 --> 
+    <div class="q-aloud-btn"> 
+      <audio controls>녹음된 소리를 재생할 audio 엘리먼트</audio>
+      <button type="button" class="btn-listen"><span>들어보기</span></button>
+      <button type="button" class="btn-talk on"><span>소리내어 읽기</span></button>
+      <button type="button" class="btn-study-end"><span>학습완료하기</span></button>
+    </div>
+    <!--// 들어보기/소리내어읽기/학습완료하기 버튼 -->
+
+    <!-- 소리내어 읽기 버튼 클릭 시 -->
+    <!-- <div class="btn-talk-area">
+      <p>문장을 정확하게 읽어 보세요.</p>
+      <div class="q-check-btn">
+        <button type="button" class="btn-read-end">읽기 종료</button>
+      </div>
+    </div> -->
+    <!--// -->
+  </div>
+
+  
+  <!-- 레이어 팝업 : 소리내어 읽기 완료 후 팝업 -->
+  <div class="layer-popup">
+    <div class="layer-content modal">
+      <p class="text-complete-read">참 잘했어요!<br> 이제 다른 책 여행을 떠나 볼까요?</p>
+
+      <div class="layer-f-btn">
+        <button class="btn-full">책 여행하러 가기!</button>
+      </div>
+    </div>
+  </div>
+  <!-- //레이어 팝업 : 소리내어 읽기 완료 후 팝업 -->
+</body>
+</html>

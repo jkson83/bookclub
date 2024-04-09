@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body class="">
+  <div id="wrap" class="wrap">
+    <div id="container" class="container">
+
+      <div style="margin: 2rem">
+        <button class="btn primary" onclick="modal.open($(this), '#findPW1');" title="레이어 팝업 열기">비밀번호 찾기1</button>
+      </div>
+
+      <div style="margin: 2rem">
+        <button class="btn primary" onclick="modal.open($(this), '#findPW2');" title="레이어 팝업 열기">비밀번호 찾기2</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 팝업 결과1 // -->
+  <div class="modal-popup" id="findPW1">
+    <div class="modal-popup-outer">
+      <section class="modal-popup-container">
+        <article class="modal-popup-header">
+          <h3 class="modal-popup-title">비밀번호 찾기</h3>
+          <button type="button" class="modal-popup-close only-icon">
+            <span><i class="hidden">닫기</i></span>
+          </button>
+        </article>
+        <article class="modal-popup-body">
+          <!-- content // -->
+          <div class="bx-line result">
+             <strong>입력하신 휴대폰 번호로<br> <span class="txt-blue">임시 비밀번호</span>를 전송하였습니다.</strong>
+             <p>임시 비밀번호로 로그인 후 <span>[부모페이지 &gt; 회원정보 &gt; 부모 계정 관리]</span><br>에서 비밀번호를 변경해 주세요.</p>
+          </div>
+          <!-- // content -->
+        </article>
+        <article class="modal-popup-footer">
+          <button type="button" class="btn primary" onclick="modal.close($(this))">확인</button>
+        </article>
+      </section>
+    </div>
+  </div>
+  <!-- // 팝업 결과1 -->
+
+  <!-- 팝업 결과2 // -->
+  <div class="modal-popup" id="findPW2">
+    <div class="modal-popup-outer">
+      <section class="modal-popup-container">
+        <article class="modal-popup-header">
+          <h3 class="modal-popup-title">비밀번호 찾기</h3> 
+          <button type="button" class="modal-popup-close only-icon">
+            <span><i class="hidden">닫기</i></span>
+          </button>
+        </article>
+        <article class="modal-popup-body">
+          <!-- content // -->
+          <div class="bx-line result">
+             <strong>회원정보를 찾을 수 없습니다.</strong>
+             <p>이메일, 아이디, 휴대폰번호를 확인 후 다시 진행해 주세요.</p>
+          </div>
+          <!-- // content -->
+        </article>
+        <article class="modal-popup-footer">
+          <button type="button" class="btn primary" onclick="modal.close($(this))">확인</button>
+        </article>
+      </section>
+    </div>
+  </div>
+  <!-- // 팝업 결과2 -->
+</body>
+</html>

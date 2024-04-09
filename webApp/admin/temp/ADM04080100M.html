@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EVERYBOOKS</title>
+    <link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+    <script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.global.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.common.js"></script>
+    <script type="text/javascript">
+        pageInfo = { mid: '2', sid: '2' }; 
+    </script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+    <header class="gnb-wrap" id="header">
+        <div>
+            <h1><span class="hide">EVERYBOOKS</span></h1>
+            <div class="links">
+                <a href="#"><span>홈페이지 바로가기</span></a>
+                <button type="button" class="logout">로그아웃</button>
+            </div> 
+        </div>
+    </header>
+    <main class="main-wrap" id="content">
+        <div class="sub-nav"></div>
+        <section class="main-conts">
+            <h2>투자 유의사항</h2>
+            <ul class="page-nav">
+                <li><a href="#">자사 메인 관리</a></li>
+                <li class="current"><a href="#">대표 펀드 관리</a></li>
+            </ul>
+            <div class="ui-tab" data-id="fundInfoTab2">
+                <div class="ui-tab-btns">
+                    <button type="button" data-tab="0" class="ui-tab-btn"><span>키움자산운용</span></button>
+                    <button type="button" data-tab="1" class="ui-tab-btn"><span>KOSEF</span></button>
+                </div>
+                <div class="tab-info">
+                    <p class="msg">홈페이지 > 상품정보 화면 하단의 “투자 전 확인하세요“ 내용을 입력</p>
+                </div>
+                <div class="ui-tab-pnls">
+                    <section class="ui-tab-pnl" data-tab="0">
+                        <h3 class="hide">키움자산운용</h3>
+                        <div class="edit-area">
+                            키움자산운용
+                        </div>
+                    </section>
+                    <section class="ui-tab-pnl" data-tab="1">
+                        <h3 class="hide">KOSEF</h3>
+                        <div class="edit-area">
+                            KOSEF
+                        </div>
+                    </section>                            
+                </div>
+            </div>
+            <div class="tbl-btns">
+                <div>
+                    <button class="btn base primary"><span>저장</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright©2023 <a href="#" target="
+_blank">Everybooks</a>. All rights reserved</p>
+    </footer>
+</div>
+<script>
+   (() => {
+        'use strict';
+        BOOK.tab.init({ id:'fundInfoTab2', current:0 });     
+    })(); 
+</script>
+</body>
+</html>

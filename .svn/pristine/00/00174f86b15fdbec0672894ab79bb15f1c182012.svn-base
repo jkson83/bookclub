@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EVERYBOOKS</title>
+    <link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+    <script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.global.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.common.js"></script>
+    <script type="text/javascript">
+        pageInfo = { mid: '2', sid: '3' }; 
+    </script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+    <header class="gnb-wrap" id="header">
+        <div>
+            <h1><span class="hide">EVERYBOOKS</span></h1>
+            <div class="links">
+                <a href="#"><span>홈페이지 바로가기</span></a>
+                <button type="button" class="logout">로그아웃</button>
+            </div> 
+        </div>
+    </header>
+    <main class="main-wrap" id="content">
+        <div class="sub-nav"></div>
+        <section class="main-conts">
+            <h2>대표 펀드</h2>
+            <ul class="page-nav">
+                <li><a href="#">자사 메인 관리</a></li>
+                <li class="current"><a href="#">대표 펀드</a></li>
+            </ul>
+            <div class="tbl-base mgt15">
+                <table>                   
+                    <colgroup>
+                        <col style="width:290px;">
+                        <col style="width:auto;">     
+                        <col style="width:290px;">
+                        <col style="width:auto;">                      
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">카테고리</th>
+                            <td>                               
+                                <select style="width:240px;">
+                                    <option>대표펀드</option>
+                                </select>
+                                <button type="button" class="btn modify" aria-label="대표 펀드 카테고리"></button>
+                            </td>
+                            <th scope="row">최종 등록일</th>
+                            <td>2022.12.19</td>
+                        </tr>                                              
+                    </tbody>
+                </table>
+            </div>
+            <div class="sub-title">
+                <h3>펀드 #1</h3>
+                <p class="msg">* 최대 5개 까지 게시 가능</p>
+            </div>
+            <div class="tbl-base">
+                <table>                   
+                    <colgroup> 
+                        <col style="width:290px;">
+                        <col style="width:auto;">                      
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">펀드코드/명<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" style="width:480px;" title="펀드코드 입력" disabled>
+                                    <input type="text" class="inp-text" style="width:224px;" title="펀드코드명 입력" disabled>
+                                    <button class="btn base tbl"><span>조회</span></button> <!-- 20230109 : 버튼 클래스 추가-->
+                                    <button class="btn base tbl"><span>초기화</span></button>
+                                    <div class="iod-wrap">
+                                        <button class="btn plus"><span class="hide">추가</span></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>  
+                        <tr>
+                            <th scope="row">펀드 특징<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td>
+                                <div class="frm-area">
+                                    <textarea class="inp-textarea"></textarea>
+                                    <p class="note">0 / 40자</p>
+                                </div>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <th scope="row">순서</th>
+                            <td>                                
+                                <select>
+                                    <option>1</option>
+                                </select>                            
+                            </td> 
+                        </tr>                                             
+                    </tbody>
+                </table>
+            </div>
+            <div class="sub-title">
+                <h3>펀드 #2</h3>
+            </div>
+            <div class="tbl-base">
+                <table>                   
+                    <colgroup> 
+                        <col style="width:290px;">
+                        <col style="width:auto;">                      
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">펀드코드/명</th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" style="width:480px;" title="펀드코드 입력" disabled>
+                                    <input type="text" class="inp-text" style="width:224px;" title="펀드코드명 입력" disabled>
+                                    <button class="btn base square"><span>조회</span></button> <!-- 20230109 : 버튼 클래스 추가-->
+                                    <button class="btn base square"><span>초기화</span></button>
+                                    <!-- <div class="iod-wrap">
+                                        <button class="btn plus"><span class="hide">추가</span></button>
+                                        <button class="btn minus"><span class="hide">삭제</span></button>
+                                    </div> -->
+                                </div>
+                            </td>
+                        </tr>  
+                        <tr>
+                            <th scope="row">펀드 특징</th>
+                            <td>
+                                <div class="frm-area">
+                                    <textarea class="inp-textarea"></textarea>
+                                    <p class="note">0 / 40자</p>
+                                </div>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <th scope="row">순서</th>
+                            <td>                                
+                                <select>
+                                    <option>1</option>
+
+
+                                </select>                            
+                            </td> 
+                        </tr>                                             
+                    </tbody>
+                </table>
+            </div>
+            <div class="sub-title">
+                <h3>펀드 #3</h3>
+            </div>
+            <div class="tbl-base">
+                <table>                   
+                    <colgroup> 
+                        <col style="width:290px;">
+                        <col style="width:auto;">                      
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">펀드코드/명</th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" style="width:480px;" title="펀드코드 입력" disabled>
+                                    <input type="text" class="inp-text" style="width:224px;" title="펀드코드명 입력" disabled>
+                                    <button class="btn base square"><span>조회</span></button>
+                                    <button class="btn base square"><span>초기화</span></button>
+                                    <!-- <div class="iod-wrap">
+                                        <button class="btn minus"><span class="hide">삭제</span></button>
+                                    </div> -->
+                                </div>
+                            </td>
+                        </tr>  
+                        <tr>
+                            <th scope="row">펀드 특징</th>
+                            <td>
+                                <div class="frm-area">
+                                    <textarea class="inp-textarea"></textarea>
+                                    <p class="note">0 / 40자</p>
+                                </div>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <th scope="row">순서</th>
+                            <td>                                
+                                <select>
+                                    <option>1</option>
+
+
+                                </select>                            
+                            </td> 
+                        </tr>                                             
+                    </tbody>
+                </table>
+            </div>
+            <div class="sub-title">
+                <h3>펀드 #4</h3>
+            </div>
+            <div class="tbl-base">
+                <table>                   
+                    <colgroup> 
+                        <col style="width:290px;">
+                        <col style="width:auto;">                      
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">펀드코드/명</th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" style="width:480px;" title="펀드코드 입력" disabled>
+                                    <input type="text" class="inp-text" style="width:224px;" title="펀드코드명 입력" disabled>
+                                    <button class="btn base square"><span>조회</span></button>
+                                    <button class="btn base square"><span>초기화</span></button>
+                                    <!-- <div class="iod-wrap">
+                                        <button class="btn minus"><span class="hide">삭제</span></button>
+                                    </div> -->
+                                </div>
+                            </td>
+                        </tr>  
+                        <tr>
+                            <th scope="row">펀드 특징</th>
+                            <td>
+                                <div class="frm-area">
+                                    <textarea class="inp-textarea"></textarea>
+                                    <p class="note">0 / 40자</p>
+                                </div>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <th scope="row">순서</th>
+                            <td>                                
+                                <select>
+                                    <option>1</option>
+
+
+                                </select>                            
+                            </td> 
+                        </tr>                                             
+                    </tbody>
+                </table>
+            </div>
+            <div class="sub-title">
+                <h3>펀드 #5</h3>
+            </div>
+            <div class="tbl-base">
+                <table>                   
+                    <colgroup> 
+                        <col style="width:290px;">
+                        <col style="width:auto;">                      
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">펀드코드/명</th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" style="width:480px;" title="펀드코드 입력" disabled>
+                                    <input type="text" class="inp-text" style="width:224px;" title="펀드코드명 입력" disabled>
+                                    <button class="btn base square"><span>조회</span></button>
+                                    <button class="btn base square"><span>초기화</span></button>
+                                    <!-- <div class="iod-wrap">
+                                        <button class="btn minus"><span class="hide">삭제</span></button>
+                                    </div> -->
+                                </div>
+                            </td>
+                        </tr>  
+                        <tr>
+                            <th scope="row">펀드 특징</th>
+                            <td>
+                                <div class="frm-area">
+                                    <textarea class="inp-textarea"></textarea>
+                                    <p class="note">0 / 40자</p>
+                                </div>
+                            </td>
+                        </tr>    
+                        <tr>
+                            <th scope="row">순서</th>
+                            <td>                                
+                                <select>
+                                    <option>1</option>
+
+
+                                </select>                            
+                            </td> 
+                        </tr>                                             
+                    </tbody>
+                </table>
+            </div>
+            <div class="tbl-btns">
+                <div>
+                    <button class="btn base primary"><span>저장</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright©2023 <a href="#" target="
+_blank">Everybooks</a>. All rights reserved</p>
+    </footer>
+</div>
+</body>
+</html>

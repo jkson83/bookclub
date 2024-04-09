@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <script type="text/javascript" src="../_ui_include/web_header.js"></script>
+    <div id="container" class="container">
+      
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#none" class="home"><span class="hidden">HOME</span></a></li>
+          <li><a href="#none">고객지원</a></li>
+          <li class="current"><a href="#none">공지사항</a></li>
+        </ul>
+      </div>
+
+      <div class="sc-sub-area v1">
+        <h2 class="sc-sub-tit">공지사항</h2>
+        <p>에브리북클럽 소식을 알려드립니다.</p>
+      </div>
+      
+      <div class="section">
+        <div class="inner">
+          <div class="board-detail">
+            <div class="board-detail-head">
+                <h2 class="board-detail-tit">에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.</h2>
+                <p class="date">2023.09.30</p>
+            </div>
+            <div class="board-detail-opt">
+              <a href="#none" class="file-name">213345jksdhfjshf.png</a>
+            </div>
+
+            <div class="board-detail-cont">
+                <div class="content">
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다. 
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다. 
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다. 
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다. 
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다. 
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다. 
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                  에브리북클럽 고객센터 시스템 점검 안내, 제목이 표시됩니다.
+                </div>
+            </div>
+          </div>
+        
+          <div class="board-preview-wrap">
+            <div class="btn-wrap">
+              <button type="button" class="btn sm primary">목록</button>
+            </div>
+
+            <ul class="board-preview-list">
+              <li>
+                <span>다음글</span>
+                <div class="tit">등록된 글이 없습니다.</div>
+                <!-- <span class="date">2023.09.25</span> -->
+              </li>
+              <li>
+                <span>이전글</span>
+                <div class="tit"><a href="#none;">에브리북클럽 시스템 점검 안내, 제목이 표시됩니다.</a></div>
+                <!-- <span class="date">2023.09.25</span> -->
+              </li>
+            </ul>
+          </div>
+          <!-- // board-preview-wrap -->
+          
+        </div>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="../_ui_include/footer.js"></script>
+  </div>
+</body>
+</html>

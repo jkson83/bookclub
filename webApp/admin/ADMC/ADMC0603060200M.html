@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVERYBOOKS</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '5', sid: '4' };
+	</script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2c"></div>
+		<section class="main-conts">
+			<h2>소리내어 읽기 관리</h2>
+			<ul class="page-nav">
+				<li><a href="#">CMS(컨텐츠 관리)</a></li>
+				<li class="current"><a href="#">소리내어 읽기 관리</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:200px">
+						<col style="width:150px">
+						<col style="width:100px">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">등록일</th>
+							<td colspan="4">2023.12.25</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp01">도서 설정</label></th>
+							<td colspan="4">
+								<div class="frm-area">
+									<input type="text" class="inp-text" id="inp01" style="width:500px">
+									<button class="btn base square btn-modal"><span>도서 설정</span></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp02">제목</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="4">
+								<div class="frm-area">
+								<input type="text" class="inp-text" id="inp02">
+								<p class="note">0 / 30자</span>
+								</div>
+							</td>
+						</tr>
+						<!-- [기획] 10/20 -->
+						<!-- 24.01.02 수정 -->
+						<tr>
+							<th scope="row" rowspan="8">문제 설정</th>
+							<th scope="row"><label for="inp03">지시문</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="3">
+								<div class="frm-area">
+								<input type="text" class="inp-text" id="inp03">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inpUpload01">지시문 음성 파일</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="3">
+								<div class="file-wrap">
+									<div class="input-item">
+										<input type="text" class="inp-text" value="" placeholder="" readonly>
+										<span class="btn base square">
+											<input type="file" title="첨부파일 선택" id="inpUpload01">
+											<span>파일 등록</span>
+										</span>
+									</div>
+									<div class="file-list">
+										<div class="file">
+											<span class="file-info">※ MP3 파일로만 등록이 가능합니다.</span>
+											<p class="file-name">파일명.확장자</p>
+											<button type="button" class="btn-del"><span>삭제</span></button>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inpUpload02">배경 이미지 파일</label></th>
+							<td colspan="3">
+								<div class="file-wrap">
+									<div class="input-item">
+										<input type="text" class="inp-text" value="" placeholder="" readonly>
+										<span class="btn base square">
+											<input type="file" title="첨부파일 선택" id="inpUpload02">
+											<span>파일 등록</span>
+										</span>
+									</div>
+									<div class="file-list">
+										<div class="file">
+											<span class="file-info">※ JPG, PNG 파일로만 등록이 가능합니다.</span>
+											<p class="file-name">파일명.확장자</p>
+											<button type="button" class="btn-del"><span>삭제</span></button>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inpUpload03">내용 이미지 파일</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="3">
+								<div class="file-wrap">
+									<div class="input-item">
+										<input type="text" class="inp-text" value="" placeholder="" readonly>
+										<span class="btn base square">
+											<input type="file" title="첨부파일 선택" id="inpUpload03">
+											<span>파일 등록</span>
+										</span>
+									</div>
+									<div class="file-list">
+										<div class="file">
+											<span class="file-info">※ JPG, PNG 파일로만 등록이 가능합니다.</span>
+											<p class="file-name">파일명.확장자</p>
+											<button type="button" class="btn-del"><span>삭제</span></button>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="textarea">내용 등록</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="3">
+								<div class="frm-area">
+									<textarea class="inp-textarea" style="height: 120px;"></textarea>
+									<p class="note">0 / 1500자</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">내용 정렬</th>
+							<td colspan="3">
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp01-1" name="rpBtn01" checked="">
+										<label for="rp01-1" class="lb-radio"><span>왼쪽</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp01-2" name="rpBtn01">
+										<label for="rp01-2" class="lb-radio"><span>가운데</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp01-2" name="rpBtn01">
+										<label for="rp01-2" class="lb-radio"><span>오른쪽</span></label>
+									</span>
+
+									<div class="note mgt10">선택한 정렬 방식에 따라 내용이 정렬됩니다.</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inpUpload03">내용 음성 파일</label></th>
+							<td colspan="3">
+								<div class="file-wrap">
+									<div class="input-item">
+										<input type="text" class="inp-text" value="" placeholder="" readonly>
+										<span class="btn base square">
+											<input type="file" title="첨부파일 선택" id="inpUpload03">
+											<span>파일 등록</span>
+										</span>
+									</div>
+									<div class="file-list">
+										<div class="file">
+											<span class="file-info">※ mp3 파일로만 등록이 가능합니다.</span>
+											<p class="file-name">파일명.확장자</p>
+											<button type="button" class="btn-del"><span>삭제</span></button>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">하일라이트 속도</th>
+							<td colspan="3">
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp02-1" name="rpBtn02" checked="">
+										<label for="rp02-1" class="lb-radio"><span>보통</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp02-2" name="rpBtn02">
+										<label for="rp02-2" class="lb-radio"><span>조금 빠르게 (1.2x)</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp02-2" name="rpBtn02">
+										<label for="rp02-2" class="lb-radio"><span>빠르게 (1.5x)</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<!-- //24.01.02 수정 -->
+						<tr>
+							<th scope="row">게시 여부<span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="4">
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp03" name="rpBtn02" checked="">
+										<label for="rp03" class="lb-radio"><span>Y</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp04" name="rpBtn02">
+										<label for="rp04" class="lb-radio"><span>N</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+            			<!-- //[기획] 10/20 -->
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<!-- 24.01.02 미리보기 버튼 추가 -->
+				<button class="btn base tertiary"><span>미리보기</span></button>
+				
+				<div>
+					<button class="btn base"><span>취소</span></button>
+					<button class="btn base primary"><span>저장</span></button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

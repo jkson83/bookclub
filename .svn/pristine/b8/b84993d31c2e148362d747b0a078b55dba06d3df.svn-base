@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body data-pagescroll="auto">
+  <div id="wrap" class="wrap wrap-game game5">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">그림과 똑같은 그림을 찾아 박스 안에 넣어보세요.</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div> 
+
+    <!-- 드래그 -->
+    <div class="mdl-drag" data-drag-id="pictureType">
+      
+      <div class="inner">
+        <div class="mdl-drag-pic">
+          <img src="../../resources/img/app/select_pic4.png" alt="">
+        </div>
+        <div class="mdl-drag-item" data-drag-name="1">
+          <div class="mdl-drag-area a1" data-drag-name="1">
+            <!-- 240328 : 문구 수정 -->
+            <p>여기에 그림이나 글자를<br> 올려놓으세요. </p>
+            <!-- //240328 : 문구 수정 -->
+            <div class="mdl-drag-answer">
+              <div class="mdl-drag-drop d1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 24.02.20  q-time클래스 처음 기본값 -->
+      <div class="q-time"></div><!-- 10 / 5초전 -->
+      <div class="mdl-drag-drop d1" data-drag-name="1">
+        <img src="../../resources/img/app/select_pic4.png" alt="">
+      </div>
+      <div class="mdl-drag-drop d2" data-drag-name="2">
+        <img src="../../resources/img/app/select_pic2.png" alt="">
+      </div>
+      <div class="mdl-drag-drop d3" data-drag-name="3">
+        <img src="../../resources/img/app/select_pic1.png" alt="">
+      </div>
+      <div class="mdl-drag-drop d4" data-drag-name="4">
+        <img src="../../resources/img/app/select_pic3.png" alt="">
+      </div>
+    </div>
+    <!-- //드래그 -->
+
+    <!-- 문제 페이징 -->
+    <div class="q-paging-area">
+      <a href="#" class="on">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+    </div>
+    <!-- //문제 페이징 -->
+  </div>
+  <script type="module">    
+    'use strict';
+
+    const global = 'UI';
+
+    if (!window[global]) {
+        window[global] = {};
+    } 
+    const UI = window[global];
+
+    import DragDrop from '../../resources/js/dragDrop.js';
+    
+    // name  :: drop-area, drop-drop의 data-drag-name
+    // sum:  :: drop-area 에 들어가는 정답 갯수, 1 ~ n
+    // limit :: drop-area 안에 들어갈 수 있는 최대 갯수, 1 ~ n
+    // move  :: true 재선택 가능
+    // align :: drop-area의 display 속성이 flex인 경우 필수 추가
+    // copy  :: drop-drop 요소 무한사용
+    // state :: 현재 정답 상태
+    // UI 객체에 exe 속성이 없다면 추가합니다.
+    if (!UI.exe) {
+        UI.exe = {};
+    }
+
+    UI.exe.dragdrop = new DragDrop({
+      id: 'pictureType',
+      answer: [
+        { name: 1, sum: 1, move: true, align: 'center', limit: 1, state: false },
+      ],
+      callback: (v) => {
+        // drop-area 영역에 성공할때마다 해당 개별 콜백
+        console.log('callback', v);  
+      },
+      callbackComplete: (v) => {
+        // 모든 정답처리 완료 시 실행
+        console.log('callbackComplete', v);
+      },
+    });
+
+    // 24.02.20 수정
+    setTimeout(function() {
+      $('.q-time').addClass('bump');
+
+      setTimeout(function() {
+        $('.q-time').addClass('count');
+      }, 5000);
+    }, 5000);
+  
+  </script>
+</body>
+</html>

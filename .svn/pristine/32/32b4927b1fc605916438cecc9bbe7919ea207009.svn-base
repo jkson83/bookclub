@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap writing">
+    <div class="writing-head">
+      <div class="writing-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+      <h1 class="writing-tit">글쓰기</h1>
+      <button class="btn-end">종료</button>
+    </div> 
+    <!--// writing-head -->
+
+    <div class="writing-cont">
+      <div class="writing-cont-inner">
+        <div class="writing-cont-cms">
+          위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 상황과 감정에 야기해 보세요.위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 상황과 감정에
+          <button type="button" class="btn-hint">작성이 어려울 땐</button>
+        </div>
+        <div class="writing-cont-box">
+          <div class="text-area">
+            <label ><input type="text" class="inp-txt" placeholder="제목을 써보세요."></label>
+            <textarea id="" placeholder="글쓰기 내용을 작성해 보세요."></textarea>
+          </div>
+          <div class="writing-cont-img">
+            <ul>
+              <li>
+                <div class="img-item"></div> 
+              </li>
+              <li>
+                <div class="img-item"></div>
+              </li>
+              <li>
+                <div class="img-item"></div>
+              </li>
+            </ul>
+            <span>(최대 3장)</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+    <div class="q-check-btn">
+      <button type="button">미리보기</button>
+      <button type="button">임시저장</button>
+      <button type="button">작성완료</button>
+    </div>
+
+  </div>
+
+  <!-- 레이어 팝업 : 미리보기 팝업 -->
+  <div class="layer-popup writing-popup">
+    
+    <div class="layer-content modal">
+      <div class="writing-popup-inner">
+        <div class="writing-popup-cont">
+          <strong class="writing-popup-tit">이렇게 써 볼까요.</strong>
+          <div class="writing-popup-img">
+            <img src="../../resources/img/12.jpg">
+          </div>
+          <div class="writing-popup-txt">
+            <div class="inner">
+              <!-- 예시 텍스트 (cms) -->
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+            </div>
+          </div>
+        </div>
+  
+        <div class="layer-f-btn">
+          <button class="btn-okay"><span class="hide">알았어요</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //레이어 팝업 : 미리보기 팝업 -->
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap join">
+    <div id="container" class="container">
+
+      <div style="margin: 2rem">
+        <button class="btn primary" onclick="modal.open($(this), '#term01');" title="레이어 팝업 열기">개인정보 수집·제공 동의</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 팝업 // -->
+  <div class="modal-popup" id="term01">
+    <div class="modal-popup-outer">
+      <section class="modal-popup-container">
+        <article class="modal-popup-header">
+          <h3 class="modal-popup-title">[필수] 개인정보 수집·제공 동의</h3>
+          <button type="button" class="modal-popup-close only-icon">
+            <span><i class="hide">닫기</i></span>
+          </button>
+        </article>
+        <article class="modal-popup-body">
+          <!-- content // -->
+          <div class="bx-line scroll">
+            <div class="inner">
+              <p class="term-text">회사는 계약체결 및 이행과 관련하여 회사가 개인정보주체(이하 “본인”이라고 함)의 개인정보를 수집,이용하는 경우에는 「개인정보 보호법」 제15조에 따라 본인의 동의를 얻어야 합니다.</p>
+
+              <dl class="term-text-list">
+                <dt>제1조 (수집, 이용 목적)</dt>
+                <dd>개인 식별, 부정 이용 및 비인가 사용 방지, 가입 의사 확인 등 회원가입 서비스를 제공하기 위함</dd>
+              </dl>
+
+              <dl class="term-text-list">
+                <dt>제2조 (수집, 이용하는 개인정보 항목)</dt>
+                <dd>
+                  필수정보: (학생회원) 이름, 학습단계 (학부모회원) 이메일, 이름, 휴대폰 번호<br>
+                  선택정보 : (학생회원) 프로필 사진, 이메일
+                </dd>
+              </dl>
+
+              <dl class="term-text-list">
+                <dt>제3조 (보유기간)</dt>
+                <dd>회원 탈퇴 시 또는 타 법령에 근거하여 보유하며, 보유 기간 만료 시 복구 불가능한 방법으로 삭제합니다.</dd>
+              </dl>
+
+              <p class="term-text2">- 이용자는 회사가 수집하는 개인정보의 항목 및 수집 방법에 동의를 거부할 수 있으며, 거부 시 회원에게 제공되는 서비스 이용의 일부가 제한될 수 있습니다.</p>
+            </div>
+          </div>
+          <!-- // content -->
+        </article>
+        <article class="modal-popup-footer">
+          <button type="button" class="btn primary" onclick="modal.close($(this))">확인</button>
+        </article>
+      </section>
+    </div>
+  </div>
+  <!-- // 팝업 -->
+</body>
+</html>

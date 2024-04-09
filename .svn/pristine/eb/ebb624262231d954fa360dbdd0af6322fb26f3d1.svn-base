@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>EVERYBOOKS 어드민</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '2', sid: '2' };
+	</script>
+</head>
+
+<body class="b2b">
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2b"></div>
+		<section class="main-conts">
+			<h2>스티커 관리</h2>
+			<ul class="page-nav">
+				<li><a href="#">LMS</a></li>
+				<li class="current"><a href="#">학습자 목록</a></li>
+			</ul>
+			<div class="sub-title">
+				<h3>학습자 정보</h3>
+			</div>
+      <div class="tbl-base type2 mgt10">
+        <table>
+          <colgroup>
+            <col style="width:200px;">
+            <col style="width:auto;">
+            <col style="width:150px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">수강여부</th>
+              <th scope="col">학습자 이름</th>
+              <th scope="col">가입일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>수강중</td>
+              <td class="txt-l"><a href="#">김길동</a></td>
+              <td>100</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>회원정보 상세</span></button>
+				</div>
+			</div>
+			<div class="sub-title type2">
+        <h3>스티커 내역</h3>
+        <select name="" id="">
+          <option value="">전체</option>
+          <option value="">적립</option>
+          <option value="">차감</option>
+        </select>
+			</div>
+      <div class="tbl-base type2 mgt10">
+        <table>
+          <colgroup>
+            <col style="width:88px;">
+            <col style="width:88px;">
+            <col style="width:auto;">
+            <col style="width:100px;">
+            <col style="width:100px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">유형</th>
+              <th scope="col">사유</th>
+              <th scope="col">스티커수</th>
+              <th scope="col">발생일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>100</td>
+              <td><span>적립</span></td>
+              <td>이북</td>
+              <td>100</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td><span class="color-red">차감</span></td>
+              <td>이북</td>
+              <td>100</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+            <tr>
+              <td>98</td>
+              <td><span>적립</span></td>
+              <td>이북</td>
+              <td>100</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+            <tr>
+              <td>97</td>
+              <td><span class="color-red">차감</span></td>
+              <td>이북</td>
+              <td>100</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+            <tr>
+              <td>96</td>
+              <td><span>적립</span></td>
+              <td>이북</td>
+              <td>100</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+            <tr>
+              <td>95</td>
+              <td><span class="color-red">차감</span></td>
+              <td>이북</td>
+              <td>100</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+            <tr>
+              <td>94</td>
+              <td><span>적립</span></td>
+              <td>이북</td>
+              <td>100</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+            <tr>
+              <td>93</td>
+              <td><span class="color-red">차감</span></td>
+              <td>이북</td>
+              <td>100</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+            <tr>
+              <td>92</td>
+              <td><span>적립</span></td>
+              <td>이북</td>
+              <td>100</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+            <tr>
+              <td>91</td>
+              <td><span class="color-red">차감</span></td>
+              <td>이북</td>
+              <td>100</td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>등록</span></button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

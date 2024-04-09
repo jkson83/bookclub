@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap setting">
+    <div class="setting-header">
+      <h1 class="title-setting">부모님 페이지</h1>
+
+      <button type="button" class="btn-back">뒤로가기</button> 
+    </div>
+
+    <div class="setting-container">
+      <ul class="tab-link">
+        <li><a href="#" class="on">부모 계정 관리</a></li>
+        <li><a href="#">자녀 프로필 관리</a></li>
+        <li><a href="#">학습 단계 변경</a></li>
+      </ul>
+
+      <div class="setting-box">
+        <h2 class="title-sub-setting">계정 정보 변경</h2>
+
+        <ul class="setting-input-list">
+          <li class="disabled">
+            <label for="email">이메일</label>
+            <input type="text" id="email" value="testmail@naver.com" disabled>
+          </li>
+          <li>
+            <label for="pw">비밀번호</label>
+            <input type="password" id="pw" placeholder="영문, 숫자, 특수문자 포함 8자리 이상">
+          </li>
+          <li>
+            <label for="pw2">비밀번호 확인</label>
+            <input type="password" id="pw2" placeholder="영문, 숫자, 특수문자 포함 8자리 이상">
+          </li>
+          <li class="disabled">
+            <label for="name">학부모 이름</label>
+            <input type="text" id="name" value="김부모" disabled>
+          </li>
+          <li class="disabled">
+            <label for="name">휴대폰 번호</label>
+            <input type="text" id="name" value="010-1234-5678" disabled>
+          </li>
+        </ul>
+
+        <div class="marketing-check-area">
+          <span class="d-check-round">
+            <input type="checkbox" id="marketing-agree">
+            <label for="marketing-agree">[선택] 마케팅정보 활용 동의</label>
+          </span>
+        </div>
+
+        <div class="btn-save-area">
+          <button class="btn-save">저장하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 레이어 팝업 : 암호확인 팝업 -->
+  <div class="layer-popup">
+    <div class="layer-content modal">
+      <button type="button" class="btn-x">닫기</button>
+
+      <p class="password-notice-text">
+        앗, 이 메뉴는 부모님을 위한 메뉴에요.<br>
+        이용을 원하시면, <br>
+        비밀번호를 다시 한번 입력해 주세요.
+      </p>
+
+      <div class="password-input-area">
+        <input type="password" placeholder="비밀번호를 입력해 주세요.">
+      </div>
+
+      <div class="layer-f-btn">
+        <button class="btn-line">취소</button>
+        <button class="btn-full">로그인</button>
+      </div>
+    </div>
+  </div>
+  <!-- //레이어 팝업 : 암호확인 팝업 -->
+</body>
+</html>

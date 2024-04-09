@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+.only-icon{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 3rem;
+  min-height: 4.8rem;
+}
+
+.btn-wrap{
+  margin-top: 5rem;
+  text-align: center;
+
+  &.fx-center{
+    // margin: 4.5rem 4.5rem 0 4.5rem;
+    margin: 7rem 7rem 10rem 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button{
+      font-size: 2rem;
+    }
+    button + button{
+      min-width: 24rem;
+      margin-left: 1.8rem
+    }
+  }
+}
+
+.btn{
+  vertical-align:middle;
+  height: 5.3rem;
+  font-family: 'pretendard';
+  font-size: 1.8rem;
+  font-weight: 700;
+  span{
+    font-family: inherit;
+    font-size: 1.8rem;
+    font-weight: 700; 
+
+    &.ico{
+      position: relative;
+      padding-left: 3.2rem;
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+      }
+      &.android{
+        &::before{
+          width: 23px;
+          height: 25px;
+          background: url($app_android_ico) 50% no-repeat;
+          background-size: contain;
+        }
+      }
+      &.ios{
+        &::before{
+          width: 23px;
+          height: 27px;
+          background: url($app_ios_ico) 50% no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+  &.primary{
+    width: 100%;
+    padding: 0 1rem;
+    border-color:#111;
+    background-color:#111;
+    border-radius: 1rem;
+    color:#fff;
+  }
+  &.second{
+    width: 100%;
+    color:#111;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    background-color:#fff;
+    &:disabled{
+      color: #ededed;
+      background-color: #888;
+      border-color: #888;
+    }
+  }
+  &.round{
+    padding: 2rem 0;
+    text-align: center;
+    font-family: 'binggrae';
+    border-radius: 10rem;
+  }
+  &-gray{
+    border-color:rgba(0, 0, 0, 0.08);
+    background-color:rgba(0, 0, 0, 0.08);
+    color:#8A8C8E;
+  }
+  &-underline{
+    color: #000;
+    text-decoration: underline;
+  }
+  &.sm{
+    width: auto;
+    min-width: 11rem;
+    height: 4.9rem;
+    font-size: 1.8rem;
+  }
+  &.lg{
+    width: auto;
+    min-width: 24rem;
+    height: 6.7rem;
+    padding: 0 4rem;
+    font-family: 'binggrae';
+    font-size: 2rem;
+    border-radius: 10rem;
+
+    .ico{
+      font-size: 2rem;
+    }
+  }
+  &-login{
+    @include headerBtn;
+    border: 1px solid #000;
+    background-color: #000;
+    span{
+      @include headerBtnText;
+      color:#fff;
+    }
+  }
+  &-test{
+    @include headerBtn;
+    border: 1px solid #000;
+    background-color: #fff;
+    span{
+      @include headerBtnText;
+      color:#111;
+    }
+  }
+  &-mall{
+    @include headerBtn;
+    border: 1px solid #000;
+    background-color: #fff;
+    span{
+      @include headerBtnText;
+      color:#111;
+    }
+  }
+}
+
+
+
+.btn-x{
+  transform: translateY(0);
+  position: absolute;
+  @include text-hide;
+
+  &::before{
+    content: "";
+    width: 100%;
+    background-color: #111;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+
+  &::after{
+    content: "";
+    width: 100%;
+    background-color: #111;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+}
+
+.btn-line{
+  width: auto;
+  height: 6.543vh;
+  border: 1px solid #111;
+  border-radius: 100px;
+  font-size: 1.95vh;
+  font-weight: 700;
+  line-height: 6.543vh;
+  transform: translateY(0);
+  position: static;
+}
+
+.btn-full{
+  width: auto;
+  height: 6.543vh;
+  background-color: #111;
+  border: 1px solid #111;
+  border-radius: 100px;
+  font-size: 1.95vh;
+  color: #fff;
+  font-weight: 700;
+  line-height: 6.543vh;
+  transform: translateY(0);
+  position: static;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************/
+@media all and (max-width: 768px) {
+
+  .btn-wrap.fx-center{
+    button{
+      min-width: 18rem;
+      padding: 1rem 0;
+      font-size: 1.6rem;
+
+      &+button{
+        min-width: 18rem;
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  .btn{
+    span{
+      &.ico{
+        font-size: 1.6rem;
+
+        &.android{
+          &::before{
+            width: 20px;
+            height: 22px;
+          }
+        }
+        &.ios{
+          &::before{
+            width: 20px;
+            height: 24px;
+          }
+        }
+      }
+    }
+    &.lg{
+      min-width: auto;
+      height: 5rem;
+      padding: 1rem 3rem;
+      font-size: 1.6rem;
+  
+      .ico{
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+
+
+@media all and (max-width: 480px) {
+  .btn{
+    height: 5rem;
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <!-- 23.12.04 wrap-game 클래스 추가 -->
+  <div id="wrap" class="wrap wrap-game game">
+    <div class="question-top">
+      <button class="btn-end">종료</button>
+    </div>
+
+    <h1 class="title-game">문해력 게임</h1>
+
+    <div class="game-descript-bubble">
+      이제 게임에 도전해 볼까요?<br>
+      책 여행을 즐긴 친구라면 누구나 도전에 성공할 수 있어요.<br>
+      승리해서 스티커도 획득하세요.
+    </div>
+
+    <div class="btn-game-link">
+      <button type="button">1단계 <strong>준비운동</strong></button>
+      <button type="button">2단계 <strong>게임도전</strong></button>
+    </div>
+  </div>
+</body>
+</html>

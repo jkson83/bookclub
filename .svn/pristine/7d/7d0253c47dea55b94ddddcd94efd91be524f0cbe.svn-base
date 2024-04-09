@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap read">
+    <div class="read-top">
+      <h1 class="title-book">양파공주 텔레비전에 나온 날</h1>
+
+      <div class="read-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <button class="btn-read read-stop">그만 읽기</button>
+
+      <!-- 읽기 완료 되었을 경우 -->
+      <!--
+      <button class="btn-read read-complete">읽기 완료</button>
+      -->
+    </div>
+
+    <div class="book-content">
+      <button type="button" class="book-prev">이전 페이지</button>
+
+      <img src="../../resources/img/app/book.png" alt="">
+
+      <button type="button" class="book-next">다음 페이지</button>
+
+      <p class="book-page">
+        <strong>3</strong> 20
+      </p>
+    </div>
+  </div>
+
+  <!-- 레이어 팝업 : 학습 완료 팝업 -->
+  <div class="layer-popup">
+    <div class="layer-content modal">
+      <button type="button" class="btn-x">닫기</button>
+
+      <!-- 23.11.23 문구 수정 -->
+      <p class="text-complete-read">책 읽기를 완료하여 <br>스티커를 획득하였습니다.</p>
+
+      <div class="big-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <p class="text-sticker">복습을 하면 스티커를 더 모을 수 있어요!</p>
+      <!-- 모든 스티커 다 모았을 경우 -->
+      <!--
+      <p class="text-sticker"><strong>모든 스티커를 모았어요!</strong> 그래도 책 읽기는 꾸준히 해 보아요</p>
+      -->
+
+
+      <div class="layer-f-btn">
+        <button class="btn-line">다시 읽기</button>
+        <button class="btn-full">완료하기</button>
+      </div>
+    </div>
+  </div>
+  <!-- //레이어 팝업 : 학습 완료 팝업 -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+
+
+// popUp
+body.is_popOn{
+	.dimmed{display:block;}
+	.modal{display:block;  top:3%; opacity:0; }
+	.modal.motion{top:0;transition: all  ease-in-out 0.2s;opacity:1;}
+	.modal.motion_end{top:-3%;transition: all  ease-in-out 0.2s;opacity:0;}
+}
+
+.modal{z-index:1050; display:none;position:fixed; left: 0;top: 0;bottom: 0;right: 0; pointer-events: none; 
+	.pop_area{ position: relative; width: auto; margin: 0 auto; height: 100vh;display: flex; align-items: center; 
+		.pop_wrap{position:relative;min-width:320px; max-width:calc(100vw - 80px); margin: 0 auto; background-color: #fff;  border-radius:6px;  pointer-events: auto;}
+
+		.pop_head{min-height: 37px;position:relative;padding:10px 15px; padding-right:25px; font-size:16px; font-weight:bold;color:#333;line-height:17px; box-sizing: border-box;}
+		.pop_con{padding:10px 15px 30px;max-height:calc(100vh - 184px);overflow-y:auto;}
+		.btn_close{z-index:10;position:absolute;right:10px;top:10px;}
+	}
+}
+
+
+//Log
+// .modal.modal_log{
+// 	.pop_area{
+// 		.pop_con{
+// 		}
+// 	}
+// }
+
+//Excel Export
+.table_export{position:relative; min-width:1400px; padding-top:30px;
+	.btn_wrap{display: table;position: absolute; z-index: 9999; top: 0px; left: 0px;
+    .chkall{display: table-cell; vertical-align: middle; margin-right:5px;}
+    .btn_copy{position: absolute;left: 20px;top:-4px;}
+	}
+
+	.table_export_head{z-index:99;position:absolute; top:30px; left:0; right:17px;
+		table.fixed{width: 100%;
+			thead th{
+				label{display: inline-block;vertical-align: top; margin-top: 2px;}
+				label span{display:inline-block;padding-left: 5px; vertical-align:top; margin-top:-1px;}
+				input[type="checkbox"]{}
+			}
+		}
+	}
+
+	.table_export_body{position:relative;max-height:calc(100vh - 260px);margin-top:0; padding-top:30px; overflow-y:auto; }
+}
+
+.mobile{
+	//Excel Export
+	.table_export{
+		.table_export_head{right: 0;}
+	}
+}

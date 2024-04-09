@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+// ------------------------------------ 
+// Util : Varibles 
+// ------------------------------------ 
+
+//color
+$color-black : #000;
+
+// filterBtn
+$color-del : #c1c1c1;//삭제 
+$color-equal :#808080;//동일
+
+$color-hold : #F7931E;//보류
+$color-rework : #8CC63F;//재확인
+$color-new : #33CCFF;//신규
+$color-layer : #93278F;//레이어팝업
+$color-popup : #C69C6D;//팝업
+$color-default : #6db8eb;
+
+//Table
+$color-path : #e40000; //링크 색상
+$color-focus_line : #f7e4e4; //포커스 라인
+$color-hover_line : #dcf1ff; //Over
+$color-del_light : #f5f5f5;//삭제
+
+
+// 이미지 경로
+$imgpath : "../images/";
+
+// Layout
+$desktop-width:1200px;
+$container-width : 1007px;
+
+$breakpoint : 500px; //max-width
+
+//컨텐트 높이 설정
+$content-min-height : 768px; //컨텐트 최소 높이 설정
+$footer-height:195px;//footer 높이설정 (old Version) 
+
+//color
+$strong-line-color : #000;
+$light-line-color : #666;
+$color-dark : #666;
+$color-gray-strong : #666;
+
+// Font
+$font-family : 'Nanum Gothic','나눔고딕', 돋움, Dotum, 굴림, Gulim, AppleGothic, Sans-serif;
+
+$base-font-color : #666;
+$strong-font-color : #666;
+$form-font-color : #666;
+$form-border-color : #666;
+
+// Font Size
+$base-font-size : 12px;
+$h2-font-size : 20px;
+$title-font-size : 18px;
+$em-base : $base-font-size; // rem() 믹스인 기준 값 16px → 14px 변경
+
+
+
+

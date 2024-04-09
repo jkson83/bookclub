@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVERYBOOKS</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '5', sid: '5' };
+	</script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2c"></div>
+		<section class="main-conts">
+			<h2>글쓰기 관리</h2>
+			<ul class="page-nav">
+				<li><a href="#">CMS(컨텐츠 관리)</a></li>
+				<li class="current"><a href="#">글쓰기</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:200px">
+						<col style="width:150px">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">등록일</th>
+							<td colspan="2">2023.12.25</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp01">도서 설정</label></th>
+							<td colspan="2">
+								<div class="frm-area">
+									<input type="text" class="inp-text" id="inp01" style="width:500px">
+									<button class="btn base square btn-modal"><span>도서 설정</span></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp02">제목</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="2">
+								<div class="frm-area">
+								<input type="text" class="inp-text" id="inp02">
+								<p class="note">0 / 30자</span>
+								</div>
+							</td>
+						</tr>
+						<!-- 24.02.26 :: 행 위치 변경 (이미지 파일이 맨 아래로 이동) -->
+						<tr>
+							<th scope="row" rowspan="3">문제 설정</th>
+							<th scope="row"><label for="textarea">내용 등록</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<textarea class="inp-textarea" style="height: 120px;"></textarea>
+									<!-- 24.01.10 내용 최대 글자수 수정 -->
+									<p class="note">0 / 150자</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">작성 방법 내용</th>
+							<td>
+								<div class="frm-area">
+									<div style="background:#eee; line-height:300px; text-align:center;">에디터</div>
+
+									<p class="note">0 / 1500자</p>
+								</div>
+							</td>
+						</tr>
+						<tr class="noline">
+							<th scope="row">이미지 파일</th>
+							<td>
+								<div class="file-wrap">
+									<div class="input-item">
+										<input type="text" class="inp-text" value="" placeholder="" readonly>
+										<span class="btn base square">
+											<input type="file" title="첨부파일 선택" id="inpUpload01">
+											<span>파일 등록</span>
+										</span>
+									</div>
+									<div class="file-list">
+										<div class="file">
+											<span class="file-info">※ 이미지 사이즈 (600x235)의 JPG, PNG 파일로만 등록이 가능합니다.</span>
+											<p class="file-name">파일명.확장자</p>
+											<button type="button" class="btn-del"><span>삭제</span></button>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<!--// 24.02.26 -->
+						<tr>
+							<th scope="row">게시 여부</th>
+							<td colspan="2">
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp03" name="rpBtn02" checked="">
+										<label for="rp03" class="lb-radio"><span>Y</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp04" name="rpBtn02">
+										<label for="rp04" class="lb-radio"><span>N</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<button class="btn base tertiary"><span>미리보기</span></button>
+				
+				<div>
+					<button class="btn base"><span>취소</span></button>
+					<button class="btn base primary"><span>저장</span></button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

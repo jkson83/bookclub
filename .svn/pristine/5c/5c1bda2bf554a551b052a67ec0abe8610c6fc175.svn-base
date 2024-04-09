@@ -1,0 +1,62 @@
+<!-- modal -->
+<section class="ui-modal" id="ADMB0602000300P">
+  <div class="ui-modal-wrap">
+    <div class="ui-modal-header">
+      <h1 class="ui-modal-tit">등록</h1>
+      <button type="button" class="icon-close ui-modal-close" aria-label="close" ><span class="hide">모달 닫기</span></button>
+    </div>
+    <div class="ui-modal-body">
+      <div class="modal-conts">
+        <div class="tbl-base">
+          <table>
+            <colgroup>
+              <col style="width:150px;">
+              <col style="width:auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">유형</th>
+                <td>
+                  <div class="frm-area">
+                    <span class="lb-item">
+                      <input type="radio" id="rp06" name="rpBtn" checked="">
+                      <label for="rp06" class="lb-radio"><span>차감</span></label>
+                    </span>
+                    <span class="lb-item">
+                      <input type="radio" id="rp07" name="rpBtn">
+                      <label for="rp07" class="lb-radio"><span>적립</span></label>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="inp01">스티커 수</label></th>
+                <td>
+                  <div class="frm-area">
+                    <input type="text" id="inp01" class="inp-text">
+                    <span class="note">(숫자로만 입력해 주세요)</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="inp02">사유</label></th>
+                <td>
+                  <div class="frm-area">
+                    <input type="text" id="inp02" class="inp-text">
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="ui-modal-footer">
+      <div class="btn-group">
+        <button type="button" class="btn base tertiary"><span>취소</span></button>
+        <button type="button" class="btn base primary"><span>저장</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //modal -->

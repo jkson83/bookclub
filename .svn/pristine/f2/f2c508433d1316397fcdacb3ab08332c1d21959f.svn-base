@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/ui.main.css">
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body class="main">
+  <div id="wrap" class="wrap">
+    <script type="text/javascript" src="../_ui_include/header.js"></script>
+    <div id="container" class="container">
+      <div class="section">
+        content
+      </div>
+    </div>
+    <script type="text/javascript" src="../_ui_include/footer.js"></script>
+  </div>
+</body>
+</html>

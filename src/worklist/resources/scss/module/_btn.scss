@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+// Filter BTN
+@mixin filterBtn($col) {
+	span:after{background-color:$col;}
+	&.on{
+		span{background-color:$col; border-color:$col;}
+		span:after{background-color:$col;}
+	}
+	&:hover {
+		span{border-color:$col;}
+		span:after{background-color:$col;}
+	}
+}
+@mixin filterBtn_default($col) {
+	span{background-color:#eee;}
+	span:after{background-color:#eee;}
+	&.on{
+		span{background-color:$col; border-color:$col;}
+		span:after{background-color:$col;}
+		&:hover{
+			span{background-color:$col; border-color:$col;}
+			span:after{background-color:$col;}
+		}
+	}
+	&:hover {
+		span{background-color:#ddd;}
+		span:after{background-color:#ddd; }
+	}
+}
+
+
+//버튼 
+.btn{display:inline-block; margin: 0; box-sizing: border-box; text-decoration: none;
+	span{display:block;position:relative;min-width:59px; margin:1px 0; padding:2px 2px; border:1px solid #dedede;border-radius:5px;text-align:center; background-color:#eee;color:#000; }
+	&.active span{border:1px solid #6db8eb;  background-color:#6db8eb; }
+	&.active:hover span{background-color:#6db8eb; }
+	&.active span{color:#fff; cursor: default;}
+	&.disable span{background-color:#eee;}
+	&.disable span{color:#ccc;}
+	&.disable:hover span{background-color:#eee; }
+	&.disable a{cursor:default;}
+	&:hover span{background-color:#ddd; transition: all ease-in-out 0.2s;}
+	&.on{
+		span{color:#fff;}
+	}
+
+	@include filterBtn_default($color-default);
+
+	// 2020.03.10 : 2차오픈 관련
+	&.open2.on span{background-color: #6db8eb; border-color: #6db8eb;}
+}
+
+.link_box .btn span{min-width:45px;}
+
+
+
+// Top_btn
+//-----------------------
+.top_btn{float:right;margin-right:18px;
+	a, a:active, a:visited{color:#999; text-decoration:none;}
+}
+
+// info_section
+//-----------------------
+.btn_fold_info{position:relative;text-align:right;
+	a{z-index:8; position:absolute;top:-1px;right:10px;display:inline-block;width:60px;height:22px;line-height:20px;text-align:center; text-decoration:none; font-weight:bold; background-color:#f6f6f6;color:#999; border-bottom-left-radius:5px;border-bottom-right-radius:5px; border:1px solid #efefef;border-top:none; }
+}
+
+body.headerFloating {
+	.btn_fold_info a{/*  right:10px;background-color:#f6f6f6; */ border:1px solid #ddd; border-top: none;}
+	.tab_nav{border-bottom:1px solid #f6f6f6;}
+}
+
+body[data-headerclose="false"] .btn_fold_info a{border-top:none;}
+
+
+// table_content 
+//-----------------------
+.btn_fold_log, 
+.btn_fold_depth{position: relative;display: inline-block;width: 9px; height:9px; background-color: #999; border-radius: 50%; margin-top:3px; margin-right: 3px;text-decoration: none;
+	i{position: absolute; left: 0px; top: 4px;  display: block; width:9px; height: 1px;background-color: #ddd;
+		&:before{content:''; display: block; position: absolute; left: 4px; top: -4px; width:1px; height: 9px;  margin-left: 0px;background-color: #ddd;}
+	}
+	&.on{color: #ddd;transition: all ease-in-out 0.26s; background-color: #bbb;
+		i{background-color: #fff;
+			&:before{display: none;}
+		}
+	}
+	h3 &{float: none !important;vertical-align: top;margin-top: 4px;
+		// &.on{background-color: #999}
+	}
+	th.log &{margin-right: 6px;}
+	th &.on{color: #bbb; background-color: #bbb;}
+	th &:hover, &:hover{color:#666; background-color: #666;}
+}
+
+
+
+// pop_area , Setting 
+//-----------------------
+.btn_close{padding:4px; border-radius:50%;background-color:#fff;transition: all  ease-in-out 0.26s;
+	& i{display: block;width: 11px; height: 11px; background:url($svg_close) 0 0 no-repeat;}
+	&:hover{background-color:#bbb;
+		i{@include background($svg_close, '%23666', '#fff', 0, 0);
+			transition: all ease-in-out 0.2s;  transform:rotate(360deg); color:#333; 
+		}
+	}
+}
+
+

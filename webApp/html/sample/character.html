@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐릭터</title>
+
+    <style>
+      .armL {
+        animation-name: cssAnimationL;
+        animation-duration: 1.0s;
+        animation-iteration-count: infinite;
+      }
+      .armR {
+        animation-name: cssAnimationR;
+        animation-duration: 1.0s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes cssAnimationL {
+        0% {   transform: matrix(0.873151, 0.487449, -0.512657, 0.858594, 34.3086, 51) rotate(0deg); }
+        50% {   transform: matrix(0.873151, 0.487449, -0.512657, 0.858594, 34.3086, 51) rotate(-10deg); }
+        100% { transform: matrix(0.873151, 0.487449, -0.512657, 0.858594, 34.3086, 51) rotate(0deg); }
+      }
+      @keyframes cssAnimationR {
+        0% {   transform: matrix(0.873151, -0.487449, -0.512657, -0.858594, 95.8516, 94.4146) rotate(0deg); }
+        50% {   transform: matrix(0.873151, -0.487449, -0.512657, -0.858594, 95.8516, 94.4146) rotate(-10deg); }
+        100% { transform: matrix(0.873151, -0.487449, -0.512657, -0.858594, 95.8516, 94.4146) rotate(0deg); }
+      }
+
+      .legsL { transition: all 0.3s ease-in; }
+
+    </style>
+    
+    <script type="text/javascript" src="../_ui_include/head.js"></script><!-- //Include: head -->
+    <script>
+      $(document).ready(function() {
+        setInterval(moving, 500);
+      });
+      var flag = 0;
+      var moving = function() {
+        if(flag) {
+          $('.legsL').attr({ 'transform': 'rotate(-90 49.3047 177)' });
+          flag = 0;
+        } else {
+          $('.legsL').attr({ 'transform': 'rotate(-90 55.3047 182)' });
+          flag = 1;
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    <div style="display: flex;">
+      <div class="">
+        <img src="./character.svg" alt="">
+      </div>
+
+
+      <div class="charType404">
+        <svg width="166" height="182" viewBox="0 0 166 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="legsL" x="55.3047" y="182" width="68.4297" height="24.6154" rx="12.3077" transform="rotate(-90 55.3047 182)" fill="#CB1E21"/>
+          <rect x="83" y="182" width="68.4297" height="24.6154" rx="12.3077" transform="rotate(-90 83 182)" fill="#CB1E21"/>
+          <ellipse cx="82.7351" cy="80" rx="82.7351" ry="80" fill="#ED4043"/>
+          <rect class="armL" width="48.829" height="24.0077" rx="12.0038" transform="matrix(0.873151 0.487449 -0.512657 0.858594 34.3086 51)" fill="#F46D6F"/>
+          <rect class="armR" width="48.829" height="24.0077" rx="12.0038" transform="matrix(0.873151 -0.487449 -0.512657 -0.858594 95.8516 94.4146)" fill="#F46D6F"/>
+          <path d="M72.6758 43.3462C75.2652 40.577 82.4543 36.3981 90.4951 41.8357" stroke="white" stroke-width="7.9009" stroke-linecap="round"/>
+          <ellipse cx="68.9887" cy="28.5609" rx="4.30122" ry="4.15904" fill="white"/>
+          <ellipse cx="94.7973" cy="28.5604" rx="4.30122" ry="4.15904" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+
+  </body>
+  </html>
+  

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap question q-drag">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div>
+
+    <!-- 질문 영역 -->
+    <div class="question-box line-3">
+      <!-- drop-zone 기본, text-length-m 3~5, text-length-l 6~ -->
+      <p class="question-drag-text" id="drag-container">
+        동해물과 백두산이 마르고 닳도록 <br>
+        하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산 <br>
+        대한사람 <span class="drop-zone" data-answer="2"></span> 대한으로 길이 보전하세
+      </p>
+
+      <button class="q-sound">질문 듣기</button>
+    </div>
+    <!-- //질문 영역 -->
+
+    <!-- 드래그 : 틀렸을 경우 정답표시 drag-item에 correct 클래스 추가 -->
+    <div class="drag-area" id="drag-container">
+      <div class="drag-item original-item" data-answer="1">가나 다라 <br>마바사</div>
+      <div class="drag-item original-item" data-answer="2">가나다라마사</div>
+      <div class="drag-item original-item" data-answer="3">가나다</div>
+      <div class="drag-item original-item" data-answer="4">가나다라마</div>
+    </div>
+    <!-- //드래그 -->
+
+    <!-- 진도율 -->
+    <div class="study-complete-area">
+      <span class="on">1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+    </div>
+    <!-- //진도율 -->
+
+    <!-- 23.11.22 하단 버튼 추가 -->
+    <div class="q-check-btn">
+      <button type="button">정답확인</button>
+      <!-- 
+      <button type="button">다음 문제 풀기</button>
+      -->
+    </div>
+
+    <!-- 정답 맞췄을 경우 -->
+    <div class="layer-correct" style="display:none;">정답</div>
+    <!-- //정답 맞췄을 경우 -->
+
+    <!-- 정답 틀렸을 경우 -->
+    <div class="layer-wrong" style="display:none;">오답</div>
+    <!-- //정답 틀렸을 경우 -->
+  </div>
+
+  <script>
+    $(document).ready(function() {
+        $(".original-item").draggable({
+          // helper: "clone",
+          snap: ".drop-zone",
+          snapMode: "both",
+          revert: "invalid",
+          drag: function(event, ui){
+            var dropItem = $(this)
+            dropItem.addClass('active')
+          },
+          start: function(event, ui){
+            var dropItem = $(this)
+          },
+          stop: function(event, ui){
+            var dropItem = $(this)
+            dropItem.removeClass("active");
+          }
+        });
+        
+        // 23.12.05 민감도 문제로 박스 영역으로 드랍 수정
+        $(".question-box").droppable({
+          accept: ".original-item",
+          drop: function(event, ui) {
+            var draggedItem = ui.helper; // ui.helper를 사용하여 복사본을 가져옴
+            var dropZone = $(this);
+            // 23.12.05 find 추가
+            var correctAnswer = dropZone.find("span").data("answer");
+
+            var answerText = draggedItem.text();
+            $(".drop-zone").text(answerText);
+
+            draggedItem.css({
+              'position':'relative',
+              'top': 0,
+              'left': 0,
+              'transition': 'all .3s'        
+            });
+
+            if (draggedItem.data("answer") === correctAnswer) {
+              dropZone.droppable("disable");
+              draggedItem.addClass("correct");
+            } 
+            
+            var item = $('.drop-zone');
+            var answer = $('.ui-droppable-disabled');
+
+            if(item.length === answer.length){
+              $('.layer-correct').show();
+            } else{
+              $('.layer-wrong').show();
+
+              // 23.12.05 find 추가
+              var findCorrectAnswer = dropZone.find("span").data("answer") - 1;
+              $('.drag-area .drag-item:eq('+ findCorrectAnswer +')').addClass('correct');
+            }
+          },
+        });
+    });
+  </script>
+</body>
+</html>

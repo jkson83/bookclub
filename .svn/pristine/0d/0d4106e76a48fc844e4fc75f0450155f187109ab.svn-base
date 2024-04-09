@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap question q-text">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div>
+
+    <!-- 질문 영역 -->
+    <div class="question-box line-3">
+      동해물과 백두산이 마르고 닳도록 <br>
+      하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려 강산 <br>
+      대한사람 대한으로 길이 보전하세 동해물과 백두산이
+
+      <button class="q-sound">질문 듣기</button>
+    </div>
+    <!-- //질문 영역 -->
+
+    <!-- 텍스트 선택 : 틀린 답 선택 했을때 정답 표시 btn-text-select에 correct 클래스 추가  -->
+    <div class="btn-text-area">
+      <button class="btn-text-select">안녕하세요</button>
+      <button class="btn-text-select">사람들이 응원을 하지 <br>않아도 됩니다</button>
+      <button class="btn-text-select">안녕하세요</button>
+      <button class="btn-text-select">사람들이 응원을 하지 <br>않아도 됩니다</button>
+    </div>
+    <!-- //텍스트 선택 -->
+
+    <!-- 진도율 -->
+    <div class="study-complete-area">
+      <span class="on">1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+    </div>
+    <!-- //진도율 -->
+
+    <!-- 23.11.22 하단 버튼 추가 -->
+    <div class="q-check-btn">
+      <button type="button">정답확인</button>
+      <!-- 
+      <button type="button">다음 문제 풀기</button>
+      -->
+    </div>
+
+    <!-- 정답 맞췄을 경우 -->
+    <div class="layer-correct" style="display:none;">정답</div>
+    <!-- //정답 맞췄을 경우 -->
+
+    <!-- 정답 틀렸을 경우 -->
+    <div class="layer-wrong" style="display:none;">오답</div>
+    <!-- //정답 틀렸을 경우 -->
+  </div>
+
+  <script>
+    $(".btn-text-select").on("click", function(){
+      $(".btn-text-select").removeClass("on");
+      $(this).addClass("on");
+    });
+  </script>
+</body>
+</html>

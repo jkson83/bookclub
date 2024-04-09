@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+  <!-- 23.11.14 ebook 관련 js 추가 -->
+  <script type="text/javascript" src="../../resources/js/lib/turn.html4.js"></script>
+	<script type="text/javascript" src="../../resources/js/lib/turn.js"></script>
+	<script type="text/javascript" src="../../resources/js/lib/hash.js"></script>
+	<script type="text/javascript" src="../../resources/js/ui.ebook.js"></script>
+</head>
+<body>
+  <div id="wrap" class="wrap read">
+    <div class="read-top">
+      <h1 class="title-book">양파공주 텔레비전에 나온 날</h1>
+
+      <div class="read-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <button class="btn-read read-stop">그만 읽기</button>
+
+      <!-- 읽기 완료 되었을 경우 -->
+      <!--
+      <button class="btn-read read-complete">읽기 완료</button>
+      -->
+    </div>
+
+    <!-- 24.01.31 확대/축소 버튼 css 및 태그 추가 -->
+    <style>
+    .fullShow {
+      z-index: 10;
+      position: absolute; 
+      left: 14%; 
+      top: 1.5vh; 
+      width: 8vh;
+      height: 8vh;
+      border-radius: 50%;
+      background:rgba(0, 0, 0, .4) url("../../resources/img/app/btn_zoomin.png") no-repeat 50%; 
+      background-size: 4vh; 
+    }
+    .fullShow.zoomout{
+      background-image: url("../../resources/img/app/btn_zoomout.png")
+    }
+    .fullShow > button{
+      position: static; 
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 10px; 
+      border-radius: 0; 
+      transform: none;
+    }
+    .fullShow > button::before{display: none;}
+		[data-full-ebook], [data-full-ebook='no'] {display: none;}
+		[data-full-ebook='yes'] {display: block;}
+    </style>
+    <div class="fullShow" data-full-ebook="yes"></div>
+    <!--// 24.01.31 -->
+
+    <div class="book-content">
+      <!-- 23.11.14 ebook 관련 퍼블리싱 수정 -->
+      <div class="read-book-img">
+        <!-- ebook size를 받아오기 위한 영역 -->
+        <div class="magazine-size">
+          <!-- 23.11.22 ebook size때문에 이미지 하나 더 추가 -->
+          <img src="../../resources/img/1.jpg" alt="">
+          <img src="../../resources/img/1.jpg" alt="">
+        </div>
+        <div id="magazine" class="magazine">
+          <div class="page" data-page="1">
+            <img src="../../resources/img/1.jpg" alt="">
+          </div>
+          <div class="page" data-page="2">
+            <img src="../../resources/img/2.jpg" alt="">
+          </div>
+          <div class="page" data-page="3">
+            <img src="../../resources/img/3.jpg" alt=""> 
+          </div>
+          <div class="page" data-page="4">
+            <img src="../../resources/img/4.jpg" alt="">
+            <!-- 23.11.22 play 버튼 위치 클래스 추가 -->
+            <a href="javascript:void(0)" data-audio-index="4" class="play play-top1"></a>
+            <audio src="../../resources/audio/4.mp3"></audio>
+          </div>
+          <div class="page" data-page="5">
+            <img src="../../resources/img/5.jpg" alt="">
+            <!-- 23.11.22 play 버튼 위치 클래스 추가 -->
+            <a href="javascript:void(0)" data-audio-index="5" class="play play-top2"></a>
+            <audio src="../../resources/audio/5.mp3"></audio>
+          </div>
+          <div class="page" data-page="6">
+            <img src="../../resources/img/6.jpg" alt="">
+            <!-- 23.11.22 play 버튼 위치 클래스 추가 -->
+            <a href="javascript:void(0)" data-audio-index="6" class="play play-center1"></a>
+            <audio src="../../resources/audio/6.mp3"></audio>
+          </div>
+          <div class="page" data-page="7">
+            <img src="../../resources/img/7.jpg" alt="">
+            <!-- 23.11.22 play 버튼 위치 클래스 추가 -->
+            <a href="javascript:void(0)" data-audio-index="7" class="play play-center2"></a>
+            <audio src="../../resources/audio/7.mp3"></audio>
+          </div>
+          <div class="page" data-page="8">
+            <img src="../../resources/img/8.jpg" alt="">
+            <!-- 23.11.22 play 버튼 위치 클래스 추가 -->
+            <a href="javascript:void(0)" data-audio-index="8" class="play play-bottom1"></a>
+            <audio src="../../resources/audio/8.mp3"></audio>
+          </div>
+          <div class="page" data-page="9">
+            <img src="../../resources/img/9.jpg" alt="">
+            <!-- 23.11.22 play 버튼 위치 클래스 추가 -->
+            <a href="javascript:void(0)" data-audio-index="9" class="play play-bottom2"></a>
+            <audio src="../../resources/audio/9.mp3"></audio>
+          </div>
+          <div class="page" data-page="10">
+            <img src="../../resources/img/10.jpg" alt="">
+          </div>
+          <div class="page" data-page="11">
+            <img src="../../resources/img/11.jpg" alt="">
+          </div>
+          <div class="page" data-page="12">
+            <img src="../../resources/img/12.jpg" alt="">
+          </div>
+          <div class="page" data-page="13">
+            <img src="../../resources/img/13.jpg" alt="">
+          </div>
+          <div class="page" data-page="14">
+            <img src="../../resources/img/14.jpg" alt="">
+          </div>
+          <div class="page" data-page="15">
+            <img src="../../resources/img/15.jpg" alt="">
+          </div>
+          <div class="page" data-page="16">
+            <img src="../../resources/img/16.jpg" alt="">
+          </div>
+          <div class="page" data-page="17">
+            <img src="../../resources/img/17.jpg" alt="">
+          </div>
+          <div class="page" data-page="18">
+            <img src="../../resources/img/18.jpg" alt="">
+          </div>
+          <div class="page" data-page="19">
+            <img src="../../resources/img/19.jpg" alt="">
+          </div>
+          <div class="page" data-page="20">
+            <img src="../../resources/img/20.jpg" alt="">
+          </div>
+          <div class="page" data-page="21">
+            <img src="../../resources/img/21.jpg" alt="">
+          </div>
+          <div class="page" data-page="22">
+            <img src="../../resources/img/22.jpg" alt="">
+          </div>
+          <div class="page" data-page="23">
+            <img src="../../resources/img/23.jpg" alt="">
+          </div>
+          <div class="page" data-page="24">
+            <img src="../../resources/img/24.jpg" alt="">
+          </div>
+          <div class="page" data-page="25">
+            <img src="../../resources/img/25.jpg" alt="">
+          </div>
+          <div class="page" data-page="26">
+            <img src="../../resources/img/26.jpg" alt="">
+          </div>
+          <div class="page" data-page="27">
+            <img src="../../resources/img/27.jpg" alt="">
+          </div>
+          <div class="page" data-page="28">
+            <img src="../../resources/img/28.jpg" alt="">
+          </div>
+        </div>
+        <button id="prevBtn" class="prevBtn">Previous</button>
+        <button id="nextBtn" class="nextBtn">Next</button>
+      </div>
+
+      <p class="book-page">
+        <strong>3</strong> 20
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>EVERYBOOKS 어드민</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '3' };
+	</script>
+</head>
+
+<body class="b2b">
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2b"></div>
+		<section class="main-conts">
+			<h2>센터 관리</h2>
+			<ul class="page-nav">
+				<li class="current"><a href="#">센터 관리</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><label for="inp01">센터명</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="3">
+								<div class="frm-area">
+									<input type="text" name="" id="inp01" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp06">센터 이메일</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp06" class="inp-text">
+								</div>
+							</td>
+							<th scope="row"><label for="inp02">센터 책임자명</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp02" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp06">비밀번호</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp06" class="inp-text">
+								</div>
+							</td>
+							<th scope="row"><label for="inp06_02">비밀번호 확인</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp06_02" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp03">센터 전화번호</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp03" class="inp-text">
+								</div>
+							</td>
+							<th scope="row"><label for="inp04">센터 고유번호</label></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp04" class="inp-text">
+								</div>
+							</td>
+						</tr>
+            <tr>
+              <th scope="row">시스템 등록일자<span class="ico-req"><span class="hide">필수</span></span></th>
+              <td>
+                <div class="ui-date-wrap full">
+                  <div class="ui-datepicker">
+                    <input type="text" id="uiDate_1" class="inp-base date" title="날짜입력" readonly="" required="">
+                    <button type="button" class="ui-datepicker-btn" data-target="uiDate_1">
+                      <span class="a11y-hidden">시스템 등록일자 선택</span>
+                    </button>
+                  </div>
+                </div>
+              </td>
+              <th scope="row">시스템 해제일자</th>
+              <td>
+                <div class="ui-date-wrap full">
+                  <div class="ui-datepicker">
+                    <input type="text" id="uiDate_2" class="inp-base date" title="날짜입력" readonly="" required="">
+                    <button type="button" class="ui-datepicker-btn" data-target="uiDate_2">
+                      <span class="a11y-hidden">시스템 해제일자 선택</span>
+                    </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+						<tr>
+              <th><label for="inpUpload">이미지 첨부</label></th>
+              <td>
+                <div class="file-wrap">
+                  <div class="input-item">   
+                    <input type="text" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                    <span class="btn base square">
+                      <input type="file" title="첨부파일 선택" id="inpUpload">
+                      <span>파일추가</span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+							<th scope="row">사용여부<span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+                <div class="frm-area">
+                  <span class="lb-item">
+                    <input type="radio" id="rp01" name="rpBtn4">
+                    <label for="rp01" class="lb-radio"><span>사용</span></label>
+                  </span>
+                  <span class="lb-item">
+                    <input type="radio" id="rp02" name="rpBtn4">
+                    <label for="rp02" class="lb-radio"><span>미사용</span></label>
+                  </span>
+                </div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+      <div class="tbl-btns">
+        <button class="btn base tertiary"><span>삭제</span></button>
+        <div>
+          <button class="btn base secondary"><span>취소</span></button>
+          <button class="btn base primary"><span>저장</span></button>
+        </div>
+      </div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

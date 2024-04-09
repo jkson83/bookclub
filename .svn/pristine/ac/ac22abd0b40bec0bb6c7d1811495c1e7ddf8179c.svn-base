@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>두 점 사이의 각도 계산과 선 그리기</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+  *{margin:0;padding:0}
+  .point{position: absolute;width:15px;height:15px;border-radius:50%;background-color: #000;cursor:pointer;border:none;z-index: 1;}
+  .line{width:0;height:1px;
+    background-image: linear-gradient(90deg, #98CD8D 27.78%, Transparent  27.78%, Transparent  50%, #98CD8D 50%, #98CD8D 77.78%, Transparent  77.78%, Transparent  100%);
+background-size: 18.00px 18.00px;
+        transition:width .5s;}
+</style>
+<body>
+
+<div id="container" style="width: 300px; height: 400px; margin: 0 auto; position: relative; background-color: lightgray;">
+  <button type="button" class="point" data-num="1" data-element="point" style="left: 50px; top: 100px;"></button>
+  <button type="button" class="point" data-num="2" data-element="point" style="left: 50px; top: 200px;"></button>
+  <button type="button" class="point" data-num="2" data-element="point" style="left: 200px; top: 100px;"></button>
+  <button type="button" class="point" data-num="1" data-element="point" style="left: 200px; top: 300px;"></button>
+</div>
+
+<script>
+$(document).ready(function() {
+  var startPoint = null;
+  var selectedCards = [];
+  $("[data-element=point]").click(function() {
+    if (startPoint === null) {
+      $('.line').remove();
+      startPoint = $(this);
+    } else {
+      var endPoint = $(this);
+
+      var startCoords = getCoords(startPoint);
+      var endCoords = getCoords(endPoint);
+
+      var deltaX = endCoords.x - startCoords.x;
+      var deltaY = endCoords.y - startCoords.y;
+
+      var radians = Math.atan2(deltaY, deltaX);
+      var degrees = radians * (180 / Math.PI);
+
+      var lineLength = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+      if(startCoords.x !== endCoords.x){
+        var line = $("<div class='line'></div>").appendTo("#container");
+        line.css({
+          position: "absolute",
+          left: startCoords.x,
+          top: startCoords.y,
+          transform: "rotate(" + degrees + "deg)",
+          transformOrigin: "0 0",
+        });
+        setTimeout(function(){
+          line.css({width: lineLength})
+        },0)
+  
+        startPoint = null;
+      }
+      startPoint = null;
+    }
+    if (!$(this).hasClass("matched") && selectedCards.length < 2) {
+        $(this).addClass("selected");
+        selectedCards.push($(this));
+
+        if (selectedCards.length === 2) {
+            var value1 = selectedCards[0].data("num");
+            var value2 = selectedCards[1].data("num");
+
+            if (value1 === value2) {
+                selectedCards.forEach(function(card) {
+                    card.addClass("matched");
+                });
+                alert("성공! 짝을 맞췄습니다.");
+            } else {
+                setTimeout(function() {
+                    selectedCards.forEach(function(card) {
+                        card.removeClass("selected");
+                    });
+                    alert("실패! 짝이 맞지 않습니다.");
+                }, 300);
+            }
+            selectedCards = [];
+        }
+    }
+  });
+
+
+  function getCoords(pointElement) {
+    return {
+      x: pointElement.position().left + pointElement.width() / 2,
+      y: pointElement.position().top + pointElement.height() / 2
+    };
+  }
+});
+</script>
+
+</body>
+</html>

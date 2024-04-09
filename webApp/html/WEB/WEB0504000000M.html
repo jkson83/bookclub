@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <script type="text/javascript" src="../_ui_include/web_header.js"></script>
+    <div id="container" class="container">
+      
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#none" class="home"><span class="hidden">HOME</span></a></li>
+          <li><a href="#none">앱 다운로드</a></li>
+          <li class="current"><a href="#none">체험하기 </a></li>
+        </ul>
+      </div>
+
+      <div class="sc-sub-area v2">
+        <h2 class="sc-sub-tit">체험하기</h2>
+        <p>에브리북클럽이 궁금하다면?<br><b>디지털 콘텐츠 서비스 바로 체험해보세요!</b></p>
+      </div>
+      
+      <div class="section">
+        <div class="tablet-box">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="swiper-content">
+                  <div class="swiper-img-box">
+                    <img src="../../resources/img/web/app_use_img06.png" alt="">
+                  </div>
+                  <div class="swiper-txt">
+                    <strong><span>STEP 1</span>이북 읽기</strong>
+                    <p>STEP1의 BOOK1의 도서를 이북과 오디오북을 통해서<br> 재미있고 쉽게 읽어볼 수 있어요.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-content">
+                  <div class="swiper-img-box">
+                    <img src="../../resources/img/web/app_use_img03.png" alt="">
+                  </div>
+                  <div class="swiper-txt">
+                    <strong><span>STEP 2</span>독서확인학습</strong>
+                    <p>어휘력과 문해력의 기초를 탄탄하게 하고,<br> 스스로 글을 읽고 이해하는 능력을 길러줘요.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-content">
+                  <div class="swiper-img-box">
+                    <img src="../../resources/img/web/app_use_img04.png" alt="">
+                  </div>
+                  <div class="swiper-txt">
+                    <strong><span>STEP 3</span>문해력 게임</strong>
+                    <p>책을 얼마나 이해했는지 게임을 통해 확인하며<br> 성취와 즐거움을 한 번에 만나보세요.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="swiper-content">
+                  <div class="swiper-img-box">
+                    <img src="../../resources/img/web/app_use_img02.png" alt="">
+                  </div>
+                  <div class="swiper-txt">
+                    <strong><span>STEP 4</span>도서구독 혜택</strong>
+                    <p>도서 구독을 시작하면 에브리북클럽의 모든<br> 디지털 콘텐츠를 이용할 수 있어요.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-button-wrap">
+            <button type="button" class="swiper-button-prev"><span class="hidden">이전</span></button>
+            <button type="button" class="swiper-button-next"><span class="hidden">다음</span></button>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="btn-wrap fx-center">
+            <button type="button" class="btn lg round primary"><span class="ico android">Google Play</span></button>
+            <button type="button" class="btn lg round primary"><span class="ico ios">App store</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom banner -->
+      <div class="btm-banner">
+        <div class="in">
+          <p>우리아이 독서습관 지금 바로 시작해보세요!</p>
+          <button type="button" class="btn lg primary">에브리북클럽 시작하기</button>
+        </div>
+      </div>
+      <!--// bottom banner -->
+    </div>
+    <script type="text/javascript" src="../_ui_include/footer.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-container', { 
+          slidesPerView: 1,
+          spaceBetween: 0,
+          autoplay: true,
+          delay: 2500,
+          centeredSlides: true,
+          loop : false,
+          loopAdditionalSlides : 1, 
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,  
+          },
+          navigation: {
+            nextEl: ".swiper-button-next", 
+            prevEl: ".swiper-button-prev",
+          },
+        });
+    </script>
+  </div>
+</body>
+</html>

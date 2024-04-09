@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+// Default
+*{margin:0;padding:0;}
+ul{list-style:none;}
+
+// layout
+html, body{margin:0;padding:0;height:100%;min-height:100%;}
+body{font:11px/1.5 'Malgun Gothic', Verdana, Dotum, sans-serif;margin:0;letter-spacing:0;color:#000;
+	select{font:11px/1.5 'Malgun Gothic', Verdana, Dotum, sans-serif;margin:0;letter-spacing:0;color:#000;}
+	#wrap{
+		#content{padding:0 10px 100px 10px; visibility:hidden;}//화면 튐 현상 방지
+		h1{margin-bottom:0;padding:10px 15px; letter-spacing:-1px; font-size: 2.15em; font-weight: bold;
+			a{text-decoration: none; color: inherit; }
+			small{display: inline-block; margin-left: 5px;letter-spacing:-1px; font-size: 14px; }
+		}
+		h2{font-size:11px}
+		h3{font-size:11px ; color:#999;
+			&.point, &.point * {color: #333; }
+		}
+	}
+}
+
+//addClass
+body{
+	$bg2 : #efefef; 
+	&.headerFloating{
+		.header{position:fixed;z-index:9;top:0px;left:0;width:100%;box-shadow: 0 0 15px 0 rgba(0,0,0,.6);}
+		.tab_nav {background-color:$bg2; transition: all ease-in-out 0.2s;}
+		.info_section{border:none;}
+		.info_fold_btn{
+			z-index:4; right:19px; 
+			a{box-shadow: 0 -2px 10px 2px rgba(0,0,0,.6);}
+		}
+	}
+	&.headerClose{
+		.info_fold_btn{
+			a{background-color:#ddd; color:#fff;}
+		}
+	}
+	&.headerClose.headerFloating{
+		.tab_nav{border-bottom:none;padding-bottom:1px;}
+		.info_fold_btn{
+			a{background-color:$bg2;color:#999; }
+		}
+	}
+}
+
+//dimmed
+.dimmed{z-index:998;display:none;position:fixed;left:0; right:0; top:0;bottom:0;background-color:#000; opacity:0.5;}
+

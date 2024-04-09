@@ -1,0 +1,177 @@
+<!-- modal -->
+<section class="ui-modal" id="ADM04030101P">
+    <div class="ui-modal-wrap modal-size-l">
+        <div class="ui-modal-header">
+            <h1 class="ui-modal-tit">ETF 상품유형 수정</h1>
+            <button type="button" class="icon-close ui-modal-close" aria-label="close" ><span class="hide">모달 닫기</span></button>
+        </div>
+        <div class="ui-modal-body ui-scrollbar">       
+            <div class="modal-conts">
+                <div class="info-title">
+                    <p class="msg">* 권장 사이즈 : xxx*xxx</p>
+                </div>
+                <div class="tbl-base mgt10">
+                    <table>                   
+                        <colgroup> 
+                            <col style="width:56px;">
+                            <col style="width:auto;">                      
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <div class="frm-area">
+                                        <input type="text" class="inp-text size-l" placeholder="상품유형(한글)입력" title="상품유형(한글) 입력">
+                                        <input type="text" class="inp-text size-l" placeholder="상품유형(영문)입력" title="상품유형(영문) 입력">
+                                        <span class="lb-item">
+                                            <input type="radio" id="etfUseY01" name="etfUse01" checked>
+                                            <label for="etfUseY01" class="lb-radio"><span>사용</span></label>
+                                        </span>
+                                        <span class="lb-item">
+                                            <input type="radio" id="etfUseN01" name="etfUse01">
+                                            <label for="etfUseN01" class="lb-radio"><span>미사용</span></label>
+                                        </span>  
+                                    </div>                                                          
+                                    <div class="file-wrap mgt10">
+                                        <div class="input-item">                                       
+                                            <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                            <span class="btn base square">
+                                                <input type="file" title="첨부파일 선택">
+                                                <span>이미지 등록(검정)</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-list">
+                                            <div class="file">
+                                                <p class="file-name">filename1.doc</p>
+                                                <button type="button" class="btn-del"><span>삭제</span></button>
+                                            </div>
+                                        </div>
+                                    </div>                                                           
+                                    <div class="file-wrap mgt10">
+                                        <div class="input-item">                                       
+                                            <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                            <span class="btn base square">
+                                                <input type="file" title="첨부파일 선택">
+                                                <span>이미지 등록(흰색)</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-list">
+                                            <div class="file">
+                                                <p class="file-name">filename1.doc</p>
+                                                <button type="button" class="btn-del"><span>삭제</span></button>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <p class="error-info">! 상품유형은 최소 1개 이상 등록되어야 합니다.</p>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>
+                                    <div class="frm-area">
+                                        <input type="text" class="inp-text size-l" placeholder="상품유형(한글)입력" title="상품유형(한글) 입력">
+                                        <input type="text" class="inp-text size-l" placeholder="상품유형(영문)입력" title="상품유형(영문) 입력">                                        
+                                        <span class="lb-item">
+                                            <input type="radio" id="etfUseY02" name="etfUse02" checked>
+                                            <label for="etfUseY02" class="lb-radio"><span>사용</span></label>
+                                        </span>
+                                        <span class="lb-item">
+                                            <input type="radio" id="etfUseN02" name="etfUse02">
+                                            <label for="etfUseN02" class="lb-radio"><span>미사용</span></label>
+                                        </span>  
+                                    </div>                                                          
+                                    <div class="file-wrap mgt10">
+                                        <div class="input-item">                                       
+                                            <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                            <span class="btn base square">
+                                                <input type="file" title="첨부파일 선택">
+                                                <span>이미지 등록(검정)</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-list">
+                                            <div class="file">
+                                                <p class="file-name">filename1.doc</p>
+                                                <button type="button" class="btn-del"><span>삭제</span></button>
+                                            </div>
+                                        </div>
+                                    </div>                                                           
+                                    <div class="file-wrap mgt10">
+                                        <div class="input-item">                                       
+                                            <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                            <span class="btn base square">
+                                                <input type="file" title="첨부파일 선택">
+                                                <span>이미지 등록(흰색)</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-list">
+                                            <div class="file">
+                                                <p class="file-name">filename1.doc</p>
+                                                <button type="button" class="btn-del"><span>삭제</span></button>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <p class="error-info">! 상품유형은 최소 1개 이상 등록되어야 합니다.</p>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>
+                                    <div class="frm-area">
+                                        <input type="text" class="inp-text size-l" placeholder="상품유형(한글)입력" title="상품유형(한글) 입력">
+                                        <input type="text" class="inp-text size-l" placeholder="상품유형(영문)입력" title="상품유형(영문) 입력">                                        
+                                        <span class="lb-item">
+                                            <input type="radio" id="etfUseY03" name="etfUse03" checked">
+                                            <label for="etfUseY03" class="lb-radio"><span>사용</span></label>
+                                        </span>
+                                        <span class="lb-item">
+                                            <input type="radio" id="etfUseN03" name="etfUse03">
+                                            <label for="etfUseN03" class="lb-radio"><span>미사용</span></label>
+                                        </span>  
+                                    </div>                                                          
+                                    <div class="file-wrap mgt10">
+                                        <div class="input-item">                                       
+                                            <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                            <span class="btn base square">
+                                                <input type="file" title="첨부파일 선택">
+                                                <span>이미지 등록(검정)</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-list">
+                                            <div class="file">
+                                                <p class="file-name">filename1.doc</p>
+                                                <button type="button" class="btn-del"><span>삭제</span></button>
+                                            </div>
+                                        </div>
+                                    </div>                                                           
+                                    <div class="file-wrap mgt10">
+                                        <div class="input-item">                                       
+                                            <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                            <span class="btn base square">
+                                                <input type="file" title="첨부파일 선택">
+                                                <span>이미지 등록(흰색)</span>
+                                            </span>
+                                        </div>
+                                        <div class="file-list">
+                                            <div class="file">
+                                                <p class="file-name">filename1.doc</p>
+                                                <button type="button" class="btn-del"><span>삭제</span></button>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <p class="error-info">! 상품유형은 최소 1개 이상 등록되어야 합니다.</p>                          
+                                </td>
+                            </tr>  
+                        </tbody>
+                    </table>
+                </div>
+            </div>                       
+        </div> 
+        <div class="ui-modal-footer">
+            <div class="btn-group">
+                <button type="button" class="btn base tertiary"><span>취소</span></button>
+                <button type="button" class="btn base primary"><span>저장</span></button>
+            </div>
+        </div>
+    </div>
+</section>                    
+<!-- //modal -->

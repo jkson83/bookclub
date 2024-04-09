@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>두 점 사이의 각도 계산과 선 그리기</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+  *{margin:0;padding:0}
+  .container {
+    margin: 0 auto;
+    width: 325px;
+  }
+  h2 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  h2 span {
+    color: #e56a5a;
+  }
+  .drag {
+    background-color: #e56a5a;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+    margin-left: 5px;
+    height: 100px;
+    width: 100px;
+    -webkit-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    -ms-transition: background-color 0.25s ease-in;
+    -o-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+  }
+  .drag:last-of-type {
+    margin-right: 5px;
+  }
+  .drag:hover {
+    background-color: #f94a34;
+  }
+
+  #dropIt {
+    background: #5eced2;
+    border-radius: 5px;
+    height: 110px;
+    margin: 0 auto;
+    padding-top: 5px;
+    width: 325px;
+  }
+
+  #holder {
+    background: #fff;
+    border-radius: 5px;
+    height: 110px;
+    margin: 0 auto;
+    padding-top: 5px;
+    width: 325px;
+  }
+</style>
+<body>
+  <section id="html5-drag" class="container">
+    <header>
+      <h2>Drag N' Drop - <span>HTML5</span></h2>
+    </header>
+    <article id="holder" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">
+      <div class="drag" id="boxA" draggable="true" ondragstart="return dragStart(event)"></div>
+      <div class="drag" id="boxB" draggable="true" ondragstart="return dragStart(event)"></div>
+      <div class="drag" id="boxC" draggable="true" ondragstart="return dragStart(event)"></div>
+    </article>
+    
+    <article id="dropIt" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"></article>
+  </section>
+<script>
+  function dragStart(ev) {
+    ev.dataTransfer.effectAllowed='move';
+    ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
+    ev.dataTransfer.setDragImage(ev.target,50,50);
+    return true;
+  }
+
+  // these functions prevents default behavior of browser
+  function dragEnter(ev) {
+    event.preventDefault();
+    return true;
+  }
+  function dragOver(ev) {
+    event.preventDefault();
+  }
+
+  // function defined for when drop element on target
+  function dragDrop(ev) {
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    ev.stopPropagation();
+    return false;
+  }
+</script>
+
+</body>
+</html>

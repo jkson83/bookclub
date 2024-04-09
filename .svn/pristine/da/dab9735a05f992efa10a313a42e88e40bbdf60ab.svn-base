@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+@mixin ellipsis($lines: 1) {
+  @if ($lines==1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+@mixin clearfix{
+  &:after{
+    display:block;
+    clear:both;
+    content:'';
+  }
+}
+@mixin text-hide{
+  overflow: hidden;
+  text-indent: -9999px;
+}
+@mixin v4CardTitle {
+  color: #111;
+  font-family: 'binggrae';
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -.04rem;
+  line-height: 1.4;
+}
+@mixin v4CardTitleMob {
+  color: #111;
+  font-family: 'binggrae';
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -.04rem;
+  line-height: 1.4;
+}
+@mixin smoothEffect {
+  transition: all .3s;
+}
+@mixin v2PatterBg {
+  content: '';
+  position: absolute;
+  width: 25.3rem;
+  height: 25.2rem;
+  background: url('../../resources/img/web/main/mo/book_v2_pattern.png') no-repeat;
+  background-size: 100% auto;
+}
+@mixin logoMob {
+  display: block;
+  width: 6.2rem;
+  height: 2.78rem;
+  margin-left: 2.4rem;
+  background:url($nav_logo_m) 50% 50% no-repeat;
+  background-size: contain;
+}
+@mixin headerBtn{
+  min-width: 8.8rem;
+  height: 4.5rem;
+  padding: 1.2rem 2rem;
+  border-radius: 10rem;
+}
+@mixin headerBtnText{
+  font-family: 'binggrae';
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+@mixin headerMobBtn{
+  min-width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+@mixin hidden{
+  overflow:hidden;
+  display:inline-block;
+  width:1px;
+  height:1px;
+  border:0;
+  clip:rect(1px, 1px, 1px, 1px);
+  clip-path:inset(50%);
+}

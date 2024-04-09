@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body class="section-m">
+  <div id="wrap" class="wrap nomenu">
+    <div id="container" class="container">
+
+      <div class="system-message">
+        <div class="system-message-txt">
+          <strong>잠시 후 다시 확인해 주세요.</strong>
+          <p>일시적으로 서비스에 연결할 수 없습니다. 잠시 후 다시 서비스를 이용해 주세요.<br>이용에 불편을 드려 죄송합니다.</p>
+        </div> 
+        <div class="btn-wrap">
+          <button type="button" class="btn lg primary">메인으로</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

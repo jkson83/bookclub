@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>  
+</head>
+<body style="margin: 0;">
+  <div style="max-width: 680px; margin-top: 58px; padding: 0 40px; text-align: center;">
+    
+    <strong style="font-size: 30px; font-weight: 700; word-break: keep-all; letter-spacing: -1px;">마케팅 정보 수신 동의 확인</strong>
+    <p style="margin: 20px 0 0 0; font-size: 18px; line-height: 1.6; letter-spacing: -1px;">안녕하세요, 에브리북클럽입니다.</p>
+    <p style="margin: 20px 0 0 0; font-size: 18px; line-height: 1.6; letter-spacing: -1px; word-break: keep-all;">본 메일은 정보통신망 이용촉진 및 정보보호 등에 관한 법률 제50조 제8항 및 동법 시행령 제62조의3에 따라 광고성 정보 수신에 동의한 고객님을 대상으로 정기적으로 수신동의 현황을 알려드리는 메일입니다.</p>
+
+    <div style="margin-top: 45px; padding: 30px; text-align: left; border: 1px solid #C6C6C6; border-radius: 10px;">
+      <div style="overflow:hidden;">
+        <span style="float: left; color: #000; font-size: 18px; font-weight: 700; letter-spacing: -1px;">수신 동의 계정</span>
+        <span style="float: left; width: 1px; height: 12px; margin: 5px 15px; background-color:#D9D9D9;"></span>
+        <span style="float: left; color: #000; font-size: 18px; font-weight: 700; letter-spacing: -1px;">awert123@gmail.com</span>
+      </div>
+      <div style="overflow:hidden; margin-top: 30px;">
+        <span style="float: left; color: #000; font-size: 18px; font-weight: 700; letter-spacing: -1px;">수신 동의 항목</span>
+        <span style="float: left; width: 1px; height: 12px; margin: 5px 15px; background-color:#D9D9D9;"></span>
+        <span style="float: left; color: #000; font-size: 18px; font-weight: 700; letter-spacing: -1px;">문자메세지(SMS), E-mail</span>
+      </div>
+      <div style="overflow:hidden; margin-top: 30px;">
+        <span style="float: left; color: #000; font-size: 18px; font-weight: 700; letter-spacing: -1px;">수신 동의 내용</span>
+        <span style="float: left; width: 1px; height: 12px; margin: 5px 15px; background-color:#D9D9D9;"></span>
+        <span style="float: left; color: #000; font-size: 18px; font-weight: 700; letter-spacing: -1px;">혜택 정보, 각종 이벤트 정보, 상품 정보,<br> 신규 서비스 안내 등 광고성 정보</span>
+      </div>
+    </div>
+
+    <ul style="margin: 50px 0 0 0; padding: 0 0 0 15px; text-align: left;">
+      <li style="color:#666; font-size: 12px;">선택적 동의사항은 계약 체결에 필수적이지 않으므로 거부할 수 있으며, 동의 후에도 언제든지 철회가능합니다. <br>홈페이지(<a href="http://everybookclub.com" target="_blank">http://everybookclub.com</a>) 내 [부모페이지 > 회원정보 > 부모 계정 관리] 또는 대표번호(전화 02-3661-9981, 팩스 02-3662-9981)</li>
+      <li style="margin-top: 8px; color:#666; font-size: 12px;"><span>YYYY.MM.DD</span> 발송된 메일입니다.</li>
+      <li style="margin-top: 8px; color:#666; font-size: 12px;">본 이메일은 이메일 수신동의 여부와 관계없이 발송되는 발신전용 이메일입니다.</li>
+    </ul>
+  </div>
+  
+  <div style="padding: 50px; margin-top: 30px; height: 306px; background-color: #000;">
+    <ul style="overflow: hidden; padding: 0; list-style: none;">
+      <li style="float: left; color: #A8A8A8; font-size: 16px;">
+        ㈜비즈마켓렌탈
+        <span style="display: inline-block; width: 1px; height: 12px; margin: 0 12px 0 10px; vertical-align: middle; background-color: #fff; opacity: .2;"></span>
+      </li>
+      <li style="float: left; color: #A8A8A8; font-size: 16px;">
+        대표이사 : 최창록
+        <span style="display: inline-block; width: 1px; height: 12px; margin: 0 12px 0 10px; vertical-align: middle; background-color: #fff; opacity: .2;"></span>
+      </li>
+      <li style="float: left; color: #A8A8A8; font-size: 16px;">
+        사업자등록번호 : 602-86-01319
+      </li>
+      <li style="clear: both; float: left; padding-top: 10px; color: #A8A8A8; font-size: 16px;">
+        주소 : [우 04304] 서울시 용산구 청파로 75 전자랜드 별관 2층
+        <span style="display: inline-block; width: 1px; height: 12px; margin: 0 12px 0 10px; vertical-align: middle; background-color: #fff; opacity: .2;"></span>
+      </li>
+      <li style="float: left; padding-top: 10px; color: #A8A8A8; font-size: 16px;">대표번호 : 1670-9511</li>
+      <li style="clear: both; display: block; padding-top: 10px; color: #A8A8A8; font-size: 16px;">
+        대표메일 : book@bizmarket.com
+      </li>
+      <li style="clear: both; float: left; padding-top: 10px; color: #A8A8A8; font-size: 16px;">
+        콘텐츠 제작 : 허브원이엔씨 주식회사
+        <span style="display: inline-block; width: 1px; height: 12px; margin: 0 12px 0 10px; vertical-align: middle; background-color: #fff; opacity: .2;"></span>
+      </li>
+      <li style="float: left; padding-top: 10px; color: #A8A8A8; font-size: 16px;">고객센터 : 02-3661-9981</li>
+    </ul>
+    <p style="margin: 20px 0 0 0; color: #666; font-size: 15px;">Copyrights ⓒ 2024 BIZMARKETRENTAL CO., LTD. All Rights Reserved.</p>
+  </div>
+
+</body>
+</html>

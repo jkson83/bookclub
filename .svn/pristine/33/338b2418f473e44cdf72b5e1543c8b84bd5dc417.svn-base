@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>  
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <script type="text/javascript" src="../_ui_include/web_header.js"></script>
+    <div id="container" class="container">
+      
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#none" class="home"><span class="hidden">HOME</span></a></li>
+          <li><a href="#none">정기구독</a></li>
+          <li class="current"><a href="#none">정기구독</a></li>
+        </ul>
+      </div>
+
+      <div class="sc-sub-area v3">
+        <h2 class="sc-sub-tit">정기구독</h2>
+        <p>믿고 시작하는 우리아이 독서습관<br><b>에브리북클럽과 함께해요!</b></p>
+      </div>
+      
+      <div class="section">
+        <div class="inner">
+
+          <div class="standing-order">
+            <ol class="standing-order-step">
+              <li>
+                <span class="cont">에브리북클럽<br>구독</span>
+              </li>
+              <li>
+                <span class="cont">매월 도서<br>3~4권 무료배송</span>
+              </li>
+              <li>
+                <span class="cont">독서 후 디지털<br>학습 무료이용</span>
+              </li>
+            </ol>
+            <!--// standing-order-step -->
+            <div class="standing-order-list">
+              <div class="standing-order-item">
+                <input type="radio" id="rdo1" name="orderMonth">
+                <label for="rdo1">
+                  <span class="standing-order-head">
+                    에브리북클럽 <strong>12개월</strong>
+                  </span>
+                  <dl class="standing-order-cont">
+                    <div>
+                      <dt>기본가</dt>
+                      <dd>123,456원</dd>
+                    </div>
+                    <div>
+                      <dt class="txt-blue">할인가</dt>
+                      <dd class="txt-blue">123,456원</dd>
+                    </div>
+                  </dl>
+                </label>
+                <span class="tip">12개월 구독으로 꾸준하게 문해력 up!</span>
+              </div>
+              <div class="standing-order-item">
+                <input type="radio" id="rdo2" name="orderMonth">
+                <label for="rdo2">
+                  <span class="standing-order-head">
+                    에브리북클럽 <strong>6개월</strong>
+                  </span>
+                  <dl class="standing-order-cont">
+                    <div>
+                      <dt>기본가</dt>
+                      <dd>123,456원</dd>
+                    </div>
+                    <div>
+                      <dt class="txt-blue">할인가</dt>
+                      <dd class="txt-blue">123,456원</dd>
+                    </div>
+                  </dl>
+                </label>
+              </div>
+              <div class="standing-order-item">
+                <input type="radio" id="rdo3" name="orderMonth">
+                <label for="rdo3">
+                  <span class="standing-order-head">
+                    에브리북클럽 <strong>3개월</strong>
+                  </span>
+                  <dl class="standing-order-cont">
+                    <div>
+                      <dt>기본가</dt>
+                      <dd>123,456원</dd>
+                    </div>
+                    <div>
+                      <dt class="txt-blue">할인가</dt>
+                      <dd class="txt-blue">123,456원</dd>
+                    </div>
+                  </dl>
+                </label>
+              </div>
+              <div class="standing-order-item">
+                <input type="radio" id="rdo4" name="orderMonth">
+                <label for="rdo4">
+                  <span class="standing-order-head">
+                    에브리북클럽 <strong>1개월</strong>
+                  </span>
+                  <dl class="standing-order-cont">
+                    <div>
+                      <dt>기본가</dt>
+                      <dd>123,456원</dd>
+                    </div>
+                    <div>
+                      <dt class="txt-blue">할인가</dt>
+                      <dd class="txt-blue">123,456원</dd>
+                    </div>
+                  </dl>
+                </label>
+              </div>
+            </div>
+            <!--// standing-order-list -->
+            <div class="btn-wrap">
+              <button type="button" class="btn lg primary">정기구독하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="../_ui_include/footer.js"></script>
+  </div>
+</body>
+</html>

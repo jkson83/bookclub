@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap setting">
+    <div class="setting-header">
+      <h1 class="title-setting">설정</h1>
+
+      <button type="button" class="btn-back">뒤로가기</button> 
+    </div>
+
+    <div class="setting-container">
+      <div class="setting-box">
+        <ul class="setting-list">
+          <li>
+            <strong class="title-sub-setting">사운드 설정</strong>
+
+            <div class="setting-check-area">
+              <span class="d-check-setting">
+                <input type="checkbox" id="setting1-1">
+                <label for="setting1-1">켜기</label>
+              </span>
+
+              <span class="d-check-setting">
+                <input type="checkbox" id="setting1-2">
+                <label for="setting1-2">끄기</label>
+              </span>
+            </div>
+          </li>
+          <li>
+            <strong class="title-sub-setting">문해력 게임 시간 설정</strong>
+
+            <div class="setting-check-area">
+              <span class="d-check-setting">
+                <input type="checkbox" id="setting2-1">
+                <label for="setting2-1">10초</label>
+              </span>
+
+              <span class="d-check-setting">
+                <input type="checkbox" id="setting2-2">
+                <label for="setting2-2">30초</label>
+              </span>
+
+              <span class="d-check-setting">
+                <input type="checkbox" id="setting2-3">
+                <label for="setting2-3">60초</label>
+              </span>
+
+              <span class="d-check-setting">
+                <input type="checkbox" id="setting2-4">
+                <label for="setting2-4">120초</label>
+              </span>
+            </div>
+          </li>
+          <li>
+            <strong class="title-sub-setting">App 버전 정보</strong>
+
+            <div class="setting-check-area">
+              1.00
+            </div>
+          </li>
+        </ul>
+
+        <div class="btn-save-area logout">
+          <button class="btn-save">로그아웃</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

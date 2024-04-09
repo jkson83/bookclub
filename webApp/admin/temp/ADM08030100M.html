@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EVERYBOOKS</title>
+    <link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+    <script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.global.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.common.js"></script>
+    <script type="text/javascript">
+        pageInfo = { mid: '2', sid: '2' }; 
+    </script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+    <header class="gnb-wrap" id="header">
+        <div>
+            <h1><span class="hide">EVERYBOOKS</span></h1>
+            <div class="links">
+                <a href="#"><span>홈페이지 바로가기</span></a>
+                <button type="button" class="logout">로그아웃</button>
+            </div> 
+        </div>
+    </header>
+    <main class="main-wrap" id="content">
+        <div class="sub-nav"></div>
+        <section class="main-conts">
+            <h2>REPORT</h2>
+            <ul class="page-nav">
+                <li><a href="#">공시정보 관리</a></li>
+                <li class="current"><a href="#">펀드공시</a></li>
+            </ul>
+            <div class="tbl-base mgt40">
+                <table>                   
+                    <colgroup>
+                        <col style="width:auto;">
+                        <col style="width:auto;">     
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">Monthly</th>
+                            <th scope="col">Fact Sheet</th>
+                        </tr>
+                    </thead>
+                    <tbody>      
+                        <tr>
+                            <td> 
+                                <div class="frm-area report ui-scrollbar">
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="daily1" name="dailyChk">
+                                        <label for="daily1" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item chk">
+                                        <input type="checkbox" id="daily2" name="dailyChk">
+                                        <label for="daily2" class="lb-checkbox"><span>20221012221.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="daily3" name="dailyChk">
+                                        <label for="daily3" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="daily4" name="dailyChk">
+                                        <label for="daily4" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="daily5" name="dailyChk">
+                                        <label for="daily5" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="daily6" name="dailyChk">
+                                        <label for="daily6" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="daily7" name="dailyChk">
+                                        <label for="daily7" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="daily8" name="dailyChk">
+                                        <label for="daily8" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="daily9" name="dailyChk">
+                                        <label for="daily9" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="daily10" name="dailyChk">
+                                        <label for="daily10" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frm-area report ui-scrollbar">
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="monthly1" name="monthlyChk">
+                                        <label for="monthly2" class="lb-checkbox"><span>20221222011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="monthly2" name="monthlyChk" >
+                                        <label for="monthly2" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="monthly3" name="monthlyChk" >
+                                        <label for="monthly3" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="monthly4" name="monthlyChk" >
+                                        <label for="monthly4" class="lb-checkbox"><span>20221011.pdf</span></label>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>          
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    <div class="tbl-btns mgt8">
+                                        <div>
+                                            <button class="btn base cancel square"><span>삭제</span></button>
+                                            <button class="btn base square"><span>추가</span></button>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="tbl-btns mgt8">
+                                        <div>
+                                            <button class="btn base cancel square"><span>삭제</span></button>
+                                            <button class="btn base square"><span>추가</span></button>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </tfoot>                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright©2023 <a href="#" target="
+_blank">Everybooks</a>. All rights reserved</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+$setting_panel_width:250px;
+$setting_panel_pad:20px;
+$setting_panel_width_total :$setting_panel_width + $setting_panel_pad;
+
+body.headerFloating{
+	#setting{display: none;}
+}
+
+.setting_on{overflow: hidden;
+	#setting{@include transition(right); right: $setting_panel_pad * -1;
+		.setting_panel{ @include boxshadow();  }
+	}
+	.dimmed{display: block;}
+}
+
+#setting{@include transition(right); z-index:999; position: fixed; top: 0; width: $setting_panel_width_total; right:$setting_panel_width_total * -1;
+	.setting_panel{z-index:999; position: fixed;top: 0; bottom: 0; width: $setting_panel_width; height: 100%; border-left: 1px solid #ccc; background-color: #fff;
+		.setting_top{padding:6px $setting_panel_pad 0; margin-bottom: 20px;}
+		.setting_wrap{overflow-y:auto; height: calc(100vh - 110px); margin-right: -10px;padding:0 0 0 $setting_panel_pad; }
+		.setting_body{padding-right: 10px; padding-bottom: 20px;}
+		.setting_footer{position: absolute; left: $setting_panel_pad; right: $setting_panel_pad; bottom:20px; }
+	}
+
+	h2{font-weight: normal; color: #333; }
+	h3{font-size: 14px; font-weight: normal; color: #333;margin-bottom: 10px;}
+	label span{display: inline-block; padding-left: 5px; margin-top: -2px; vertical-align: top;}
+
+	.group{margin-top: 18px;
+		&:first-child{margin-top:0;}
+	}
+
+	.option_area{@include clearfix();
+		.option_list{ padding-left: 20px; width: calc(($setting_panel_width - $setting_panel_pad) - 20px);
+			 li{margin-bottom: 7px;float: left; width: 50%;
+				&:nth-child(2n){float: right;}
+				ul{margin-top: 6px;}
+				.data_groups{margin-left: 20px;}
+			}
+			.btn span{min-width: 47px;}
+		}
+	}
+
+	//btn
+	.setting_footer{font-size: 0;
+		.btn{width: 100%;  text-decoration: none;color: #fff;
+			span{display: block;min-width:auto;; border:1px solid #3583eb;  color: inherit; background-color:#3583eb; font-weight: bold; font-size: 13px;  border-radius: 4px; }
+			&:hover{text-decoration: underline;}
+		}
+	}
+
+	.btn_setting{display: block;z-index:1;position: fixed; top:10px; right: 10px; outline: 0; width:19px;height:19px; 
+		&:after{content:''; z-index:10; position: absolute; left: 3px;top:3px;  background:url($svg_icon_setting) 0 0 no-repeat;width: 14px; height: 14px; background-size: 14px; opacity:0.6; }
+		&:hover:after{opacity:1; transition: all ease-in-out 0.2s;  transform:rotate(60deg);}
+	}
+	.btn_close{position: absolute; top:10px; right:28px ;}
+}
+

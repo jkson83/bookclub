@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+@font-face { 
+	font-family: 'Binggrae'; 
+	font-style: normal; 
+	font-weight: 700; 
+	src: local(""), 
+		url("../fonts/Binggrae/Binggrae-Bold.woff") format("woff"), 
+		url("../fonts/Binggrae/Binggrae-Bold.woff2") format("woff2");
+}
+@font-face { 
+	font-family: 'Binggrae'; 
+	font-style: normal; 
+	font-weight: 400; 
+	src: local(""), 
+		url("../fonts/Binggrae/Binggrae.woff") format("woff"), 
+		url("../fonts/Binggrae/Binggrae.woff2") format("woff2");
+}
+@font-face { 
+	font-family: 'TmoneyRoundWinnd'; 
+	font-style: normal; 
+	font-weight: 800; 
+	src: local(""), 
+		url("../fonts/TmoneyRoundWinnd/TmoneyRoundWindExtraBold.woff") format("woff"), 
+		url("../fonts/TmoneyRoundWinnd/TmoneyRoundWindExtraBold.woff2") format("woff2");
+}
+@font-face { 
+	font-family: 'TmoneyRoundWinnd'; 
+	font-style: normal; 
+	font-weight: 400; 
+	src: local(""), 
+		url("../fonts/TmoneyRoundWinnd/TmoneyRoundWindRegular.woff") format("woff"), 
+		url("../fonts/TmoneyRoundWinnd/TmoneyRouTmoneyRoundWindRegulardWinnd.woff2") format("woff2");
+}
+@font-face { 
+	font-family: 'Pretendard'; 
+	font-style: normal; 
+	font-weight: 400; 
+	src: local(""), 
+		url("../fonts/Pretendard/Pretendard-Regular.woff") format("woff"), 
+		url("../fonts/Pretendard/Pretendard-Regular.woff2") format("woff2");
+}
+@font-face { 
+	font-family: 'Pretendard'; 
+	font-style: normal; 
+	font-weight: 800; 
+	src: local(""), 
+		url("../fonts/Pretendard/Pretendard-Bold.woff") format("woff"), 
+		url("../fonts/Pretendard/Pretendard-Bold.woff2") format("woff2");
+}
+@font-face { 
+	font-family: 'CookieRun'; 
+	font-style: normal; 
+	font-weight: 700; 
+	src: local(""), 
+		url("../fonts/CookieRun/CookieRun Bold.otf") format("opentype");
+}

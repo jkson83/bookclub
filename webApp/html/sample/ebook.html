@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ebook sample</title>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/app/ui.ebook.css">
+	<script type="text/javascript" src="../_ui_include/head.js"></script><!-- //Include: head -->
+	<script type="text/javascript" src="../../resources/js/lib/turn.html4.js"></script>
+	<script type="text/javascript" src="../../resources/js/lib/turn.js"></script>
+	<script type="text/javascript" src="../../resources/js/lib/hash.js"></script>
+	<script type="text/javascript" src="../../resources/js/ui.ebook.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<!-- ebook size를 받아오기 위한 영역 -->
+		<div class="magazine-size">
+			<img src="../../resources/img/1.jpg" alt="">
+		</div>
+		<div id="magazine" class="magazine">
+			<div class="page" data-page="1">
+				<img src="../../resources/img/1.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="1" class="play"></a> -->
+				<audio src="../../resources/audio/1.mp3"></audio>
+			</div>
+			<div class="page" data-page="2">
+				<img src="../../resources/img/2.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="2" class="play"></a> -->
+				<!-- <audio src="../../resources/audio/2.mp3"></audio> -->
+			</div>
+			<div class="page" data-page="3">
+				<img src="../../resources/img/3.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="3" class="play"></a> -->
+				<audio src="../../resources/audio/3.mp3"></audio>
+			</div>
+			<div class="page" data-page="4">
+				<img src="../../resources/img/4.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="4" class="play"></a>
+				<audio src="../../resources/audio/4.mp3"></audio>
+			</div>
+			<div class="page" data-page="5">
+				<img src="../../resources/img/5.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="5" class="play"></a>
+				<audio src="../../resources/audio/5.mp3"></audio> -->
+			</div>
+			<div class="page" data-page="6">
+				<img src="../../resources/img/6.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="6" class="play"></a>
+				<audio src="../../resources/audio/6.mp3"></audio>
+			</div>
+			<div class="page" data-page="7">
+				<img src="../../resources/img/7.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="7" class="play"></a>
+				<audio src="../../resources/audio/7.mp3"></audio>
+			</div>
+			<div class="page" data-page="8">
+				<img src="../../resources/img/8.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="8" class="play"></a>
+				<audio src="../../resources/audio/8.mp3"></audio>
+			</div>
+			<div class="page" data-page="9">
+				<img src="../../resources/img/9.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="9" class="play"></a>
+				<audio src="../../resources/audio/9.mp3"></audio>
+			</div>
+			<div class="page" data-page="10">
+				<img src="../../resources/img/10.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="10" class="play"></a>
+				<audio src="../../resources/audio/10.mp3"></audio>
+			</div>
+			<div class="page" data-page="11">
+				<img src="../../resources/img/11.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="11" class="play"></a>
+				<audio src="../../resources/audio/11.mp3"></audio>
+			</div>
+			<div class="page" data-page="12">
+				<img src="../../resources/img/12.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="12" class="play"></a>
+				<audio src="../../resources/audio/12.mp3"></audio>
+			</div>
+			<div class="page" data-page="13">
+				<img src="../../resources/img/13.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="13" class="play"></a>
+				<audio src="../../resources/audio/13.mp3"></audio>
+			</div>
+			<div class="page" data-page="14">
+				<img src="../../resources/img/14.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="14" class="play"></a>
+				<audio src="../../resources/audio/14.mp3"></audio> -->
+			</div>
+			<div class="page" data-page="15">
+				<img src="../../resources/img/15.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="15" class="play"></a>
+				<audio src="../../resources/audio/15.mp3"></audio>
+			</div>
+			<div class="page" data-page="16">
+				<img src="../../resources/img/16.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="16" class="play"></a>
+				<audio src="../../resources/audio/16.mp3"></audio> -->
+			</div>
+			<div class="page" data-page="17">
+				<img src="../../resources/img/17.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="17" class="play"></a>
+				<audio src="../../resources/audio/17.mp3"></audio>
+			</div>
+			<div class="page" data-page="18">
+				<img src="../../resources/img/18.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="18" class="play"></a>
+				<audio src="../../resources/audio/18.mp3"></audio>
+			</div>
+			<div class="page" data-page="19">
+				<img src="../../resources/img/19.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="19" class="play"></a>
+				<audio src="../../resources/audio/19.mp3"></audio> -->
+			</div>
+			<div class="page" data-page="20">
+				<img src="../../resources/img/20.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="20" class="play"></a>
+				<audio src="../../resources/audio/20.mp3"></audio> -->
+			</div>
+			<div class="page" data-page="21">
+				<img src="../../resources/img/21.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="21" class="play"></a>
+				<audio src="../../resources/audio/21.mp3"></audio>
+			</div>
+			<div class="page" data-page="22">
+				<img src="../../resources/img/22.jpg" alt="">
+				<a href="javascript:void(0)" data-audio-index="22" class="play"></a>
+				<audio src="../../resources/audio/22.mp3"></audio>
+			</div>
+			<div class="page" data-page="23">
+				<img src="../../resources/img/23.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="23" class="play"></a>
+				<audio src="../../resources/audio/23.mp3"></audio> -->
+			</div>
+			<div class="page" data-page="24">
+				<img src="../../resources/img/24.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="24" class="play"></a> -->
+				<audio src="../../resources/audio/24.mp3"></audio>
+			</div>
+			<div class="page" data-page="25">
+				<img src="../../resources/img/25.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="25" class="play"></a>
+				<audio src="../../resources/audio/25.mp3"></audio> -->
+			</div>
+			<div class="page" data-page="26">
+				<img src="../../resources/img/26.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="26" class="play"></a>
+				<audio src="../../resources/audio/26.mp3"></audio> -->
+			</div>
+			<div class="page" data-page="27">
+				<img src="../../resources/img/27.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="27" class="play"></a>
+				<audio src="../../resources/audio/27.mp3"></audio> -->
+			</div>
+			<div class="page" data-page="28">
+				<img src="../../resources/img/28.jpg" alt="">
+				<!-- <a href="javascript:void(0)" data-audio-index="28" class="play"></a>
+				<audio src="../../resources/audio/28.mp3"></audio> -->
+			</div>
+		</div>
+		<button id="prevBtn" class="prevBtn">Previous</button>
+		<button id="nextBtn" class="nextBtn">Next</button>
+		<div class="utill">
+			<button type="button" class="btn_utill btn_thumbnail">여닫기</button>
+			<button type="button" class="auto">자동재생</button>
+			<button type="button" class="stop">정지</button>
+			<button type="button" class="full">풀스크린</button>
+		</div>
+		<div class="thumbnails_wrap">
+			<button type="button" class="btn_thumbnail" id="btn_thumbnail">여닫기</button>
+			<div class="thumbnails swiper">
+				<div class="swiper-wrapper"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

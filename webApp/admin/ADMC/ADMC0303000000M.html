@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVERYBOOKS</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '2', sid: '2' };
+	</script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<a href="#"><span>홈페이지 바로가기</span></a>
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2c"></div>
+		<section class="main-conts">
+			<h2>권한 설정</h2>
+			<ul class="page-nav">
+				<li><a href="#">권한 관리</a></li>
+				<li class="current"><a href="#">권한 설정</a></li>
+			</ul>
+			<div class="sub-title type2">
+				<h3>권한 그룹</h3>
+				<select>
+					<option value="">CMS 관리1</option>
+				</select>
+			</div>
+      <div class="tbl-base type2">
+        <table>
+          <colgroup>
+            <col style="width:33.33%;">
+            <col style="width:33.33%;">
+            <col style="width:33.33%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">메뉴명</th>
+              <th scope="col" colspan="2">권한</th>
+            </tr>
+          </thead>
+          <tbody>
+						<tr>
+							<td>관리자 계정 관리</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk01">
+										<label for="chk01" class="lb-checkbox"><span>읽기</span></label>
+								</span>
+							</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk02">
+										<label for="chk02" class="lb-checkbox"><span>쓰기</span></label>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>권한 관리</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk03">
+										<label for="chk03" class="lb-checkbox"><span>읽기</span></label>
+								</span>
+							</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk04">
+										<label for="chk04" class="lb-checkbox"><span>쓰기</span></label>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>학생 관리</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk05">
+										<label for="chk05" class="lb-checkbox"><span>읽기</span></label>
+								</span>
+							</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk06">
+										<label for="chk06" class="lb-checkbox"><span>쓰기</span></label>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>LMS</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk07">
+										<label for="chk07" class="lb-checkbox"><span>읽기</span></label>
+								</span>
+							</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk08">
+										<label for="chk08" class="lb-checkbox"><span>쓰기</span></label>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>CMS</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk09">
+										<label for="chk09" class="lb-checkbox"><span>읽기</span></label>
+								</span>
+							</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk10">
+										<label for="chk10" class="lb-checkbox"><span>쓰기</span></label>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>고객지원</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk11">
+										<label for="chk11" class="lb-checkbox"><span>읽기</span></label>
+								</span>
+							</td>
+							<td>
+								<span class="lb-item">
+										<input type="checkbox" id="chk12">
+										<label for="chk12" class="lb-checkbox"><span>쓰기</span></label>
+								</span>
+							</td>
+						</tr>
+          </tbody>
+        </table>
+      </div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>취소</span></button>
+					<button class="btn base primary"><span>저장</span></button>
+				</div>
+				</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EVERYBOOKS 어드민</title>
+  <link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+  <script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="../resource/js/ui.global.js"></script>
+  <script type="text/javascript" src="../resource/js/ui.common.js"></script>
+</head>
+<body>
+<div class="bookclub-amin-wrap login">
+  <section class="admin-login-inner">
+    <div class="login-top">
+      <h1>LOG-IN</h1>
+      <div class="links">
+        <div class="logo"><span class="hide">EVERYBOOKS</span></div>
+      </div>
+    </div>
+    <div class="login-box">
+      <div class="frm-area">
+        <input type="text" id="adminId" name="adminId" value="" placeholder="아이디 입력" data-valid="required" title="아이디 입력">
+      </div><p class="msg error-info">아이디 입력 을(를) 입력해 주세요.</p>
+      <div class="frm-area">
+        <input type="password" id="adminPwd" name="adminPwd" value="" placeholder="비밀번호 입력" data-valid="required" title="비밀번호 입력">
+      </div><p class="msg error-info">비밀번호 입력 을(를) 입력해 주세요.</p>
+      <div class="login-btn">
+        <button type="button" class="btn primary"><span>관리자 로그인</span></button>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

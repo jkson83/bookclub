@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>EVERYBOOKS 어드민</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '8' };
+	</script>
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <div id="container" class="container">
+      
+      <div class="email-b2b fail">
+        <h1 class="logo"><span class="hide">에브리북클럽</span></h1>
+        <strong>잘못된 접근의 URL 주소 입니다.</strong>
+        <p>이메일 인증을 위한 정상적인 URL 주소가 아닙니다.<br>가입한 센터 지점 혹은 고객센터에 문의 바랍니다.</p>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="../_ui_include/footer.js"></script>
+  </div>
+</body>
+</html>

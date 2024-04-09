@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap question q-line">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div>
+
+    <!-- 질문 영역 -->
+    <div class="question-box line-2">
+      동해물과 백두산이 마르고 닳도록 <br>
+      하느님이 보우하사 우리나라 만세 무궁
+
+      <button class="q-sound">질문 듣기</button>
+    </div>
+    <!-- //질문 영역 -->
+
+    <!-- 라인긋기 : 틀렸을 경우 정답 체크시 ui-draw 클래스에 correct 클래스 추가  -->
+    <div class="draw-line-area">
+      <!-- 유형 1 : 이미지 - 이미지 -->
+      <!-- 23.12.05 문항 2개일 경우 ui-draw-2 클래스 추가 -->
+      <div class="ui-draw" data-id="ui-draw-area">
+        <div class="n1">
+          <span><img src="../../resources/img/app/draw_img2.png" alt=""></span>
+          <div class="ui-draw-dot" data-name="1"></div>
+        </div>
+        <div class="n2">
+          <span><img src="../../resources/img/app/draw_img4.png" alt=""></span>
+          <div class="ui-draw-dot" data-name="1"></div>
+        </div>
+        <div class="n3">
+          <span><img src="../../resources/img/app/draw_img2.png" alt=""></span>
+          <div class="ui-draw-dot" data-name="2"></div>
+        </div>
+        <div class="n4">
+          <span><img src="../../resources/img/app/draw_img5.png" alt=""></span>
+          <div class="ui-draw-dot" data-name="2"></div>
+        </div>
+        <div class="n5">
+          <span><img src="../../resources/img/app/draw_img3.png" alt=""></span>
+          <div class="ui-draw-dot" data-name="3"></div>
+        </div>
+        <div class="n6">
+          <span><img src="../../resources/img/app/draw_img6.png" alt=""></span>
+          <div class="ui-draw-dot" data-name="3"></div>
+        </div>
+      </div>
+      <!-- //유형 1 : 이미지 - 이미지 -->
+
+      <!-- 유형 2 : 텍스트 - 이미지 -->
+      <!--       
+      <div class="ui-draw" data-id="ui-draw-area">
+        <div class="n1">
+          <span class="text-box">안녕하세요</span>
+          <div class="ui-draw-dot" data-name="1"></div>
+        </div>
+        <div class="n2">
+          <span><img src="../../resources/img/app/draw_img4.png" alt=""></span>
+          <div class="ui-draw-dot" data-name="1"></div>
+        </div>
+        <div class="n3">
+          <span class="text-box">술래 손 안에<br>내 손을 넣고 빼요</span>
+          <div class="ui-draw-dot" data-name="2"></div>
+        </div>
+        <div class="n4">
+          <span><img src="../../resources/img/app/draw_img5.png" alt=""></span>
+          <div class="ui-draw-dot" data-name="2"></div>
+        </div>
+        <div class="n5">
+          <span class="text-box">안녕하세요</span>
+          <div class="ui-draw-dot" data-name="3"></div>
+        </div>
+        <div class="n6">
+          <span><img src="../../resources/img/app/draw_img6.png" alt=""></span>
+          <div class="ui-draw-dot" data-name="3"></div>
+        </div>
+      </div>
+      -->
+      <!-- //유형 2 : 텍스트 - 이미지 -->
+
+      <!-- 유형 2 : 텍스트 - 텍스트 -->
+      <!--
+      <div class="ui-draw" data-id="ui-draw-area">
+        <div class="n1">
+          <span class="text-box">안녕하세요</span>
+          <div class="ui-draw-dot" data-name="1"></div>
+        </div>
+        <div class="n2">
+          <span class="text-box">안녕하세요</span>
+          <div class="ui-draw-dot" data-name="1"></div>
+        </div>
+        <div class="n3">
+          <span class="text-box">술래 손 안에<br>내 손을 넣고 빼요</span>
+          <div class="ui-draw-dot" data-name="2"></div>
+        </div>
+        <div class="n4">
+          <span class="text-box">술래 손 안에<br>내 손을 넣고 빼요</span>
+          <div class="ui-draw-dot" data-name="2"></div>
+        </div>
+        <div class="n5">
+          <span class="text-box">안녕하세요</span>
+          <div class="ui-draw-dot" data-name="3"></div>
+        </div>
+        <div class="n6">
+          <span class="text-box">안녕하세요</span>
+          <div class="ui-draw-dot" data-name="3"></div>
+        </div>
+      </div>
+      -->
+      <!-- //유형 2 : 텍스트 - 텍스트 -->
+    </div>
+    <!-- //라인긋기 -->
+
+    <!-- 진도율 -->
+    <div class="study-complete-area">
+      <span class="on">1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+    </div>
+    <!-- //진도율 -->
+
+    <!-- 23.11.22 하단 버튼 추가 -->
+    <div class="q-check-btn">
+      <!-- 23.12.13 학습결과보기 버튼 추가 -->
+      <button type="button">학습결과보기</button>    
+      <!-- 
+      <button type="button">다시 할래요!</button> 
+      -->
+      <!-- 240328 : 다음 문제 풀기 버튼 클래스 추가 -->
+      <!-- 
+      <button type="button" class="btn-next">다음 문제 풀기</button>
+      -->
+      <!-- //240328 : 다음 문제 풀기 버튼 클래스 추가 -->
+    </div> 
+
+    <!-- 정답 맞췄을 경우 -->
+    <div class="layer-correct" style="display:none;">정답</div>
+    <!-- //정답 맞췄을 경우 -->
+
+    <!-- 정답 틀렸을 경우 -->
+    <div class="layer-wrong" style="display:none;">오답</div>
+    <!-- //정답 틀렸을 경우 -->
+  </div>
+
+  <script>
+    class DrawLine {
+      constructor(opt) {
+        this.id = opt.id;
+        this.wrap = document.querySelector('.ui-draw[data-id="' + this.id + '"]');
+        this.dots = this.wrap.querySelectorAll('.ui-draw-dot');
+        this.wrap_t = this.wrap.getBoundingClientRect().top;
+        this.wrap_l = this.wrap.getBoundingClientRect().left;
+        this.wrap_w = this.wrap.offsetWidth;
+        this.wrap_h = this.wrap.offsetHeight;
+        this.answer = opt.answer;
+        this.callback = opt.callback;
+        this.answer_n = 0;
+        this.currentDot = null;
+        this.init();
+      }
+      init() {
+        this.wrap.insertAdjacentHTML('beforeend', '<svg></svg>');
+        for (let item of this.dots) {
+          const _dot_info = item.getBoundingClientRect();
+          const _dot_name = item.dataset.name;
+          const _dot_w = item.offsetWidth / 2;
+          const _dot_h = item.offsetHeight / 2;
+          item.dataset.x = _dot_info.left + _dot_w - this.wrap_l;
+          item.dataset.y = _dot_info.top + _dot_h - this.wrap_t;
+        }
+        const touchBuffer = 0; // Adjust the buffer size as needed
+        const actStart = (e) => {
+          const el_svg = this.wrap.querySelector('svg');
+          const el_line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+          el_line.setAttribute('x1', 0);
+          el_line.setAttribute('x2', 0);
+          el_line.setAttribute('y1', 0);
+          el_line.setAttribute('y2', 0);
+          el_line.setAttribute('data-state', 'ing');
+          el_svg.appendChild(el_line);
+          this.wrap_t = this.wrap.getBoundingClientRect().top;
+          this.wrap_l = this.wrap.getBoundingClientRect().left;
+          this.wrap_w = this.wrap.offsetWidth;
+          this.wrap_h = this.wrap.offsetHeight;
+          const win_y = window.scrollY;
+          const win_x = window.scrollX;
+          const el_dot = e.currentTarget;
+          this.currentDot = el_dot;
+          this.currentDot.classList.add('active')
+          const dot_info = el_dot.getBoundingClientRect();
+          const dot_name = el_dot.dataset.name;
+          const dot_w = el_dot.offsetWidth / 2 + touchBuffer;
+          const dot_h = el_dot.offsetHeight / 2 + touchBuffer;
+          const s_x = !!e.clientX ? e.clientX : e.targetTouches[0].clientX;
+          const s_y = !!e.clientY ? e.clientY : e.targetTouches[0].clientY;
+          let dot_data = [];
+          let _x;
+          let _y;
+          const startX = dot_info.left + dot_w - this.wrap_l;
+          const startY = dot_info.top + dot_h - this.wrap_t;
+          el_line.setAttribute('x1', startX);
+          el_line.setAttribute('y1', startY);
+          el_line.setAttribute('x2', startX);
+          el_line.setAttribute('y2', startY);
+          for (let item of this.dots) {
+            item.dataset.state = 'none';
+          }
+          const actEnd = (e) => {
+            const v_x = _x;
+            const v_y = _y;
+            el_line.dataset.state = 'complete';
+            const uiDrawDots = document.querySelectorAll('.ui-draw-dot');
+            for (let dot of uiDrawDots) {
+              dot.classList.remove('active');
+            }
+            let is_answer = false;
+            for (let item of this.dots) {
+              item.dataset.state = '';
+              const i_x = Number(item.dataset.x);
+              const i_y = Number(item.dataset.y);
+              if (
+                v_x <= i_x + dot_w &&
+                v_x >= i_x - dot_w &&
+                v_y <= i_y + dot_h &&
+                v_y >= i_y - dot_h &&
+                item !== el_dot
+              ) {
+                if (item.dataset.name === dot_name) {
+                  is_answer = true;
+                  el_dot.dataset.complete = true;
+                  item.dataset.complete = true;
+                  this.answer_n = this.answer_n + 1;
+                  break;
+                }
+              }
+            }
+            if (!is_answer) {
+              console.log('바르게 움직여 주세요.'); // 오답일 때 메시지 출력을 주석 처리
+              // 23.12.07 오답일 경우 remove 부분 주석 처리 
+              //el_line.remove();
+            }
+            for (let item of this.dots) {
+              item.dataset.state = '';
+            }
+            this.wrap.removeEventListener('mousemove', actMove);
+            this.wrap.removeEventListener('mouseup', actEnd);
+            this.wrap.removeEventListener('touchmove', actMove);
+            this.wrap.removeEventListener('touchend', actEnd);
+            this.callback({
+              sum: this.answer,
+              value: this.answer_n,
+              name: dot_name,
+              state: is_answer,
+            });
+          };
+          const actMove = (e) => {
+            _x = !!e.clientX ? e.clientX : e.targetTouches[0].clientX;
+            _y = !!e.clientY ? e.clientY : e.targetTouches[0].clientY;
+            el_line.setAttribute('x2', _x);
+            el_line.setAttribute('y2', _y);    
+            // 현재 위치에서 가장 가까운 점 찾기
+            let nearestDot = null;
+            let minDistance = Number.MAX_SAFE_INTEGER;
+            for (let item of this.dots) {
+              const i_x = Number(item.dataset.x);
+              const i_y = Number(item.dataset.y);
+              const distance = Math.sqrt(Math.pow(_x - i_x, 2) + Math.pow(_y - i_y, 2));
+              if (distance < minDistance && distance <= dot_w) {
+                minDistance = distance;
+                nearestDot = item;
+                el_line.setAttribute('x2', i_x);
+                el_line.setAttribute('y2', i_y);
+              }
+            }
+              
+            // 현재 위치에서 가장 가까운 점에 "active" 클래스 추가
+            for (let item of this.dots) {
+              if (item === nearestDot) {
+                item.classList.add('active');
+              } else {
+                item.classList.remove('active');
+              }
+            }
+            // 활성화된 요소 중심 좌표를 찾아서 라인을 스냅
+            let activeDot = null;
+            for (let item of this.dots) {
+              if (item.classList.contains('active')) {
+                activeDot = item;
+                break;
+              }
+            }
+            if (activeDot) {
+              const centerX = Number(activeDot.dataset.x);
+              const centerY = Number(activeDot.dataset.y);
+              el_line.setAttribute('x2', centerX);
+              el_line.setAttribute('y2', centerY);
+            } else {
+              // 활성화된 요소가 없으면 현재 마우스 위치를 사용
+              el_line.setAttribute('x2', _x);
+              el_line.setAttribute('y2', _y);
+            }
+          };
+          //event
+          this.wrap.addEventListener('mousemove', actMove);
+          this.wrap.addEventListener('mouseup', actEnd);
+          this.wrap.addEventListener('touchmove', actMove);
+          this.wrap.addEventListener('touchend', actEnd);
+        };
+        for (let item of this.dots) {
+          item.addEventListener('mousedown', actStart);
+          item.addEventListener('touchstart', actStart);
+        }
+      }
+      checkComplete() {
+        const completeDots = Array.from(this.dots).filter((dot) => dot.dataset.complete === 'true');
+        if (completeDots.length === this.answer * 2) {
+          console.log('모두 정답입니다.');
+        }
+      }
+    }
+    const drawline = new DrawLine({
+      id: 'ui-draw-area',
+      answer: 3,
+      callback: (v) => {
+        console.log(v);
+        drawline.checkComplete();
+      },
+    });
+</script>
+</body>
+</html>

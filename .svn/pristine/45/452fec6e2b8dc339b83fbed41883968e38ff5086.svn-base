@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVERYBOOKS</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '5', sid: '1' };
+	</script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2c"></div>
+		<section class="main-conts">
+			<h2>작가 관리</h2>
+			<ul class="page-nav">
+				<li><a href="#">도서정보 관리</a></li>
+				<li class="current"><a href="#">작가 관리</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><label for="inp01">작가명</label></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp01" class="inp-text">
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>조회</span></button>
+				</div>
+			</div>
+			<div class="sub-title">
+				<p class="count">총 <span>100</span>건</p>
+			</div>
+      <div class="tbl-base type2 mgt10">
+        <table>
+          <colgroup>
+            <col style="width:88px;">
+            <col style="width:auto;">
+            <col style="width:100px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">작가명</th>
+              <th scope="col">등록일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10</td>
+              <td class="txt-l"><a href="#">지식정보</a></td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+              <td>9</td>
+              <td class="txt-l"><a href="#">지식정보</a></td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+              <td>8</td>
+              <td class="txt-l"><a href="#">지식정보</a></td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+              <td>7</td>
+              <td class="txt-l"><a href="#">지식정보</a></td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+              <td>6</td>
+              <td class="txt-l"><a href="#">지식정보</a></td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+              <td>5</td>
+              <td class="txt-l"><a href="#">지식정보</a></td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+              <td>4</td>
+              <td class="txt-l"><a href="#">지식정보</a></td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+              <td>3</td>
+              <td class="txt-l"><a href="#">지식정보</a></td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+              <td>2</td>
+              <td class="txt-l"><a href="#">지식정보</a></td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+              <td>1</td>
+              <td class="txt-l"><a href="#">지식정보</a></td>
+              <td>yyyy.mm.dd</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base primary btn-modal" data-id="ADMC0606040200P" data-src="ADMC0606040200P.html"><span>등록</span></button>
+				</div>
+				<div class="pager">
+					<a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+					<span class="num">
+						<a href="#">1</a>
+						<a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+					</span>
+					<a href="#" class="btn next"><span class="hide">다음으로</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+<script>
+    (() => {
+        'use strict';
+        // 모달 확인 호출
+        BOOK.modal.show({
+            id:"ADMC0606040200P",
+            src:"ADMC0606040200P.html"
+        });
+    })();
+</script>
+</body>
+</html>

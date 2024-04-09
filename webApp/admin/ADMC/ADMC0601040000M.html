@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVERYBOOKS</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '5', sid: '2' };
+	</script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2c"></div>
+		<section class="main-conts">
+			<h2>이북</h2>
+			<ul class="page-nav">
+				<li><a href="#">CMS(컨텐츠 관리)</a></li>
+				<li class="current"><a href="#">이북 관리</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">등록일</th>
+							<td>2023.12.25</td>
+						</tr>
+						<tr>
+							<th scope="row">도서 설정</th>
+							<td>설정된 도서명을 표시</td>
+						</tr>
+						<tr>
+							<th scope="row">제목</th>
+							<td>이북명 표시</td>
+						</tr>
+						<tr>
+							<th scope="row">책 이미지</th>
+							<td><a href="#" target="_blank">image.jpg</a></td>
+						</tr>
+						<tr>
+							<th scope="row">도서 콘텐츠 파일</th>
+							<td><a href="#" target="_blank">book.pdf</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+      <div class="tbl-btns">
+        <button class="btn base tertiary"><span>삭제</span></button>
+        <button class="btn base primary"><span>이북 미리보기</span></button>
+        <div>
+          <button class="btn base secondary"><span>목록</span></button>
+          <button class="btn base fill"><span>수정</span></button>
+        </div>
+      </div>
+			<div class="sub-title">
+				<h3>음성 콘텐츠 목록</h3>
+			</div>
+			<div class="tbl-base type2 mgt10">
+				<table>
+					<colgroup>
+						<col style="width:90px;">
+						<col style="width:auto;">
+						<col style="width:auto;">
+						<col style="width:190px;">
+						<col style="width:90px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">페이지</th>
+							<th scope="col">파일명</th>
+							<th scope="col">음성파일</th>
+							<th scope="col">음성 파일 노출 위치</th>
+							<th scope="col">등록</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>001</td>
+							<td class="txt-l"><a href="#">001.jpg</a></td>
+							<td class="txt-l file-wrap">
+                <div class="file-list">
+                  <div class="file">
+                    <p class="file-name"><a href="#">filename1.png</a></p>
+                    <button type="button" class="btn-del"><span>삭제</span></button>
+                  </div>
+                </div>
+              </td>
+							<td>
+								<select name="" id="">
+									<option value="">선택해 주세요</option>
+									<option value="">1번 위치</option>
+									<option value="">2번 위치</option>
+									<option value="">3번 위치</option>
+									<option value="">4번 위치</option>
+									<option value="">5번 위치</option>
+									<option value="">6번 위치</option>
+									<option value="">7번 위치</option>
+									<option value="">8번 위치</option>
+							</select>
+							</td>
+							<td><button class="btn base square"><span>등록</span></button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<button class="btn base primary"><span>일괄 등록</span></button>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

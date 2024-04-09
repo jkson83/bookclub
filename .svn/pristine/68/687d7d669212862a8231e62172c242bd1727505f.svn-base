@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body class="">
+  <div id="wrap" class="wrap">
+    <div id="container" class="container">
+
+      <div style="margin: 2rem">
+        <button class="btn primary" onclick="modal.open($(this), '#write');" title="레이어 팝업 열기">글쓰기 팝업</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 글쓰기 팝업 ( 비공개: private 클래스 추가 ) -->
+  <div class="modal-popup write private" id="write">
+    <div class="modal-popup-outer">
+      <section class="modal-popup-container">
+        <!-- 비공개 일 경우 추가되는 영역 -->
+        <div class="writing-tip">
+          <p>작성한 글쓰기가 관리자에 의해서 비공개 처리가 되었어요.</p>
+          <p>※ 사유 : 부적절한 내용 게시</p>
+        </div>
+        <!--// -->
+        <article class="modal-popup-header">
+          <h3 class="modal-popup-title">두근두근.. 시간아 멈추어다오.</h3>
+          <button type="button" class="modal-popup-close only-icon">
+            <span><i class="hidden">닫기</i></span>
+          </button>
+        </article>
+        <article class="modal-popup-body">
+          <!-- content -->
+          <div class="bx-line scroll">
+            <div class="inner">
+              <div class="img-area">
+                <img src="../../resources/img/12.jpg">
+              </div>
+              <div class="txt">
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+                글을 잘 쓰기 위해서는 책을 많이 읽고 생각을 많이 해야 합니다.
+              </div>
+            </div>
+          </div>
+          <!--// -->
+        </article>
+        <article class="modal-popup-footer">
+          <div class="btn-wrap">
+            <button type="button" class="btn like">
+              <span class="hide">좋아요</span>
+              <span class="count">256</span>
+            </button>
+            <button type="button" class="btn primary" onclick="modal.close($(this))">확인</button>  
+          </div>
+        </article>
+      </section>
+    </div>
+  </div>
+  <!--// 팝업 -->
+</body>
+<script>
+  (function (win, doc) {
+    'use strict';
+  
+    const btnLike = doc.querySelector('.btn.like');
+
+    btnLike.addEventListener('click', () => {
+      btnLike.classList.toggle('on');
+    });
+
+  })(window, document);
+</script>
+</html>

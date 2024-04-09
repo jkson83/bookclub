@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>두 점 사이의 각도 계산과 선 그리기</title>
+	<script type="text/javascript" src="../_ui_include/head.js"></script><!-- //Include: head -->
+</head>
+<style>
+  *{margin:0;padding:0}
+  .point{overflow:hidden;position: absolute;width:15px;height:15px;border-radius:50%;background-color: #000;cursor:pointer;border:none;z-index: 1;color:#fff}
+  .line{width:0;height:3px;background-color: #000;
+    /* background-image: linear-gradient(90deg, #98CD8D 27.78%, Transparent  27.78%, Transparent  50%, #98CD8D 50%, #98CD8D 77.78%, Transparent  77.78%, Transparent  100%);
+    background-size: 18.00px 18.00px; */
+    transition:width .5s;}
+</style>
+<body>
+
+<div id="container" style="width: 500px; height: 100vh; margin: 0 auto; position: relative; background-color: #f2f2f2;">
+  <button type="button" class="point" data-num="1" data-element="point" style="left: 50px; top: 100px;">1</button>
+  <button type="button" class="point" data-num="1" data-element="point" style="right: 50px; top: 300px;">1</button>
+  <button type="button" class="point" data-num="2" data-element="point" style="left: 50px; top: 200px;">2</button>
+  <button type="button" class="point" data-num="2" data-element="point" style="right: 50px; top: 100px;">2</button>
+  <button type="button" class="point" data-num="3" data-element="point" style="left: 50px; top: 400px;">3</button>
+  <button type="button" class="point" data-num="3" data-element="point" style="right: 50px; top: 500px;">3</button>
+  <button type="button" class="point" data-num="" data-element="point" style="right: 50px; top: 600px;">X</button>
+</div>
+<script>
+  $(document).ready(function() {
+    var startPoint = null;
+    var endPoint = null;
+    var selectedCards = [];
+    var previousCard = null; // 이전에 선택한 카드를 저장하는 변수
+
+    $("[data-element=point]:not(.matched)").click(function() {
+      if ($(this).hasClass("selected")) {
+        // 이미 선택된 카드를 다시 클릭한 경우
+        alert("다른 점을 선택해주세요.");
+        resetSelection();
+        return;
+      }
+      
+      if ($(this).hasClass("matched")) {
+        // 짝지어진 카드를 클릭한 경우
+        alert("이미 짝지어진 점은 선택할 수 없습니다.");
+        resetSelection();
+        return;
+      }
+
+      if (startPoint === null || endPoint === null) {
+        startPoint = $(this);
+      } else {
+        var endPoint = $(this);
+
+        var startCoords = getCoords(startPoint);
+        var endCoords = getCoords(endPoint);
+
+        if (startCoords.x === endCoords.x) {
+          // x 값이 같은 경우, 다른 점을 선택하라고 알림
+          alert("다른 점을 선택해주세요.");
+          resetSelection();
+          return;
+        }
+
+        var deltaX = endCoords.x - startCoords.x;
+        var deltaY = endCoords.y - startCoords.y;
+
+        var radians = Math.atan2(deltaY, deltaX);
+        var degrees = radians * (180 / Math.PI);
+
+        var lineLength = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+        if (startCoords.x !== endCoords.x) {
+          var line = $("<div class='line'></div>").appendTo("#container");
+          line.css({
+            position: "absolute",
+            left: startCoords.x,
+            top: startCoords.y,
+            transform: "rotate(" + degrees + "deg)",
+            transformOrigin: "0 0",
+          });
+          setTimeout(function () {
+            line.css({ width: lineLength });
+          }, 0);
+          startPoint = null;
+          endPoint = null;
+        }
+        startPoint = null;
+        endPoint = null;
+      }
+
+      previousCard = this;
+
+      if (!$(this).hasClass("matched") && selectedCards.length < 2) {
+        $(this).addClass("selected");
+        selectedCards.push($(this));
+        if (selectedCards.length === 2) {
+          var value1 = selectedCards[0].data("num");
+          var value2 = selectedCards[1].data("num");
+
+          if (value1 === value2) {
+            selectedCards.forEach(function (card) {
+              card.addClass("matched");
+            });
+            alert("성공! 짝을 맞췄습니다.");
+            if ($("[data-element=point]").not(".matched").length === 0) {
+              alert("모두 정답입니다!");
+            }
+            selectedCards = [];
+          } else {
+            selectedCards.forEach(function (card) {
+              card.removeClass("selected");
+            });
+            alert("땡!");
+            $('.line:last-child').css('background', 'red');
+            setTimeout(function () {
+              $('.line:last-child').remove();
+            }, 1000);
+            resetSelection();
+          }
+        }
+      }
+    });
+
+    function getCoords(pointElement) {
+      return {
+        x: pointElement.position().left + pointElement.width() / 2,
+        y: pointElement.position().top + pointElement.height() / 2
+      };
+    }
+
+    function resetSelection() {
+      startPoint = null;
+      endPoint = null;
+      selectedCards = [];
+      previousCard = null;
+      $(".selected").removeClass("selected");
+    }
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "Workflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JHJ",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.51.0",
+    "gulp-autoprefixer": "^8.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  }
+}

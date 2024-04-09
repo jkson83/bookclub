@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <div style="margin: 2rem">
+      <button class="btn primary" onclick="modal.open($(this), '#alert');" title="레이어 팝업 열기">alert</button>
+    </div>
+  </div>
+
+  <!-- 팝업 -->
+  <div class="modal-popup" id="alert">
+    <div class="modal-popup-outer">
+      <section class="modal-popup-container alert">
+        <article class="modal-popup-header">
+          <button type="button" class="modal-popup-close only-icon">
+            <span><i class="hide">닫기</i></span>
+          </button>
+        </article>
+        <article class="modal-popup-body">
+          <p class="alert-txt">팝업내용이 들어갑니다.</p>
+        </article>
+        <article class="modal-popup-footer">
+          <button type="button" class="btn primary" onclick="modal.close($(this))">확인</button>
+        </article>
+      </section>
+    </div>
+  </div>
+  <!-- //팝업 -->
+</body>
+</html>

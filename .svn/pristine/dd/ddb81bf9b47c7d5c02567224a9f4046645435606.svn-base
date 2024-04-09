@@ -1,0 +1,107 @@
+<!-- modal -->
+<section class="ui-modal" id="ADM08040101P">
+    <div class="ui-modal-wrap modal-size-m">
+        <div class="ui-modal-header">
+            <h1 class="ui-modal-tit">분배금지급현황 추가/수정</h1>
+            <button type="button" class="icon-close ui-modal-close" aria-label="close" ><span class="hide">모달 닫기</span></button>
+        </div>
+        <div class="ui-modal-body">
+            <div class="modal-conts">
+                <div class="tbl-base">
+                    <table>                   
+                        <colgroup> 
+                            <col style="width:160px;">
+                            <col style="width:auto;">                      
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">상품명<span class="ico-req"><span class="hide">필수</span></span></th>
+                                <td>
+                                    <select style="width:100%;" title="상품명 선택">
+                                        <option>KOSEF 200</option>
+                                    </select>
+                                </td>
+                            </tr>  
+                            <tr>
+                                <th scope="row">분배금 지급 기준일<span class="ico-req"><span class="hide">필수</span></span></th>
+                                <td>
+                                    <div class="ui-date-wrap full">
+                                        <div class="ui-datepicker">
+                                            <input type="text" id="uiDate_1" class="inp-base date" value="2021-11-05" min="2020-12-05" max="2025-05-20" title="날짜입력" readonly="" required="">
+                                            <button type="button" class="ui-datepicker-btn" data-target="uiDate_1">
+                                                <span class="a11y-hidden">분배금 기준일 년월일 선택</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>   
+                            <tr>
+                                <th scope="row">분배금 지급일<span class="ico-req"><span class="hide">필수</span></span></th>
+                                <td>
+                                    <div class="ui-date-wrap full">
+                                        <div class="ui-datepicker">
+                                            <input type="text" id="uiDate_2" class="inp-base date" value="2021-11-05" min="2020-12-05" max="2025-05-20" title="날짜입력" readonly="" required="">
+                                            <button type="button" class="ui-datepicker-btn" data-target="uiDate_2">
+                                                <span class="a11y-hidden">분배금 지급일 년월일 선택</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <th scope="row">분배락일<span class="ico-req"><span class="hide">필수</span></span></th>
+                                <td>
+                                    <div class="ui-date-wrap full">
+                                        <div class="ui-datepicker">
+                                            <input type="text" id="uiDate_3" class="inp-base date" value="2021-11-05" min="2020-12-05" max="2025-05-20" title="날짜입력" readonly="" required="">
+                                            <button type="button" class="ui-datepicker-btn" data-target="uiDate_3">
+                                                <span class="a11y-hidden">분배락일 년월일 선택</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <th scope="row">현금 지급일<span class="ico-req"><span class="hide">필수</span></span></th>
+                                <td>
+                                    <div class="ui-date-wrap full">
+                                        <div class="ui-datepicker">
+                                            <input type="text" id="uiDate_4" class="inp-base date" value="2021-11-05" min="2020-12-05" max="2025-05-20" title="날짜입력" readonly="" required="">
+                                            <button type="button" class="ui-datepicker-btn" data-target="uiDate_4">
+                                                <span class="a11y-hidden"> 현금 지급일년월일 선택</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <th scope="row">주당 분배금(원)<span class="ico-req"><span class="hide">필수</span></span></th>
+                                <td>
+                                    <div class="frm-area multi">
+                                        <input type="text" class="inp-text" title="주당 분배금 입력">
+                                        <div>원</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">시가대비 분배율(%)</th>
+                                <td>
+                                    <div class="frm-area">
+                                        <input type="text" class="inp-text" title="시가대비 분배율 입력">
+                                    </div>
+                                </td>
+                            </tr>                                                      
+                        </tbody>
+                    </table>
+                </div>
+            </div>                       
+        </div> 
+        <div class="ui-modal-footer">
+            <div class="btn-group">
+                <button type="button" class="btn base tertiary"><span>취소</span></button>
+                <button type="button" class="btn base primary"><span>등록</span></button>
+            </div>
+        </div>
+    </div>
+</section>                    
+<!-- //modal -->

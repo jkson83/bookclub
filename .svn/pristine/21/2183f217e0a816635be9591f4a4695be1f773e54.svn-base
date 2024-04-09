@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap question q-read">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div>
+
+    <!-- 질문 영역 -->
+    <div class="question-box read-aloud">
+      <div class="read-img-box">
+        <button class="q-sound">질문 듣기</button>
+        <div class="read-img-area">
+          <img src="../../resources/img/app/select_pic3.png" alt="">
+        </div>
+      </div>
+      <div class="read-highlight-txt">
+        <div class="read-highlight-inner scroll" data-area="bookData"></div>
+      </div>
+    </div>
+    <!-- //질문 영역 -->
+
+    <!-- 그만듣기/내 녹음듣기/소리내어읽기/학습완료하기 버튼 --> 
+	<!-- 240322 : 그만듣기 버튼(클래스) 추가 -->
+    <!-- <div class="q-aloud-btn"> 
+      <audio controls>녹음된 소리를 재생할 audio 엘리먼트</audio>
+      <button type="button" class="btn-stop"><span>그만듣기</span></button>
+      <button type="button" class="btn-listen"><span class="hide">내 녹음듣기</span></button>
+      <button type="button" class="btn-talk on"><span class="hide">소리내어 읽기</span></button>
+      <button type="button" class="btn-study-end"><span class="hide">학습완료하기</span></button>
+    </div> -->
+	<!-- //240322 : 그만듣기 버튼(클래스) 추가 -->
+    <!--// 들어보기/소리내어읽기/학습완료하기 버튼 -->
+
+    <!-- 24.02.27 :: 소리내어 읽기 버튼 클릭 시 수정 -->
+    <!-- <div class="btn-talk-area">
+			<p>
+				<strong>문장을 정확하게 읽어 보세요.</strong>
+				중간에 나가시면 학습내용이 저장되지 않습니다.
+			</p>
+      <div class="q-check-btn">
+        <button type="button" class="btn-read-end">나가기</button>
+      </div>
+    </div> -->
+    <!--// -->
+
+
+    <!-- <div style="position: absolute; bottom: 50px;">
+      <button type="button" style="position: static; width: auto; height: auto; transform: translateY(0);"onclick="readBook.start(200, () => { console.log('start callback 함수'); });"><span>소리내어 읽기 (start)</span></button> |
+      <button type="button" style="position: static; width: auto; height: auto; transform: translateY(0);"onclick="readBook.reset();"><span>소리내어 읽기(초기화,reset)</span></button> |
+      <button type="button" style="position: static; width: auto; height: auto; transform: translateY(0);"onclick="readBook.pause();"><span>일시정지</span></button> |
+      <button type="button" style="position: static; width: auto; height: auto; transform: translateY(0);"onclick="readBook.restart(() => { console.log('restart callback 함수'); });"><span>일시정지 후 시작</span></button>
+    </div> -->
+  </div>
+
+  <script>
+    function init(){
+      
+      const $audioEl = document.querySelector("audio");           // 엘리먼트 취득
+      const $talkBtn = document.querySelector(".btn-talk");
+      const $listenBtn = document.querySelector(".btn-listen");
+      const $endBtn = document.querySelector(".btn-study-end");
+      let isRecording = false;                                    // 녹음중 상태 변수
+      let mediaRecorder = null;                                   // MediaRecorder 변수 생성
+
+      // 녹음 데이터 저장 배열
+      const audioArray = [];
+      
+      $talkBtn.onclick = async function (event) {
+        if(!isRecording){
+          // 마이크 mediaStream 생성: Promise를 반환하므로 async/await 사용
+          const mediaStream = await navigator.mediaDevices.getUserMedia({audio: true});
+
+          // MediaRecorder 생성
+          mediaRecorder = new MediaRecorder(mediaStream);
+
+          // 이벤트핸들러: 녹음 데이터 취득 처리
+          mediaRecorder.ondataavailable = (event) => {
+            audioArray.push(event.data); // 오디오 데이터가 취득될 때마다 배열에 담아둔다.
+          }
+
+          // 이벤트핸들러: 녹음 종료 처리 & 재생하기
+          mediaRecorder.onstop = (event) => {
+            // 녹음이 종료되면, 배열에 담긴 오디오 데이터(Blob)들을 합친다: 코덱도 설정해준다.
+            // const blob = new Blob(audioArray, {"type": "audio/ogg codecs=opus"});
+            const blob = new Blob(audioArray, {"type": "audio/wav"});
+            audioArray.splice(0); // 기존 오디오 데이터들은 모두 비워 초기화한다.
+            
+            // Blob 데이터에 접근할 수 있는 주소를 생성한다.
+            const blobURL = window.URL.createObjectURL(blob);
+
+            // audio엘리먼트로 재생한다.
+            $audioEl.src = blobURL;
+            $audioEl.play();
+          }
+
+          // 녹음 시작
+          mediaRecorder.start();
+          isRecording = true;
+
+        }
+        // 녹음 종료
+        // else{
+        // mediaRecorder.stop();
+        // isRecording = false;
+        // }
+      }
+
+      $endBtn.addEventListener('click', function () {
+        if (mediaRecorder) {
+          mediaRecorder.stop();
+          isRecording = false;
+        }
+      });
+
+      $listenBtn.addEventListener('click', function() {
+        $audioEl.play();
+      });
+
+      //텍스트 하이라이트  24.02.02 수정
+      // const currentText = document.querySelectorAll(".highlight-text");
+      // const scroll = document.querySelector('.read-highlight-inner');
+
+      // for (let i = 0; i < currentText.length; i++) {
+      //   setTimeout(function () {
+      //     currentText[i].classList.add('highlight');
+
+      //     let highlightPos = currentText[i].offsetTop;
+      //     let scrollHeight = scroll.clientHeight;
+
+      //     console.log(highlightPos, scrollHeight);
+
+      //     if(highlightPos >= scrollHeight) {
+      //       scroll.scrollTop = highlightPos;
+      //     }
+
+      //   }, 5000 * i);
+      // }
+      // 여기까지 
+    }
+
+    //init();
+  </script>
+	<script>
+		'use strict';
+
+		const bookData = "“엄마한테 아침 뽀뽀도 안 해 주고 어디 갔나했어.”<br>엄마가 일부러 입을 삐죽 내밀었어요.<br>“조금 있다가요.”<br>루카가 대수롭지 않게 대답했어요.<br>엄마가 다시 말했어요.<br>“너 주려고 나무딸기를 땄단다.”<br>“그래요?”<br>“여기 두고 갈 테니, 친구랑 나눠 먹으렴.”<br><br><br>그 좋아하는 나무딸기도 본 체 만 체<br><br><br>“엄마한테 아침 뽀뽀도 안 해 주고 어디 갔나했어.”<br>엄마가 일부러 입을 삐죽 내밀었어요.<br>“조금 있다가요.”<br>루카가 대수롭지 않게 대답했어요.<br>엄마가 다시 말했어요.<br>“너 주려고 나무딸기를 땄단다.”<br>“그래요?”<br>“여기 두고 갈 테니, 친구랑 나눠 먹으렴.”<br><br><br>그 좋아하는 나무딸기도 본 체 만 체";
+
+		const useData = {
+			area: document.querySelector('[data-area=bookData]'),
+			book: {
+				play: false,
+				pause: false,
+				reset: false,
+			},
+		};
+
+		const setBookData = {
+			gTarget: null,
+			gData: null,
+			tmpData: null,
+			sData: null,
+			replaceFn: (pattern, replacement) => {
+				const o = setBookData;
+				o.sData = o.tmpData.innerHTML.replaceAll(pattern, replacement);
+				o.gTarget.innerHTML = o.sData;
+			},
+			wrapFn: () => {
+				const o = setBookData;
+				[...o.gData].forEach(ele => {
+					const spanTag = document.createElement('span');
+					const innerTag = document.createElement('i');
+					spanTag.innerHTML = ele;
+					spanTag.append(innerTag);
+					o.gTarget.append(spanTag);
+				});
+				o.tmpData = o.gTarget;
+			},
+			init: () => {
+				const o = setBookData;
+				o.gData = bookData;
+				o.gTarget = useData.area;
+				o.gData = o.gData.replaceAll(/<br>|<br\/>|<br \/>/g, '$');// 문자열에서 <br>, <br/> <br /> 찾아서 $로 변경
+				o.wrapFn(); // 개별 태그로 감싸기
+				o.replaceFn(/<span>\$<i><\/i><\/span>/g, '<br>'); // <span>$</span> 찾아서 <br> 로 변경
+			},
+		};
+
+		/*
+			parent.clientHeight - 브모 영역 높이
+			parent.offsetTop		- 부모 영역 offsetTop
+			ele.offsetTop				- 해당 element offsetTop
+			highlight 된 element의 offsetTop 값이 부모 영역 높이의 50%가 넘어가면 이벤트 발생(스크롤)
+		*/
+		const setActivePos = {
+			parent: null,
+			parentClientHeight: null,
+			parentOffsetTop: null,
+			condition: null,
+			conditionValue: null,
+			scrollTopValue: null,
+			activePos: (ele) => {
+				const o = setActivePos;
+				// console.log(ele.offsetTop, o.conditionValue);
+				if (ele.offsetTop - o.parent.scrollTop > o.conditionValue) {
+					o.parent.scrollBy({ left: 0, top: o.scrollTopValue, behavior: 'smooth' });
+				}
+			},
+			init: () => {
+				const o = setActivePos;
+				o.parent = useData.area;
+				o.parentClientHeight = o.parent.clientHeight;
+				o.parentOffsetTop = o.parent.offsetTop;
+				o.condition = parseInt(o.parentClientHeight / 100 * 50);// 부모 영격 높이의 50% 계산
+				o.conditionValue = o.parentOffsetTop + o.condition;
+				const gFontSize = parseInt(document.defaultView.getComputedStyle(o.parent.childNodes[0]).getPropertyValue('font-size'));
+				let gLineHeight = document.defaultView.getComputedStyle(o.parent.childNodes[0]).getPropertyValue('line-height');
+				gLineHeight = gLineHeight === 'normal' ? 1.3 : parseInt(gLineHeight) / gFontSize;
+				o.scrollTopValue = Math.round(gFontSize * gLineHeight);
+
+				console.log(gFontSize, gLineHeight, gFontSize * gLineHeight);
+				console.log(o.scrollTopValue);
+			},
+		};
+
+		// 소리내어 읽기,
+		// 한번 클릭해서 진행 중이라면 다시 시작 못하게
+		const readBook = {
+			area: null,
+			speed: null,
+			activeIndex: 0,
+			computedSpeed: null,
+			myInterval: null,
+			activeClassName: null,
+			addActiveClass: (speed, count, callback) => {
+				const o = readBook;
+				o.myInterval = setInterval(() => {
+					if (count < o.area.childNodes.length) {
+						o.area.childNodes[count].classList.add(o.activeClassName);
+						setActivePos.activePos(o.area.childNodes[count]); // Y좌표 구하기
+						count++;
+						o.activeIndex = count;
+					} else {
+						o.reset(); // 초기화
+						callback !== undefined && typeof callback === 'function' && callback(); // '소리내어 읽기'  종료 콜백(함수만 허용)
+					}
+				}, speed, o.activeIndex);
+				useData.book.play = true;
+				useData.book.pause = false;
+			},
+			addStyleDuration: (child) => {
+				const o = readBook;
+				child.style.animationDuration = `${o.computedSpeed}s`;
+			},
+			addActiveDuration: () => {
+				const o = readBook;
+				o.area.childNodes.forEach((ele) => {
+					const child = ele.lastChild;
+					child && o.addStyleDuration(child);
+				});
+			},
+			start: (speed = 200, callback) => {
+				if (useData.book.play || useData.book.pause) return;
+				const o = readBook;
+				o.speed = speed;
+				o.computedSpeed = (o.speed + 50) / 1000;
+				o.addActiveDuration();
+				o.addActiveClass(o.speed, o.activeIndex, callback);
+				console.log(`START ----- PLAY: ${useData.book.play} / PAUSE: ${useData.book.pause} / RESET: ${useData.book.reset}`);
+			},
+			restart: (callback) => {
+				if (useData.book.play || !useData.book.pause) return;
+				const o = readBook;
+				useData.book.pause = false;
+				o.addActiveClass(o.speed, o.activeIndex, callback);
+				console.log(`RESTART ----- PLAY: ${useData.book.play} / PAUSE: ${useData.book.pause} / RESET: ${useData.book.reset}`);
+			},
+			pause: () => {
+				if (!useData.book.play) return;
+				const o = readBook;
+				useData.book.play && o.readBookPause(o);
+			},
+			readBookPause: (o) => {
+				clearInterval(o.myInterval);
+				useData.book.play = false;
+				useData.book.pause = true;
+				console.log(`PAUSE ----- PLAY: ${useData.book.play} / PAUSE: ${useData.book.pause} / RESET: ${useData.book.reset}`);
+			},
+			reset: () => {
+				if (!useData.book.play && !useData.book.pause) return;
+				const o = readBook;
+				o.pause();
+				o.removeActiveClass(o);
+				o.area.scrollTop = 0;
+			},
+			removeActiveClass: (o) => {
+				o.area.childNodes.forEach((ele) => {
+					if (ele.classList.value === o.activeClassName) {
+						ele.classList.remove(o.activeClassName);
+					}
+				});
+				o.activeIndex = 0;
+				useData.book.pause = false;
+				useData.book.reset = true;
+				console.log(`RESET ----- PLAY: ${useData.book.play} / PAUSE: ${useData.book.pause} / RESET: ${useData.book.reset}`);
+			},
+			init: () => {
+				if (useData.book.play) return;
+				const o = readBook;
+				o.area = useData.area;
+				o.computedSpeed = 0.3;
+				o.activeClassName = 'active';
+				console.log(`INIT ----- PLAY: ${useData.book.play} / PAUSE: ${useData.book.pause} / RESET: ${useData.book.reset}`);
+			},
+		};
+
+		document.addEventListener("DOMContentLoaded", () => {
+			setBookData.init();
+			readBook.init();
+			setActivePos.init();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap setting">
+    <div class="setting-header">
+      <h1 class="title-setting">튜토리얼</h1>
+
+      <button type="button" class="btn-back">뒤로가기</button> 
+    </div>
+
+    <div class="setting-container">
+      <ul class="tab-link tab2">
+        <li><a href="#" class="on" data-tab="tutorial1">학습 시작</a></li>
+        <li><a href="#" data-tab="tutorial2">학습 선택</a></li>
+        <li><a href="#" data-tab="tutorial3">학습 방법</a></li>
+        <li><a href="#" data-tab="tutorial4">성장맵</a></li>
+      </ul> 
+
+      <!-- 학습 시작 -->
+      <div class="tab-content tutorial on" id="tutorial1">
+        <div class="swiper tutorial-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="tutorial-img">
+                <img src="../../resources/img/app/tutorial1_1.png" alt="">
+
+                <p class="check-tutorial check1-1-1">
+                  <span>1</span>
+                </p>
+
+                <p class="check-tutorial check1-1-2">
+                  <span>2</span>
+                </p>
+              </div>
+
+              <ul class="tutorial-text-list">
+                <li>
+                  현재 학습하고 있는 STEP과 BOOK 이 표시되어요.<br>
+                  왼쪽으로 이동하는 버튼을 터치하면 읽었던 도서들도 볼 수 있어요.
+                </li>
+                <li>출석체크 버튼을 터치해야 출석인정이 되니 꼭 ‘터치’하세요.</li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <div class="tutorial-img">
+                <img src="../../resources/img/app/tutorial1_2.png" alt="">
+
+                <p class="check-tutorial check1-2-1"></p>
+              </div>
+
+              <p class="tutorial-text">
+                책을 선택하면 다양하고 재미있는 학습을 할 수 있어요.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <div class="tutorial-img">
+                <img src="../../resources/img/app/tutorial1_3.png" alt="">
+
+                <p class="check-tutorial check1-3-1">
+                  <span>1</span>
+                </p>
+
+                <p class="check-tutorial check1-3-2">
+                  <span>2</span>
+                </p>
+
+                <p class="check-tutorial check1-3-3">
+                  <span>3</span>
+                </p>
+              </div>
+
+              <ul class="tutorial-text-list row">
+                <li>해당 단계에서 받을 수 <br>있는 스티커수가 표시<br>되어요</li>
+                <li>이제까지 읽은 <br>누적 도서 수입니다.</li>
+                <li>도서 학습 활동을 통해<br>서 해결한 누적 문제 <br>수 입니다.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-btn swiper-button-next"></div>
+          <div class="swiper-btn swiper-button-prev"></div>
+        </div>
+      </div>
+      <!-- //학습 시작 -->
+
+      <!-- 학습 선택 -->
+      <div class="tab-content tutorial" id="tutorial2">
+        <p class="tutorial-img only"><img src="../../resources/img/app/tutorial2_1.png" alt=""></p>
+
+        <p class="tutorial-text">
+          다양하고 재미있는 학습 활동들이 있어요.<br>
+          이북으로 책을 끝까지 읽고 다양한 게임까지 즐겨보세요.<br>
+          순차적으로 진행하는 것을 추천하나 재미있는 것을 먼저 선택할 수도 있어요.
+        </p>
+      </div>
+      <!-- //학습 선택 -->
+
+      <!-- 학습 방법 -->
+      <div class="tab-content tutorial" id="tutorial3">
+        <div class="swiper tutorial-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p class="title-tutorial">책읽기 </p>
+
+              <div class="tutorial-img">
+                <img src="../../resources/img/app/tutorial3_1.png" alt="">
+
+                <p class="check-tutorial check3-1">
+                  <span>1</span>
+                </p>
+
+                <p class="check-tutorial check3-2">
+                  <span>2</span>
+                </p>
+              </div>
+
+              <ul class="tutorial-text-list">
+                <li>
+                  책읽기를 통해서 책 속으로 여행을 떠나보세요.<br>
+                  화면 중간 중간 스피커 모양의 아이콘을 누르면 음성으로 책을 들을 수 있어요.
+                </li>
+                <li>“그만 읽기”를 터치하여 종료하면 읽고 있는 페이지가 저장되어요.</li>
+              </ul>
+            </div>
+            
+            <div class="swiper-slide">
+              <p class="title-tutorial">오디오북</p>
+
+              <p class="tutorial-img"><img src="../../resources/img/app/tutorial3_2.png" alt=""></p>
+
+              <p class="tutorial-text">
+                듣는 것도 좋은 읽기 방법이에요.<br>
+                책을 읽었던 경험을 떠올리며 다시 한번 재미있게 들어보세요.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <p class="title-tutorial">독서확인학습</p>
+
+              <p class="tutorial-img"><img src="../../resources/img/app/tutorial3_3.png" alt=""></p>
+
+              <p class="tutorial-text">
+                책을 얼마나 이해하고 있는지 확인해 볼까요?<br>
+                다양한 활동으로 재미있게 학습할 수 있어요.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <p class="title-tutorial">문해력게임</p>
+
+              <p class="tutorial-img"><img src="../../resources/img/app/tutorial3_4.png" alt=""></p>
+
+              <p class="tutorial-text">
+                이제 게임으로 우리의 문해력을 높여볼까요?<br>
+                재미있게 게임도하고 스티커도 많이 모아보세요
+              </p>
+            </div>
+            <!-- 240327 : 글쓰기, 소리내어 읽기 추가 -->
+            <div class="swiper-slide">
+              <p class="title-tutorial">글쓰기</p>
+
+              <p class="tutorial-img"><img src="../../resources/img/app/tutorial3_5.png" alt=""></p>
+
+              <p class="tutorial-text">
+                텍스트 넣어주세요<br>
+                텍스트 넣어주세요
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <p class="title-tutorial">소리내어 읽기</p>
+
+              <div class="tutorial-img">
+                <img src="../../resources/img/app/tutorial3_6.png" alt="">
+
+                <p class="check-tutorial check4-1">
+                  <span>1</span>
+                </p>
+
+                <!-- <p class="check-tutorial check3-2">
+                  <span>2</span>
+                </p> -->
+              </div>
+
+              <ul class="tutorial-text-list">
+                <li>전체화면 버튼</li>
+              </ul>
+            </div>
+            <!-- //240327 : 글쓰기, 책읽기 추가 -->
+          </div>
+          <div class="swiper-btn swiper-button-next"></div>
+          <div class="swiper-btn swiper-button-prev"></div>
+        </div>
+      </div>
+      <!-- //학습 방법 -->
+
+      <!-- 성장맵 -->
+      <div class="tab-content tutorial" id="tutorial4">
+        <p class="tutorial-img only"><img src="../../resources/img/app/tutorial4_1.png" alt=""></p>
+
+        <p class="tutorial-text">
+          지금까지 받은 스티커로 마을을 꾸밀 수 있어요.<br>
+          복습을 하면 스티커를 더 많이 모을 수 있어요. 모은 스티커를 아이템으로 바꿀 수 있어요.<br>
+          아이템으로 예쁜 마을을 꾸며보아요.
+        </p>
+      </div>
+      <!-- //성장맵 -->
+    </div>
+  </div>
+
+  <script>
+    $(".tab-link.tab2 li a").on("click", function(e){
+      e.preventDefault();
+
+      var activeTab = $(this).attr('data-tab');
+      $(".tab-link.tab2 li a").removeClass("on");
+      $(".tab-content.tutorial").removeClass('on');
+      $(this).addClass('on');
+      $('#' + activeTab).addClass('on');
+    });
+
+    var swiper = new Swiper(".tutorial-swiper", {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+</html>

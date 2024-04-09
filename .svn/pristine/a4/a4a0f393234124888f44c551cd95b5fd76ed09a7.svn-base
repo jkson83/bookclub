@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <!-- 23.12.04 wrap-game 클래스 추가, game1-3으로 클래스 변경 -->
+  <div id="wrap" class="wrap wrap-game game1-3">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">아래 이미지를 선택하여 낱말의 뜻을 확인할 수 있어요</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div> 
+
+    <!-- 24.02.29 :: 단어 목록 수정 -->
+    <div class="word-list-area">
+      <div class="word-list">
+        <div class="word-list-wrap">
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic1.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic2.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button" class="btn-word">실감</button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic3.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic4.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button" class="btn-word">중심문장</button>
+          </div>
+          <div class="word-item">
+            <button type="button" class="btn-word">피곤한</button>
+          </div>
+          <div class="word-item">
+            <button type="button" class="btn-word">인물</button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic3.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic4.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic1.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic2.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button" class="btn-word">실감</button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic3.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic4.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button" class="btn-word">중심문장</button>
+          </div>
+          <div class="word-item">
+            <button type="button" class="btn-word">피곤한</button>
+          </div>
+          <div class="word-item">
+            <button type="button" class="btn-word">인물</button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic3.png" alt=""></button>
+          </div>
+          <div class="word-item">
+            <button type="button"><img src="../../resources/img/app/select_pic4.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 24.03.07 텍스트 수정 -->
+    <div class="word-btn-box">
+      <button class="btn-active">게임 도전하기!</button>
+    </div>
+     <!-- //24.03.07 텍스트 수정 -->
+     <!-- // 24.02.29 -->
+  </div>
+  
+  <script>
+    var swiper = new Swiper(".word-swiper", {
+      slidesPerView: 4,
+      freeMode: true,
+      grid: {
+        rows: 3,
+      },
+    });
+  </script>
+</body>
+</html>

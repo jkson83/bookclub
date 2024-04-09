@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap setting">
+    <div class="setting-header">
+      <h1 class="title-setting">부모님 페이지</h1>
+
+      <button type="button" class="btn-back">뒤로가기</button> 
+    </div>
+
+    <div class="setting-container">
+      <ul class="tab-link">
+        <li><a href="#">부모 계정 관리</a></li>
+        <li><a href="#" class="on">자녀 프로필 관리</a></li>
+        <li><a href="#">학습 단계 변경</a></li>
+      </ul>
+
+      <div class="setting-box">
+        <h2 class="title-sub-setting">자녀 프로필 관리</h2>
+
+        <ul class="setting-input-list">
+          <li>
+            <label for="children1">자녀 1</label>
+            <input type="text" id="children1" value="정희수">
+          </li>
+        </ul>
+
+        <div class="profile-img-area">
+          <img src="../../resources/img/app/profile_thumb2.png" alt="">
+          
+          <div>
+            <p class="profile-notice-txt">※ 사진첩 또는 카메라를 이용해 <br>프로필 이미지를 등록할 수 있어요</p>
+
+            <a href="#" class="btn-profile">프로필 이미지 등록</a>
+          </div>
+        </div>
+
+        <div class="btn-save-area">
+          <button class="btn-save">저장하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

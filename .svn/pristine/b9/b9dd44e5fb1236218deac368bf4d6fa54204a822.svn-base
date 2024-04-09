@@ -1,0 +1,63 @@
+<!-- modal -->
+<section class="ui-modal" id="ADMB0903010000P">
+	<div class="ui-modal-wrap">
+		<div class="ui-modal-header">
+			<h1 class="ui-modal-tit">비공개 설정</h1>
+			<button type="button" class="icon-close ui-modal-close" aria-label="close" ><span class="hide">모달 닫기</span></button>
+		</div>
+		<div class="ui-modal-body">
+			<div class="modal-conts">
+				<p class="descript-txt">※ 비공개 설정 시 해당 게시물은 커뮤니티 내에서 비공개 처리됩니다.</p>
+
+				<div class="tbl-base">
+					<table>
+						<colgroup>
+							<col style="width:150px;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">비공개 설정 사유</th>
+								<td>
+									<div class="frm-area">
+										<ul>
+											<li>
+												<span class="lb-item">
+													<input type="radio" id="rp01" name="rpBtn" checked="">
+													<label for="rp01" class="lb-radio"><span>부적절한 내용 게시</span></label>
+												</span>
+											</li>
+											<li>
+												<span class="lb-item">
+													<input type="radio" id="rp02" name="rpBtn">
+													<label for="rp02" class="lb-radio"><span>부적절한 사진 게시</span></label>
+												</span>
+											</li>
+											<li>
+												<span class="lb-item">
+													<input type="radio" id="rp03" name="rpBtn">
+													<label for="rp03" class="lb-radio"><span>기타</span></label>
+												</span>
+
+												<div>
+													<textarea class="inp-textarea" style="height:100px"></textarea>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="ui-modal-footer">
+			<div class="btn-group">
+				<button type="button" class="btn base tertiary"><span>취소</span></button>
+				<button type="button" class="btn base primary"><span>설정</span></button>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //modal -->

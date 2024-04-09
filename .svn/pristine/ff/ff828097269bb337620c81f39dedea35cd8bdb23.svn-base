@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVERYBOOKS</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '5', sid: '3' };
+	</script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2c"></div>
+		<section class="main-conts">
+			<h2>독서확인 학습 관리</h2>
+			<ul class="page-nav">
+				<li><a href="#">CMS(컨텐츠 관리)</a></li>
+				<li class="current"><a href="#">독서확인 학습</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+          <!-- [기획] 10/20 -->
+					<tbody>
+						<tr>
+							<th scope="row"><label for="select01">STEP</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select01">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+							<th scope="row"><label for="select02">BOOK</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select02">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp03">도서명</label></th>
+							<td colspan="3">
+								<div class="frm-area">
+									<select name="" id="select03">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="select01">대분류</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select01">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+							<th scope="row"><label for="select02">Type</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select02">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">등록일(기간)</th>
+							<td colspan="3">
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp06" name="rpBtn2" checked="">
+										<label for="rp06" class="lb-radio"><span>전체</span></label>
+									</span>
+									<strong>최근</strong>
+									<span class="lb-item">
+										<input type="radio" id="rp07" name="rpBtn2">
+										<label for="rp07" class="lb-radio"><span>1개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp08" name="rpBtn2">
+										<label for="rp08" class="lb-radio"><span>3개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp09" name="rpBtn2">
+										<label for="rp09" class="lb-radio"><span>6개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp10" name="rpBtn2">
+										<label for="rp10" class="lb-radio"><span>1년</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">게시여부</th>
+							<td colspan="3">
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp11" name="rpBtn3" checked="">
+										<label for="rp11" class="lb-radio"><span>전체</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp12" name="rpBtn3">
+										<label for="rp12" class="lb-radio"><span>Y</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp13" name="rpBtn3">
+										<label for="rp13" class="lb-radio"><span>N</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+          <!-- //[기획] 10/20 -->
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>조회</span></button>
+				</div>
+			</div>
+			<div class="sub-title">
+				<p class="count">총 <span>100</span>건</p>
+			</div>
+      <div class="tbl-base type2 mgt10">
+        <!-- [기획] 10/20 -->
+        <table>
+          <colgroup>
+            <col style="width:88px;">
+            <col style="width:88px;">
+            <col style="width:88px;">
+            <col style="width:100px;">
+            <col style="width:100px;">
+            <col style="width:100px;">
+            <col style="width:auto;">
+            <col style="width:70px;">
+            <col style="width:88px;">
+            <col style="width:100px;">
+            <col style="width:100px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">Step</th>
+              <th scope="col">Book</th>
+              <th scope="col">도서명</th>
+              <th scope="col">대분류</th>
+              <th scope="col">Type</th>
+              <th scope="col">학습제목</th>
+              <th scope="col">게시여부</th>
+              <th scope="col">등록자</th>
+              <th scope="col">등록일</th>
+              <th scope="col">문제 추가</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>100</td>
+              <td>Step1</td>
+              <td>Book1</td>
+              <td>프린세스</td>
+              <td>선택하기</td>
+              <td>글을 읽고 O,X 선택</td>
+              <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+              <td>Y</td>
+              <td>관리자A</td>
+              <td>yyyy.mm.dd</td>
+              <td><button type="button" class="btn base tbl">추가</button></td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td>Step1</td>
+              <td>Book1</td>
+              <td>프린세스</td>
+              <td>선 긋기</td>
+              <td>선 긋기</td>
+              <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+              <td>Y</td>
+              <td>관리자A</td>
+              <td>yyyy.mm.dd</td>
+              <td><button type="button" class="btn base tbl">추가</button></td>
+            </tr>
+            <tr>
+              <td>98</td>
+              <td>Step1</td>
+              <td>Book1</td>
+              <td>프린세스</td>
+              <td>선택하기</td>
+              <td>문제를 읽고 그림이나 글 선택하기</td>
+              <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+              <td>Y</td>
+              <td>관리자A</td>
+              <td>yyyy.mm.dd</td>
+              <td><button type="button" class="btn base tbl">추가</button></td>
+            </tr>
+            <tr>
+              <td>97</td>
+              <td>Step1</td>
+              <td>Book1</td>
+              <td>프린세스</td>
+              <td>선 긋기</td>
+              <td>선 긋기</td>
+              <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+              <td>Y</td>
+              <td>관리자A</td>
+              <td>yyyy.mm.dd</td>
+              <td><button type="button" class="btn base tbl">추가</button></td>
+            </tr>
+            <tr>
+              <td>96</td>
+              <td>Step1</td>
+              <td>Book1</td>
+              <td>프린세스</td>
+              <td>선 긋기</td>
+              <td>선 긋기</td>
+              <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+              <td>Y</td>
+              <td>관리자A</td>
+              <td>yyyy.mm.dd</td>
+              <td><button type="button" class="btn base tbl">추가</button></td>
+            </tr>
+            <tr>
+              <td>95</td>
+              <td>Step1</td>
+              <td>Book1</td>
+              <td>프린세스</td>
+              <td>선 긋기</td>
+              <td>선 긋기</td>
+              <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+              <td>Y</td>
+              <td>관리자A</td>
+              <td>yyyy.mm.dd</td>
+              <td><button type="button" class="btn base tbl">추가</button></td>
+            </tr>
+            <tr>
+              <td>94</td>
+              <td>Step1</td>
+              <td>Book1</td>
+              <td>프린세스</td>
+              <td>선 긋기</td>
+              <td>선 긋기</td>
+              <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+              <td>Y</td>
+              <td>관리자A</td>
+              <td>yyyy.mm.dd</td>
+              <td><button type="button" class="btn base tbl">추가</button></td>
+            </tr>
+            <tr>
+              <td>93</td>
+              <td>Step1</td>
+              <td>Book1</td>
+              <td>프린세스</td>
+              <td>선 긋기</td>
+              <td>선 긋기</td>
+              <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+              <td>Y</td>
+              <td>관리자A</td>
+              <td>yyyy.mm.dd</td>
+              <td><button type="button" class="btn base tbl">추가</button></td>
+            </tr>
+            <tr>
+              <td>92</td>
+              <td>Step1</td>
+              <td>Book1</td>
+              <td>프린세스</td>
+              <td>선 긋기</td>
+              <td>선 긋기</td>
+              <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+              <td>Y</td>
+              <td>관리자A</td>
+              <td>yyyy.mm.dd</td>
+              <td><button type="button" class="btn base tbl">추가</button></td>
+            </tr>
+            <tr>
+              <td>91</td>
+              <td>Step1</td>
+              <td>Book1</td>
+              <td>프린세스</td>
+              <td>선 긋기</td>
+              <td>선 긋기</td>
+              <td class="txt-l"><a href="#">도서확인학습 제목 100</a></td>
+              <td>Y</td>
+              <td>관리자A</td>
+              <td>yyyy.mm.dd</td>
+              <td><button type="button" class="btn base tbl">추가</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- //[기획] 10/20 -->
+      </div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base primary"><span>등록</span></button>
+				</div>
+				<div class="pager">
+					<a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+					<span class="num">
+						<a href="#">1</a>
+						<a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+					</span>
+					<a href="#" class="btn next"><span class="hide">다음으로</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

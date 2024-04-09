@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap setting">
+    <div class="setting-header">
+      <h1 class="title-setting">학습리포트</h1>
+
+      <button type="button" class="btn-back">뒤로가기</button> 
+    </div>
+
+    <div class="setting-container fullpage">
+      <h2 class="title-report">전체 학습 리포트</h2>
+
+      <div class="tb-list-area report">
+        <table>
+          <caption>독서습관, 누적 독서 수, 학습한 어휘 수, 해결한 문제 수, 스티커 수, 출석 횟수 항목으로 이루어진 테이블입니다.</caption>
+          <colgroup>
+            <col style="width:12.92%;">
+            <col style="width:18.29%;">
+            <col style="width:19.42%;">
+            <col style="width:19.42%;">
+            <col style="width:16.61%;">
+            <col >
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">독서습관</th>
+              <th scope="col">누적 독서 수</th>
+              <th scope="col">학습한 어휘 수</th>
+              <th scope="col">해결한 문제 수</th>
+              <th scope="col">스티커 수</th>
+              <th scope="col">출석 횟수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10</td>
+              <td>5</td>
+              <td>120</td>
+              <td>107</td>
+              <td>22</td>
+              <td>12</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 학습리포트 -->
+      <div class="report-area">
+        <h2 class="title-report">학습리포트</h2>
+
+        <div class="study-step-selecct">
+          <h3 class="title-step">학습 단계</h3>
+
+          <select class="select-type">
+            <option value="">STEP3</option>
+          </select>
+
+          <select class="select-type">
+            <option value="">Book1</option>
+          </select>
+        </div>
+
+        <!-- 학습 상세내역 -->
+        <div class="tb-list-area report">
+          <table>
+            <caption>누적 독서 수, 학습한 어휘 수, 해결한 문제 수, 스티커 수 항목으로 이루어진 테이블입니다.</caption>
+            <colgroup>
+              <col span="4" style="width:25%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">누적 독서 수</th>
+                <th scope="col">학습한 어휘 수</th>
+                <th scope="col">해결한 문제 수</th>
+                <th scope="col">스티커 수</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="accrue-book">5</span></td>
+                <td><span class="study-word">120</span></td>
+                <td><span class="solve-question">107</span></td>
+                <td><span class="sticker-num">22</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //학습 상세내역 -->
+      </div>
+      <!-- //학습리포트 -->
+
+      <div class="report-area">
+        <h2 class="title-report">도서별 학습 현황</h2>
+
+        <div class="book-study-state">
+          <!-- 책 정보 -->
+          <div class="study-book-info">
+            <div class="one-book-area one-book1">
+              <p class="book-img"><img src="../../resources/img/app/book_img1.png" alt=""></p>
+            </div>
+
+            <ul class="boook-info-list">
+              <li>
+                <strong>도서명</strong> 혹부리 할아버지
+              </li>
+              <li>
+                <strong>획득한 스티커 수</strong> 12개
+              </li>
+              <li>
+                <!-- 23.11.22 문구 수정 -->
+                <strong>학습 진행률</strong>
+
+                <p class="study-percent">
+                  <span style="width:60%;">60%</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- //책 정보 -->
+
+          <!-- 학습결과 -->
+          <div class="tb-list-area">
+            <table>
+              <caption>구분, 학습, 결과 항목으로 이루어진 테이블입니다.</caption>
+              <colgroup>
+                <col style="width:32.39%;">
+                <col >
+                <col style="width:23.97%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">학습</th>
+                  <th scope="col">결과</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="3">읽기</td>
+                  <td>이북</td>
+                  <td class="complete">완료</td>
+                </tr>
+                <tr>
+                  <td>오디오북</td>
+                  <td class="complete">완료</td>
+                </tr>
+                <tr>
+                  <td>소리내어 읽기</td>
+                  <td class="complete">완료</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //학습결과 -->
+
+          <!-- 학습결과 그래프 -->
+          <div class="study-graph-area">
+            <img src="../../resources/img/app/study_graph.png" alt="">
+          </div>
+          <!-- //학습결과 그래프 -->
+        </div>
+      </div>
+
+      <div class="report-area">
+        <div class="book-study-state">
+          <!-- 책 정보 -->
+          <div class="study-book-info">
+            <div class="one-book-area one-book2">
+              <p class="book-img"><img src="../../resources/img/app/book_img2.png" alt=""></p>
+            </div>
+
+            <ul class="boook-info-list">
+              <li>
+                <strong>도서명</strong> Row, Row, Row Your BoatYour Boat
+              </li>
+              <li>
+                <strong>획득한 스티커 수</strong> 12개
+              </li>
+              <li>
+                <!-- 23.11.22 문구 수정 -->
+                <strong>학습 진행률</strong>
+
+                <p class="study-percent">
+                  <span style="width:60%;">60%</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- //책 정보 -->
+
+          <!-- 학습결과 -->
+          <div class="tb-list-area">
+            <table>
+              <caption>구분, 학습, 결과 항목으로 이루어진 테이블입니다.</caption>
+              <colgroup>
+                <col style="width:32.39%;">
+                <col >
+                <col style="width:23.97%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">학습</th>
+                  <th scope="col">결과</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="3">읽기</td>
+                  <td>이북</td>
+                  <td class="complete">완료</td>
+                </tr>
+                <tr>
+                  <td>오디오북</td>
+                  <td class="complete">완료</td>
+                </tr>
+                <tr>
+                  <td>소리내어 읽기</td>
+                  <td class="complete">완료</td>
+                </tr>
+                <tr>
+                  <td rowspan="4">독해</td>
+                  <td>독서확인학습</td>
+                  <td class="complete">완료</td>
+                </tr>
+                <tr>
+                  <td>문해력 게임(1단계)</td>
+                  <td class="complete">완료</td>
+                </tr>
+                <tr>
+                  <td>문해력 게임(2단계)</td>
+                  <td class="complete">완료</td>
+                </tr>
+                <tr>
+                  <td>글쓰기</td>
+                  <td class="complete">완료</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //학습결과 -->
+
+          <!-- 학습결과 그래프 -->
+          <div class="study-graph-area">
+            <img src="../../resources/img/app/study_graph.png" alt="">
+          </div>
+          <!-- //학습결과 그래프 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

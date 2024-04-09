@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap study-result">
+    <div class="top-sticker-area">
+      <span class="icon-sticker on">스티커</span>
+      <span class="icon-sticker on">스티커</span>
+      <span class="icon-sticker">스티커</span>
+    </div>
+
+    <h1 class="title-study-result">독서확인 학습 결과</h1>
+
+    <p class="result-text">조금 더 노력해야겠어요!</p>
+
+    <div class="result-area">
+      <p class="result-point">점수 : 49점</p>
+
+      <!-- 23.12.22 테이블 헤더 고정때문에 tb-box-wrap div 추가 -->
+      <div class="tb-box-wrap">
+        <div class="table-area scroll">
+          <table>
+            <caption>NAME, VALUE, COLOR, DATE 항목으로 이루어진 테이블입니다.</caption>
+            <colgroup>
+              <col style="width:16.41%;">
+              <col style="width:32.72%;">
+              <col />
+              <col style="width:18%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">유형</th>
+                <th scope="col">역량</th>
+                <th scope="col">결과</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>O,X 선택</td>
+                <td>지각적 사고</td>
+                <td><img src="../../resources/img/app/answer_o.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>문제를 읽고 그림이나 글 선택하기</td>
+                <td>종합적 사고</td>
+                <td><img src="../../resources/img/app/answer_x.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>선 긋기</td>
+                <td>실천적 사고</td>
+                <td><img src="../../resources/img/app/answer_x.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>선택하기</td>
+                <td>분석적 사고</td>
+                <td><img src="../../resources/img/app/answer_o.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>순서배열</td>
+                <td>비판적 사고, 분석적 사고</td>
+                <td><img src="../../resources/img/app/answer_o.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>순서 선택하기</td>
+                <td>실천적 사고</td>
+                <td><img src="../../resources/img/app/answer_o.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>순서 선택하기</td>
+                <td>실천적 사고</td>
+                <td><img src="../../resources/img/app/answer_o.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>순서 선택하기</td>
+                <td>실천적 사고</td>
+                <td><img src="../../resources/img/app/answer_o.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>순서 선택하기</td>
+                <td>실천적 사고</td>
+                <td><img src="../../resources/img/app/answer_o.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>순서 선택하기</td>
+                <td>실천적 사고</td>
+                <td><img src="../../resources/img/app/answer_o.png" alt=""></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="btn-end-study">
+        <button>학습 마치기</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

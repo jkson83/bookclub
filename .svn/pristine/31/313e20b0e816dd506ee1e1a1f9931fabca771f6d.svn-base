@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body data-pagescroll="auto">
+  <!-- 
+    이미지 : q-img-arrange
+    텍스트 : q-txt-arrange
+  -->
+  <div id="wrap" class="wrap question q-txt-arrange">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div>
+
+    <!-- 드래그 -->
+    <div class="mdl-drag" data-drag-id="txtType">
+      <div class="inner">
+        <div class="mdl-drag-item" data-drag-name="1">
+          <img src="../../resources/img/app/select_pic2.png" alt="">  
+          <div class="mdl-drag-area a1" data-drag-name="1"></div>
+        </div>
+        <div class="mdl-drag-item" data-drag-name="2">
+          <img src="../../resources/img/app/select_pic3.png" alt="">
+          <div class="mdl-drag-area a2" data-drag-name="2"></div>
+        </div>
+        <div class="mdl-drag-item" data-drag-name="3">
+          <img src="../../resources/img/app/select_pic4.png" alt="">
+          <div class="mdl-drag-area a3" data-drag-name="3"></div>
+        </div>
+        <div class="mdl-drag-item" data-drag-name="4">
+          <img src="../../resources/img/app/select_pic1.png" alt="">
+          <div class="mdl-drag-area a4" data-drag-name="4"></div>
+        </div>
+      </div>
+      <div class="mdl-drag-drop d1" data-drag-name="1">
+        루카는 눈앞에 펼쳐질 멋진 하루를 상상해 보았어요.
+      </div>
+      <div class="mdl-drag-drop d2" data-drag-name="2">
+        층계에서 발소리가 들렸어요! 아빠가 일어났나 봐요. 큰일났어요!
+      </div>
+      <div class="mdl-drag-drop d3" data-drag-name="3">
+        루카의 마음 속에 찬바람이 휭 불면서 먹구름이 몰려왔어요.
+      </div>
+      <div class="mdl-drag-drop d4" data-drag-name="4">
+        루카는 새로 생긴 친구한테서 눈길을 뗄 수가 없었어요.
+      </div>
+    </div>
+    <!-- //드래그 -->
+
+    <!-- 다시하기/정답확인 버튼 -->
+    <div class="q-checked-box disabled">
+      <button type="button" class="btn-again" onclick="UI.exe.dragdrop.reset();"><span>다시하기</span></button>
+      <button type="button" class="btn-confirm" onclick="UI.exe.dragdrop.check();"><span>정답확인</span></button>
+    </div>
+    <!--// 다시하기/정답확인 버튼 -->
+
+    <!-- 다음문제풀기 버튼 -->
+    <div class="q-next-btn disabled">
+      <button type="button" class="btn-next"><span>다음문제풀기</span></button>
+    </div>
+    <!--// 다음문제풀기 버튼-->
+
+    <!-- 다음문제풀기 버튼 -->
+    <div class="q-next-btn disabled last">
+      <button type="button" class="btn-result"><span>학습결과보기</span></button>
+    </div>
+    <!--// 다음문제풀기 버튼-->
+
+
+    <!-- 진도율 -->
+    <div class="study-complete-area">
+      <span class="on">1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+    </div>
+    <!-- //진도율 -->
+
+    <!-- 23.11.22 하단 버튼 추가 -->
+    <div class="q-check-btn">
+      <button type="button">다시 할래요!</button>
+    </div>
+
+    <!-- 정답 맞췄을 경우 -->
+    <div class="layer-correct" style="display:none;">정답</div>
+    <!-- //정답 맞췄을 경우 -->
+
+    <!-- 정답 틀렸을 경우 -->
+    <div class="layer-wrong" style="display:none;">오답</div>
+    <!-- //정답 틀렸을 경우 -->
+  </div>
+
+
+  <script type="module">    
+    'use strict';
+
+    const global = 'UI';
+
+    if (!window[global]) {
+        window[global] = {};
+    } 
+    const UI = window[global];
+
+    import DragDrop from '../../resources/js/dragDrop.js';
+    
+    // name  :: drop-area, drop-drop의 data-drag-name
+    // sum:  :: drop-area 에 들어가는 정답 갯수, 1 ~ n
+    // limit :: drop-area 안에 들어갈 수 있는 최대 갯수, 1 ~ n
+    // move  :: true 재선택 가능
+    // align :: drop-area의 display 속성이 flex인 경우 필수 추가
+    // copy  :: drop-drop 요소 무한사용
+    // state :: 현재 정답 상태
+    // UI 객체에 exe 속성이 없다면 추가합니다.
+    if (!UI.exe) {
+        UI.exe = {};
+    }
+
+    UI.exe.dragdrop = new DragDrop({
+      id: 'txtType',
+      answer: [
+        { name: 1, sum: 1, move: true, align: 'center', limit: 1, state: false },
+        { name: 2, sum: 1, move: true, align: 'center', limit: 1, state: false },
+        { name: 3, sum: 1, move: true, align: 'center', limit: 1, state: false },
+        { name: 4, sum: 1, move: true, align: 'center', limit: 1, state: false },
+      ],
+      callback: (v) => {
+        // drop-area 영역에 성공할때마다 해당 개별 콜백
+        console.log('callback', v);  
+      },
+      callbackComplete: (v) => {
+        // 모든 정답처리 완료 시 실행
+        console.log('callbackComplete', v);
+        const wrap = document.querySelector('.mdl-drag');
+        const btns = document.querySelector('.q-checked-box');
+        const btnAgain = document.querySelector('.q-check-btn');
+
+        if(v.sum === 4) {
+          wrap.classList.add('complete');
+          btns.classList.remove('disabled');
+          btnAgain.classList.add('disabled');
+        } 
+      },
+    });
+  </script>
+</body>
+</html>

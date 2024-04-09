@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>EVERYBOOKS 어드민</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '7' };
+	</script>
+</head>
+
+<body class="b2b">
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2b"></div>
+		<section class="main-conts">
+			<h2>포트폴리오</h2>
+			<ul class="page-nav">
+				<li class="current"><a href="#">포트폴리오</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><label for="select01">STEP</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<select id="select01">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+							<th scope="row"><label for="select02">BOOK</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td>
+								<div class="frm-area">
+									<select id="select02">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="select03">도서명</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="3">
+								<div class="frm-area">
+									<select id="select03">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp01">제목</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="3">
+								<div class="frm-area">
+									<input type="text" name="" id="inp01" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">등록일</th>
+							<td colspan="3">2023-12-29</td>
+						</tr>
+						<tr>
+							<th><label for="inpUpload">포트폴리오</label><span class="ico-req"><span class="hide">필수</span></span></th>
+							<td colspan="3">
+								<div class="file-wrap multi">
+									<div class="input-item">
+										<input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly="">
+										<span class="btn base square">
+											<input type="file" title="첨부파일 선택">
+											<span>파일추가</span>
+										</span>
+										<!-- 24.02.26 :: 문구 수정 -->
+										<span class="file-info">※ 이미지 사이즈 (1116x808)의 JPG, PNG 파일로만 등록이 가능합니다.</span>
+									</div>
+									<div class="file-list">
+										<div class="file">
+											<p class="file-name">파일명.확장자</p>
+											<button type="button" class="btn-del"><span>삭제</span></button>
+										</div>
+										<div class="file">
+											<p class="file-name">파일명.확장자</p>
+											<button type="button" class="btn-del"><span>삭제</span></button>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4">
+								<p class="msg error-info">내용을 입력해주세요.</p>
+								<div style="background:#eee; line-height:300px; text-align:center;">에디터</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<button class="btn base tertiary"><span>삭제</span></button>
+				<div>
+					<button class="btn base secondary"><span>취소</span></button>
+					<button class="btn base primary"><span>저장</span></button>
+				</div>
+			</div>
+
+			<div class="sub-title">
+				<h3>댓글 작성</h3>
+			</div>
+
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:100%;">
+					<tbody>
+						<tr>
+							<td>
+								<div class="frm-area">
+									<textarea class="inp-textarea" style="height:200px"></textarea>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base primary"><span>등록</span></button>
+				</div>
+			</div>
+
+			<div class="sub-title">
+				<h3>댓글 관리</h3>
+			</div>
+
+			<div class="sub-title mgt10">
+				<p class="count">총 <span>3</span>건</p>
+			</div>
+
+			<div class="tbl-base type2 mgt10">
+				<table>
+					<colgroup>
+						<col style="width:90px;">
+						<col style="width:100px;">
+						<col style="width:auto;">
+						<col style="width:150px;">
+						<col style="width:150px;">
+						<col style="width:200px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">이름</th>
+							<th scope="col">내용</th>
+							<th scope="col">IP</th>
+							<th scope="col">등록일</th>
+							<th scope="col">관리</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>최우영</td>
+							<td class="txt-l">너무너무 좋았어요. 감사합니다.</td>
+							<td>112.218.228.29</td>
+							<td>2024-01-03</td>
+							<td>
+								<button class="btn base tbl"><span>삭제</span></button>
+								<button class="btn base tbl"><span>숨기기</span></button>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>김나라</td>
+							<td class="txt-l">너무너무 좋았어요. 감사합니다.</td>
+							<td>112.218.228.29</td>
+							<td>2024-01-03</td>
+							<td>
+								<button class="btn base tbl"><span>삭제</span></button>
+								<button class="btn base tbl"><span>보이기</span></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tbl-btns">
+				<div class="pager">
+					<a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+					<span class="num">
+						<a href="#">1</a>
+						<a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+					</span>
+					<a href="#" class="btn next"><span class="hide">다음으로</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

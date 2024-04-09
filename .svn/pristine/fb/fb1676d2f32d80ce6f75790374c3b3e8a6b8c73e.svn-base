@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <!-- 23.12.04 wrap-game 클래스 추가, game4 클래스로 변경 -->
+  <div id="wrap" class="wrap wrap-game game4">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">다음 카드 중 같은 그림 2개를 찾아 주세요.</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div> 
+
+    <!-- 질문 영역 -->
+    <div class="card-box">
+      <!-- 23.12.04 div 추가 -->
+      <div class="card-area">
+        <section class="score-panel">
+          <div class="movesCounter"><span class="moves">0</span> Moves</div>
+
+          <div class="timer"></div>
+
+          <div class="restart">
+            <i class="fa fa-repeat"></i>
+          </div>
+        </section>
+
+        <!-- 23.12.29 카드 글자 추가로 p태그 추가 -->
+        <!-- 24.01.03 2x2일때 deck-2x2 클래스 추가 -->
+        <ul class="deck">
+          <li class="card">
+            <p class="card-img-area">
+              <img src="../../resources/img/app/profile_img1.png" alt="">
+
+              <span class="card-text">가나다라마</span>
+            </p>
+          </li>
+          <li class="card">
+            <p class="card-img-area">
+              <img src="../../resources/img/app/select_pic1.png" alt="">
+
+              <span class="card-text">가나다라마</span>
+            </p>
+          </li>
+          <li class="card">
+            <p class="card-img-area">
+              <img src="../../resources/img/app/select_pic2.png" alt="">
+
+              <span class="card-text">가나다라마</span>
+            </p>
+          </li>
+          <li class="card">
+            <p class="card-img-area">
+              <img src="../../resources/img/app/select_pic2.png" alt="">
+
+              <span class="card-text">가나다라마</span>
+            </p>
+          </li>
+          <li class="card">
+            <p class="card-img-area">
+              <img src="../../resources/img/app/select_pic3.png" alt="">
+
+              <span class="card-text">가나다라마</span>
+            </p>
+          </li>
+          <li class="card">
+            <p class="card-img-area">
+              <img src="../../resources/img/app/select_pic3.png" alt="">
+
+              <span class="card-text">가나다라마</span>
+            </p>
+          </li>
+          <li class="card">
+            <p class="card-img-area">
+              <img src="../../resources/img/app/select_pic4.png" alt="">
+
+              <span class="card-text">가나다라마</span>
+            </p>
+          </li>
+          <li class="card">
+            <p class="card-img-area">
+              <img src="../../resources/img/app/select_pic4.png" alt="">
+
+              <span class="card-text">가나다라마</span>
+            </p>
+          </li>
+          <li class="card">
+            <p class="card-img-area">
+              <img src="../../resources/img/app/profile_img1.png" alt="">
+
+              <span class="card-text">가나다라마</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- //질문 영역 -->
+
+    <!-- 문제 페이징 -->
+    <div class="q-paging-area">
+      <a href="#" class="on">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+    </div>
+    <!-- //문제 페이징 -->
+  </div>
+
+
+  <script>
+    /*
+    * Create a list that holds all of your cards
+    */
+    let openCards = [];
+    let card = document.getElementsByClassName('card');
+    let cards = [...card];
+    let movesCounter = document.querySelector('.moves');
+    let deck = document.querySelector('.deck');
+    let shuffledCards = [];
+    let moves = 0;
+    let match = 0;
+    let sec = 0;
+    let min = 0;
+    let timeCounter = document.querySelector('.timer');
+    let timer = '';
+    let timerDelay = 0;
+    let modal2 = document.querySelector('.modal2');
+    let stat = document.querySelector('.end-msg');
+    let timerText = '';
+    let modalMsg = '';
+    let restart = document.querySelector('.restart');
+    restart.addEventListener('click', restartGame);
+
+    /*
+    * set up the event listener for a card. If a card is clicked:
+    *  - display the card's symbol (put this functionality in another function that you call from this one)
+    *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
+    *  - if the list already has another card, check to see if the two cards match
+    *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
+    *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
+    *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
+    *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
+    */
+
+    setDeck();
+
+    /**
+    * Shuffle cards on deck and display face down
+    * call to initialize moves at move-counter on webpage
+    * call to start the game
+    */
+    function setDeck() {
+      console.log("shuffle");
+      shuffledCards = shuffle(cards);
+      for(let i = 0; i < shuffledCards.length; i++) {
+        deck.appendChild(shuffledCards[i]);
+        shuffledCards[i].classList.remove('open','show','match','shake');
+      }
+      setMoves();
+      setTimeout(function() {
+        showFirst();
+        setTimeout(function() {
+          hideCards();
+          startGame();
+        },2000);
+      },1000);
+    }
+
+    /**
+    * showFirst - shows all the cards
+    *
+    * @param  card shuffled card list
+    */
+    function showFirst() {
+      console.log("show");
+      for(let i = 0; i < shuffledCards.length; i++) {
+        shuffledCards[i].classList.add('open','show');
+      }	
+    
+    }
+
+    /**
+    * hideCards - hides all the cards
+    *
+    * @param  card shuffled card list
+    */
+    function hideCards() {
+      console.log("hide");
+      for(let i = 0; i < shuffledCards.length; i++) {
+        shuffledCards[i].classList.remove('open','show');
+      }
+    }
+
+    /**
+    * Sets move counter to current moves done
+    */
+    function setMoves() {
+      movesCounter.textContent = moves++;
+    }
+
+    /**
+    * Game starts when a card is clicked
+    */
+
+    function startGame() {
+      for(let i = 0; i < cards.length; i++) {
+        shuffledCards[i].addEventListener('click', flipCardUp);
+      }
+    }
+
+    /**
+    * Shows card-symbol at click
+    * Adds card to openCards list
+    * If it's first card - start timer
+    * If there are 2 cards on list - call to compare symbols
+    * If all cards are matched, call to end game
+    * @param  {type} event clicked card
+    */
+
+    function flipCardUp(event) {
+      event.target.classList.remove('shake');
+      showCard(event);
+      addToOpenCards(event.target);
+      timerDelay++;
+
+      if(timerDelay === 1) {
+        startTimer();
+      }
+
+      if(openCards.length === 2) {
+        let prev = openCards[0];
+        let curr = openCards[1];
+        checkMatch(prev,curr);
+      }
+
+      if(card.length%2 == 0){
+        if(match === card.length/2) {
+          endGame();
+        } 
+      }
+      if(card.length%2 == 1){
+        if(match === Math.floor(card.length/2)) {
+          endGame();
+        } 
+      }
+    }
+
+    /**
+    * Checks the symbol of current and previous cards from list
+    * If match - call to change card style
+    * If not a match - call to flip card down
+    * Afterwards, call to increment moves and check star rating-status
+    * Reset openCards list
+    * @param  {type} prev 1st card on list
+    * @param  {type} curr 2nd card of list
+    */
+    function checkMatch(prev,curr) {
+      if(prev.innerHTML === curr.innerHTML)  {
+          isMatch(prev,curr);
+      }
+      else {
+        notMatch(prev,curr);
+      }
+
+      incrementMoves();
+      openCards = [];
+    }
+
+    /**
+    * Lock card in open position and change styles
+    * Increment match number
+    * @param  {type} prev 1st card on list
+    * @param  {type} curr 2nd card of list
+    */
+    function isMatch(prev,curr) {
+      prev.classList.add('match');
+      curr.classList.add('match');
+      match++;
+    }
+
+    /**
+    * Flip card back down and add style 	 *
+    * @param  {type} prev 1st card on list
+    * @param  {type} curr 2nd card of list
+    */
+    function notMatch(prev,curr) {
+      setTimeout(function () {
+        prev.classList.add('shake');
+        curr.classList.add('shake');
+        prev.classList.remove('open','show');
+        curr.classList.remove('open','show');
+      }, 300);
+    }
+
+    /**
+    * Increment moves by 1
+    */
+    function incrementMoves() {
+    setMoves();
+    }
+
+    /**
+    * Add currently clicked card to openCards list
+    * @param  {type} c clicked card
+    */
+    function addToOpenCards(c) {
+      openCards.push(c);
+    }
+
+    /**
+    * Shows card symbol
+    * @param  {type} event clicked card
+    */
+    function showCard(event) {
+      event.target.classList.add('open','show');
+      console.log(event.target.classList);
+    }
+
+    /**
+    * Start the timer
+    * Store timer in a temporary variable
+    */
+    function startTimer() {
+      timer = setInterval(buildTimer,1000);
+    }
+
+    /**
+    * Pre-increment seconds on every time function is called
+    * Calculate minute and second and store in variables
+    * Format time in 00:00 and set it in variable
+    * Show final formatted time to time-counter on webpage
+    */
+    function buildTimer() {
+      ++sec;
+      min = Math.floor(sec / 60);
+      sec = Math.floor(sec % 60);
+      timerText = pad(sec) + "초";
+      timeCounter.innerHTML = timerText;
+    }
+
+    /**
+    * Pad the time in 00 format
+    * Convert time value to string
+    * If digit is less than 2, add 0 infront
+    * @param  {type} value time value
+    * @return {type} string expression of time value
+    */
+    function pad(value) {
+      var string = value + "";
+      if(string.length < 2) {
+        return "0" + string;
+      }
+      else return string;
+    }
+
+    /**
+    * Stops timer from running
+    * Clears minute,second, and time string
+    */
+    function stopTimer() {
+      clearInterval(timer);
+      sec = 0;
+      min = 0;
+      timerText = '';
+    }
+
+    /**
+    * Stop timer from running
+    */
+    function endGame() {
+      stopTimer();
+      setTimeout(function(){
+        alert('게임 끝!')
+      }, 500);
+    }
+
+    /**
+    * Reset everything
+    * Event - when "Restart" is clicked
+    * Call to shuffle and set cards to deck
+    * Call to reinitialize temporary variables
+    */
+    function resetGame() {
+      setDeck();
+      reInit();
+    }
+
+    /**
+    * Reinitialize moves and match numbers
+    * Reset move and timer text on webpage
+    */
+    function reInit() {
+      movesCounter.innerHTML = '';
+      timeCounter.innerHTML = '';
+      moves = 0;
+      match = 0;
+      timerDelay = 0;
+    }
+
+    /**
+    * Restart the game by resetting everything
+    * Event - when "Play Again" is clicked
+    */
+    function restartGame() {
+      this.classList.add('active');
+      stopTimer();
+      reInit();
+      setDeck();
+      setTimeout(function(){
+        restart.classList.remove('active')
+      },2900)
+    }
+
+    function shuffle(array) {
+      var currentIndex = array.length, temporaryValue, randomIndex;
+
+      while (currentIndex !== 0) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    }
+  </script>
+
+</body>
+</html>

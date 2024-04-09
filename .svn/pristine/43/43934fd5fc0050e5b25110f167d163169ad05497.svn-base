@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <!-- 23.12.04 wrap-game 클래스 추가 -->
+  <div id="wrap" class="wrap wrap-game game2">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">글자를 선택해 뜻에 알맞은 단어를 완성해 보세요.</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div> 
+
+    <!-- 질문 영역 -->
+    <!-- 23.12.04 game-box-area div 추가, game-box-top로 클래스 변경 -->
+    <div class="game-box-area">
+      <div class="game-box-top">
+        무슨 영문인지 잘 몰라서 어떨떨 하다<br>
+        무슨 영문인지 잘 몰라서 어떨떨 하다
+
+        <button class="q-sound">질문 듣기</button>
+
+        <p class="q-time">58초</p>
+      </div>
+    </div>
+    <!-- //질문 영역 -->
+
+    <!-- 단어 박스 -->
+    <!-- <div class="word-box-area">
+      <p class="word-box2">어</p>
+      <p class="word-box2">?</p>
+      <p class="word-box2">?</p>
+      <p class="word-box2">?</p>
+    </div> -->
+    <!-- //단어 박스 -->
+
+    <!-- 24.01.03 단어 입력 추가 -->
+    <div class="word-box-area">
+      <p class="word-box2">
+        <input type="text" class="input-word">
+      </p>
+      <p class="word-box2">
+        <input type="text" class="input-word">
+      </p>
+      <p class="word-box2">
+        <input type="text" class="input-word">
+      </p>
+      <p class="word-box2">
+        <input type="text" class="input-word">
+      </p>
+    </div>
+    <!-- //24.01.03 단어 입력 추가 -->
+
+    <div class="syllable-box">
+      <div class="syllable-area">
+        <!-- 선택 됐을 경우 on 클래스 추가 -->
+        <button type="button" class="btn-syllable on">어</button>
+        <button type="button" class="btn-syllable">음</button>
+        <button type="button" class="btn-syllable on">리</button>
+        <button type="button" class="btn-syllable">체</button>
+        <button type="button" class="btn-syllable">활</button>
+        <button type="button" class="btn-syllable">사</button>
+        <button type="button" class="btn-syllable on">절</button>
+        <button type="button" class="btn-syllable">진</button>
+        <button type="button" class="btn-syllable">려</button>
+        <button type="button" class="btn-syllable">트</button>
+        <button type="button" class="btn-syllable on">둥</button>
+        <button type="button" class="btn-syllable">임</button>
+      </div>
+    </div>
+
+    <!-- 문제 페이징 -->
+    <div class="q-paging-area">
+      <a href="#" class="on">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+    </div>
+    <!-- //문제 페이징 -->
+  </div>
+
+</body>
+<!-- 24.02.28 :: 첫번째 키워드에 커서 깜빡임 효과 추가 -->
+<script>
+  (function (win, doc) {
+    'use strict';
+
+    const wordWrap = doc.querySelector('.word-box-area');
+    const wordInp = wordWrap.firstElementChild;
+    const item = wordInp.querySelector('.input-word');
+
+    item.addEventListener('input', (e) => {
+      const _target = e.target;
+      const _parent = _target.parentElement;
+      
+      _parent.classList.add('noBlink');
+    })
+    
+  })(window, document);
+</script>
+<!--// -->
+</html>

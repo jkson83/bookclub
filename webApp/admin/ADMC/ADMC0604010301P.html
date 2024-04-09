@@ -1,0 +1,105 @@
+<!-- modal -->
+<section class="ui-modal" id="ADMC0604010301P">
+  <div class="ui-modal-wrap">
+    <div class="ui-modal-header">
+      <h1 class="ui-modal-tit">항목 추가</h1>
+      <button type="button" class="icon-close ui-modal-close" aria-label="close" ><span class="hide">모달 닫기</span></button>
+    </div>
+    <div class="ui-modal-body">
+      <div class="modal-conts">
+        <div class="tbl-base">
+          <table>
+            <colgroup>
+              <col style="width:150px;">
+              <col style="width:auto;">
+            </colgroup>
+            <!-- [기획] 10/20 -->
+            <tbody>
+              <tr>
+                <th scope="row" class="txt-l"><label for="modal_inp01">낱말</label><span class="ico-req"><span class="hide">필수</span></span></th>
+                <td>
+                  <div class="frm-area">
+                    <input type="text" id="modal_inp01" class="inp-text">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="txt-l"><label for="modal_inp03">낱말 정의</label><span class="ico-req"><span class="hide">필수</span></span></th>
+                <td>
+                  <div class="frm-area">
+                    <input type="text" class="inp-text" id="modal_inp02">
+                    <div class="flex-box">
+                      <span class="note">낱말이 들어갈 빈영역은 #( )로 입력하세요.</span>
+                      <span class="note">0 / 50자</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="txt-l"><label for="modal_inpUpload01">낱말 정의 음성 파일</label><span class="ico-req"><span class="hide">필수</span></span></th>
+                <td>
+                  <div class="file-wrap">
+                    <div class="input-item">
+                      <input type="text" class="inp-text" value="" placeholder="" readonly>
+                      <span class="btn base square">
+                        <input type="file" title="첨부파일 선택" id="modal_inpUpload01">
+                        <span>파일 등록</span>
+                      </span>
+                    </div>
+                    <div class="file-list">
+                      <div class="file">
+                        <span class="file-info">※ MP3 파일로만 등록이 가능합니다.</span>
+                        <p class="file-name">파일명.확장자</p>
+                        <button type="button" class="btn-del"><span>삭제</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="txt-l"><label for="modal_inp03">추가 설명</label></th>
+                <td>
+                  <div class="frm-area">
+                    <input type="text" class="inp-text" id="modal_inp03">
+                    <div class="flex-box">
+                      <span class="note">0 / 50자</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="txt-l"><label for="modal_inpUpload02">추가 설명 음성 파일</label></th>
+                <td>
+                  <div class="file-wrap">
+                    <div class="input-item">
+                      <input type="text" class="inp-text" value="" placeholder="" readonly>
+                      <span class="btn base square">
+                        <input type="file" title="첨부파일 선택" id="modal_inpUpload02">
+                        <span>파일 등록</span>
+                      </span>
+                    </div>
+                    <div class="file-list">
+                      <div class="file">
+                        <span class="file-info">※ MP3 파일로만 등록이 가능합니다.</span>
+                        <p class="file-name">파일명.확장자</p>
+                        <button type="button" class="btn-del"><span>삭제</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <!-- //[기획] 10/20 -->
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="ui-modal-footer">
+      <div class="btn-group">
+        <button type="button" class="btn base tertiary"><span>취소</span></button>
+        <button type="button" class="btn base primary"><span>저장</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //modal -->

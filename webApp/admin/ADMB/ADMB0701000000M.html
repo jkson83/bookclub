@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>EVERYBOOKS 어드민</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '6' };
+	</script>
+</head>
+
+<body class="b2b">
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2b"></div>
+		<section class="main-conts">
+			<h2>LMS</h2>
+			<ul class="page-nav">
+				<li><a href="#">LMS</a></li>
+				<li class="current"><a href="#">학습자 목록</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><label for="select01">지점</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select01">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp01">학습자 이름</label></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp01" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">가입일</th>
+							<td>
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp01" name="rpBtn" checked="">
+										<label for="rp01" class="lb-radio"><span>전체</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp02" name="rpBtn">
+										<label for="rp02" class="lb-radio"><span>1개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp03" name="rpBtn">
+										<label for="rp03" class="lb-radio"><span>3개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp04" name="rpBtn">
+										<label for="rp04" class="lb-radio"><span>6개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp05" name="rpBtn">
+										<label for="rp05" class="lb-radio"><span>1년</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>조회</span></button>
+				</div>
+			</div>
+			<div class="sub-title">
+				<p class="count">총 <span>100</span>건</p>
+			</div>
+			<div class="tbl-base type2 mgt10">
+				<table>
+					<!-- 24.01.04 col width값 변경 -->
+					<colgroup>
+						<col style="width:88px;">
+						<col style="width:200px;">
+						<col style="width:200px;">
+						<col style="width:300px;">
+						<col style="width:auto;">
+						<col style="width:100px;">
+						</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">센터</th>
+							<th scope="col">학부모 이름</th>
+							<th scope="col">학부모 이메일</th>
+							<th scope="col">학습자 이름</th>
+							<th scope="col">가입일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>100</td>
+							<td>신촌점</td>
+							<td>김길동</td>
+							<td>abc@naver.com</td>
+							<!-- 24.01.04 txt-l 클래스 삭제 -->
+							<td><a href="#">김길동</a></td>
+							<td>yyyy.mm.dd</td>
+						</tr>
+						<tr>
+							<td>99</td>
+							<td>목동점</td>
+							<td>김길동</td>
+							<td>abc@naver.com</td>
+							<!-- 24.01.04 txt-l 클래스 삭제 -->
+							<td><a href="#">김길동</a></td>
+							<td>yyyy.mm.dd</td>
+						</tr>
+						<tr>
+							<td>98</td>
+							<td>목동점</td>
+							<td>김길동</td>
+							<td>abc@naver.com</td>
+							<!-- 24.01.04 txt-l 클래스 삭제 -->
+							<td><a href="#">김길동</a></td>
+							<td>yyyy.mm.dd</td>
+						</tr>
+						<tr>
+							<td>97</td>
+							<td>목동점</td>
+							<td>김길동</td>
+							<td>abc@naver.com</td>
+							<!-- 24.01.04 txt-l 클래스 삭제 -->
+							<td><a href="#">김길동</a></td>
+							<td>yyyy.mm.dd</td>
+						</tr>
+						<tr>
+							<td>96</td>
+							<td>목동점</td>
+							<td>김길동</td>
+							<td>abc@naver.com</td>
+							<!-- 24.01.04 txt-l 클래스 삭제 -->
+							<td><a href="#">김길동</a></td>
+							<td>yyyy.mm.dd</td>
+						</tr>
+						<tr>
+							<td>95</td>
+							<td>목동점</td>
+							<td>김길동</td>
+							<td>abc@naver.com</td>
+							<!-- 24.01.04 txt-l 클래스 삭제 -->
+							<td><a href="#">김길동</a></td>
+							<td>yyyy.mm.dd</td>
+						</tr>
+						<tr>
+							<td>94</td>
+							<td>목동점</td>
+							<td>김길동</td>
+							<td>abc@naver.com</td>
+							<!-- 24.01.04 txt-l 클래스 삭제 -->
+							<td><a href="#">김길동</a></td>
+							<td>yyyy.mm.dd</td>
+						</tr>
+						<tr>
+							<td>93</td>
+							<td>목동점</td>
+							<td>김길동</td>
+							<td>abc@naver.com</td>
+							<!-- 24.01.04 txt-l 클래스 삭제 -->
+							<td><a href="#">김길동</a></td>
+							<td>yyyy.mm.dd</td>
+						</tr>
+						<tr>
+							<td>92</td>
+							<td>목동점</td>
+							<td>김길동</td>
+							<td>abc@naver.com</td>
+							<!-- 24.01.04 txt-l 클래스 삭제 -->
+							<td><a href="#">김길동</a></td>
+							<td>yyyy.mm.dd</td>
+						</tr>
+						<tr>
+							<td>91</td>
+							<td>목동점</td>
+							<td>김길동</td>
+							<td>abc@naver.com</td>
+							<!-- 24.01.04 txt-l 클래스 삭제 -->
+							<td><a href="#">김길동</a></td>
+							<td>yyyy.mm.dd</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div class="pager">
+					<a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+					<span class="num">
+						<a href="#">1</a>
+						<a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+					</span>
+					<a href="#" class="btn next"><span class="hide">다음으로</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

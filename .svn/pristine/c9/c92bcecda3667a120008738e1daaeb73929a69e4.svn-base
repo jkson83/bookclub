@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <script type="text/javascript" src="../_ui_include/web_header.js"></script>
+    <div id="container" class="container">
+      
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#none" class="home"><span class="hidden">HOME</span></a></li>
+          <li><a href="#none">앱 다운로드</a></li>
+          <li class="current"><a href="#none">북클럽 App 무료 이용</a></li>
+        </ul>
+      </div>
+
+      <div class="sc-sub-area v2">
+        <h2 class="sc-sub-tit">북클럽 App 무료이용</h2>
+        <p>문해력 높이는 독서 습관<br><b>에브리북클럽 APP을 시작해보세요!</b></p>
+      </div>
+      
+      <div class="section">
+        <div class="tablet-box">
+
+          <div class="intro-app">
+            <div class="intro-app-cont">
+              <div class="txt">
+                <strong class="highlight"><span>에브리북클럽 APP이란?</span></strong>
+                <p>도서를 구독하신 분들께 제공하는 에브리북클럽의 디지털 학습 콘텐츠입니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-wrap fx-center">
+            <button type="button" class="btn lg round primary"><span class="ico android">Google Play</span></button>
+            <button type="button" class="btn lg round primary"><span class="ico ios">App store</span></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="../_ui_include/footer.js"></script>
+  </div>
+</body>
+</html>

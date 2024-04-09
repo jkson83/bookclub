@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>EVERYBOOKS 어드민</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '4' };
+	</script>
+</head>
+
+<body class="b2b">
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2b"></div>
+		<section class="main-conts">
+			<h2>학생 관리</h2>
+			<ul class="page-nav">
+				<li class="current"><a href="#">학생 관리</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+            <tr>
+              <tr>
+                <th scope="row"><label for="select01">소속</label></th>
+                <td>
+                  <div class="frm-area">
+                    <select id="select01">
+                      <option value="">목동점</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+            </tr>
+						<!-- 24.01.22 등급 추가 -->
+						<tr>
+							<th scope="row">등급</th>
+							<td>
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp001" name="rpBtn0" checked="">
+										<label for="rp001" class="lb-radio"><span>전체</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp002" name="rpBtn0">
+										<label for="rp002" class="lb-radio"><span>정회원</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp003" name="rpBtn0">
+										<label for="rp003" class="lb-radio"><span>인증대기</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<!--//-->
+						<tr>
+							<th scope="row">구분</th>
+							<td>
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp01" name="rpBtn" checked="">
+										<label for="rp01" class="lb-radio"><span>학부모</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp02" name="rpBtn">
+										<label for="rp02" class="lb-radio"><span>학생</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+            <tr>
+              <th scope="row"><label for="select02">Step</label></th>
+              <td>
+                <div class="frm-area">
+                  <select id="select02">
+                    <option value="">전체</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+						<tr>
+							<th scope="row">조건</th>
+							<td>
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp03" name="rpBtn2">
+										<label for="rp03" class="lb-radio"><span>이름</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp04" name="rpBtn2">
+										<label for="rp04" class="lb-radio"><span>이메일</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp05" name="rpBtn2">
+										<label for="rp05" class="lb-radio"><span>연락처</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp01">검색</label></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp01" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">가입일(기간)</th>
+							<td>
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp06" name="rpBtn3" checked="">
+										<label for="rp06" class="lb-radio"><span>전체</span></label>
+									</span>
+									<strong>최근</strong>
+									<span class="lb-item">
+										<input type="radio" id="rp07" name="rpBtn3">
+										<label for="rp07" class="lb-radio"><span>1개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp08" name="rpBtn3">
+										<label for="rp08" class="lb-radio"><span>3개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp09" name="rpBtn3">
+										<label for="rp09" class="lb-radio"><span>6개월</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp10" name="rpBtn3">
+										<label for="rp10" class="lb-radio"><span>1년</span></label>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>조회</span></button>
+				</div>
+			</div>
+			<div class="sub-title">
+				<p class="count">총 <span>100</span>건</p>
+			</div>
+			<div class="tbl-base type2 mgt10">
+				<table>
+					<colgroup>
+						<col style="width:88px;">
+						<col style="width:100px;">
+						<col style="width:100px;">
+						<col style="width:80px;">
+						<col style="width:auto">
+						<col style="width:auto;">
+						<col style="width:150px;">
+						<col style="width:100px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">등급</th>
+							<th scope="col">구분</th>
+							<th scope="col">Step</th>
+							<th scope="col">이름</th>
+							<th scope="col">이메일</th>
+							<th scope="col">연락처</th>
+							<th scope="col">가입일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>100</td>
+							<td>인증대기</td><!-- 24.01.22 인증대기 일 경우 -->
+							<td>학생</td>
+							<td>1</td>
+							<td><a href="#">홍길동</a></td>
+							<td>aaa@aaa.com</td>
+							<td>010-1234-1234</td>
+							<td>2022.12.22</td>
+						</tr>
+						<tr>
+							<td>99</td>
+							<td>정회원</td>
+							<td>학생</td>
+							<td>1</td>
+							<td><a href="#">홍길동</a></td>
+							<td>aaa@aaa.com</td>
+							<td>010-1234-1234</td>
+							<td>2022.12.22</td>
+						</tr>
+						<tr>
+							<td>98</td>
+							<td>정회원</td>
+							<td>학생</td>
+							<td>1</td>
+							<td><a href="#">홍길동</a></td>
+							<td>aaa@aaa.com</td>
+							<td>010-1234-1234</td>
+							<td>2022.12.22</td>
+						</tr>
+						<tr>
+							<td>97</td>
+							<td>정회원</td>
+							<td>학생</td>
+							<td>1</td>
+							<td><a href="#">홍길동</a></td>
+							<td>aaa@aaa.com</td>
+							<td>010-1234-1234</td>
+							<td>2022.12.22</td>
+						</tr>
+						<tr>
+							<td>96</td>
+							<td>정회원</td>
+							<td>학생</td>
+							<td>1</td>
+							<td><a href="#">홍길동</a></td>
+							<td>aaa@aaa.com</td>
+							<td>010-1234-1234</td>
+							<td>2022.12.22</td>
+						</tr>
+						<tr>
+							<td>95</td>
+							<td>정회원</td>
+							<td>학생</td>
+							<td>1</td>
+							<td><a href="#">홍길동</a></td>
+							<td>aaa@aaa.com</td>
+							<td>010-1234-1234</td>
+							<td>2022.12.22</td>
+						</tr>
+						<tr>
+							<td>94</td>
+							<td>준회원</td>
+							<td>학부모</td>
+							<td>-</td>
+							<td><a href="#">홍길동</a></td>
+							<td>aaa@aaa.com</td>
+							<td>010-1234-1234</td>
+							<td>2022.12.22</td>
+						</tr>
+						<tr>
+							<td>93</td>
+							<td>정회원</td>
+							<td>학생</td>
+							<td>1</td>
+							<td><a href="#">홍길동</a></td>
+							<td>aaa@aaa.com</td>
+							<td>-</td>
+							<td>2022.12.22</td>
+						</tr>
+						<tr>
+							<td>92</td>
+							<td>정회원</td>
+							<td>학생</td>
+							<td>1</td>
+							<td><a href="#">홍길동</a></td>
+							<td>aaa@aaa.com</td>
+							<td>-</td>
+							<td>2022.12.22</td>
+						</tr>
+						<tr>
+							<td>91</td>
+							<td>정회원</td>
+							<td>학생</td>
+							<td>1</td>
+							<td><a href="#">홍길동</a></td>
+							<td>aaa@aaa.com</td>
+							<td>010-1234-1234</td>
+							<td>2022.12.22</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base primary"><span>등록</span></button>
+				</div>
+				<div class="pager">
+					<a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+					<span class="num">
+						<a href="#">1</a>
+						<a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+					</span>
+					<a href="#" class="btn next"><span class="hide">다음으로</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

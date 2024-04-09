@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap profile-select">
+    <div class="text-login">
+      아직 북클럽을 시작하지 않았네요.
+      <!-- 23.11.23 문구 수정 -->
+      <p>
+        <strong class="everybooks"><span class="text-blue">에</span><span class="text-green">브</span><span class="text-yellow">리</span><span class="text-red">북</span><span class="text-black">클럽</span></strong>을 체험해 보세요.
+      </p>
+    </div>
+
+    <div class="profile-select-area">
+      <button type="button" class="profile-btn">
+        <!-- 23.11.23 프로필 이미지 수정 -->
+        <span class="profile-img"><img src="../../resources/img/app/profile_img3.png" alt=""></span>
+
+        <!-- 23.11.23 문구 수정 -->
+        <span class="text-step">STEP1 (BOOK1)</span>
+
+        <!-- 23.11.23 문구 수정 -->
+        <span class="text-name">Guest</span>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+
+.tab{
+  &-menu{
+    display: flex;
+    justify-content: center;
+  }
+  &-menu-item{
+    margin-left: 1rem;
+
+    &:first-child{
+      margin-left: 0;
+    }
+    a{
+      display: block;
+      width: auto;
+      height: 5rem;
+      padding: 1.8rem 3rem;
+      font-family: 'pretendard';
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1;
+      border-radius: 10rem;
+      border: 1px solid #111;
+    }
+    &.active{
+      a{
+        color: #fff;
+        background-color: #09A0FF;
+        border-color: #09A0FF;
+      }
+    }
+  }
+}
+
+.terms{
+  &-wrap{
+    margin-top: 3.2rem;
+
+    h3{
+      margin: 1.88rem 0;
+      font-family: 'pretendard';
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.03rem;
+
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+    ul li, p{
+      font-size: 1.4rem;
+      font-family: 'pretendard';
+      letter-spacing: -0.0175rem;
+    }
+    p{
+      margin-top: .75rem;
+      font-weight: 700;
+      
+      span{
+        display: block;
+        margin-top: .5rem;
+        font-family: 'pretendard';
+      }
+    }
+    ul{
+      > li{
+        margin-top: 3rem;
+        
+        ul > li{
+          margin-top: .75rem;
+        }
+      }
+    }
+
+    &.person{
+      > p{
+        font-size: 1.6rem;
+        line-height: 1.6;
+      }
+      ul.terms-list{
+        margin: 1.88rem 0;
+
+        > li{
+          margin-top: .75rem;
+          font-size: 1.6rem;
+        }
+      }
+      ul.terms-in-list{
+        margin-top: 1rem; 
+
+        > li{
+          font-size: 1.4rem;
+
+          p{
+            margin-top: .5rem;
+            font-size: 1.4rem;
+          }
+        }
+      }
+      ul.terms-list-view{
+        > li{
+          em{
+            display: block;
+            margin-top: 3.2rem;
+            font-family: 'pretendard';
+            font-size: 1.6rem;
+            font-weight: 700;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+  &-tit{
+    display: block;
+    margin-bottom: .75rem;
+    font-family: 'pretendard';
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.03rem;
+  }
+  &-last-txt{
+    margin: 3rem 0 6rem;
+
+    span{
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <script type="text/javascript" src="../_ui_include/web_header.js"></script>
+    <div id="container" class="container">
+      
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#none" class="home"><span class="hidden">HOME</span></a></li>
+          <li><a href="#none">에브리북클럽</a></li>
+          <li class="current"><a href="#none">커리큘럼</a></li>
+        </ul>
+      </div>
+
+      <div class="sc-sub-area v4">
+        <h2 class="sc-sub-tit">커리큘럼</h2>
+        <p>나이별 학습이 아닌<br><b>우리아이 독서 레벨에 맞춘 커리큘럼</b></p>
+      </div>
+      
+      <div class="section">
+        <div class="inner">
+          <div class="bookclub-cours">
+            <div class="bookclub-cours-box">
+              <ul class="flag-list">
+                <li><span>6세~10세</span></li>
+                <li><span>수준 별 5단계(총 60레벨)</span></li>
+                <li><span>주제별 커리큘럼</span></li>
+              </ul>
+              <div class="bookclub-cours-head bg">
+                <p class="stxt">스텝 별 12개월 구성!(BOOK1~BOOK12)</p>
+              </div>
+            </div>
+            <!--// bookclub-cours-box -->
+
+            <div class="bookclub-cours-box">
+              <div class="bookclub-cours-head">
+                <strong>IB PYP 주제로 구성된 독서 시스템</strong>
+                <p class="stxt">IB PYP 주제를 중심으로 과목의 틀을 벗어난 초학문적 지식을 제공합니다.</p>
+              </div>
+              <div class="bookclub-cours-img">
+                <img src="../../resources/img/web/bookclub_cours_img02.png" alt="">
+                <ul class="hidden">
+                  <li>나 그리고 우리</li>
+                  <li>우리가 살아가는 세상</li>
+                  <li>세상을 움직이는 방법</li>
+                  <li>우리가 살고 있는 지구</li>
+                  <li>생각을 정리하기</li>
+                  <li>나를 표현하는 방법</li>
+                </ul>
+              </div>
+            </div>
+            <!--// bookclub-cours-box -->
+          </div>
+        </div>
+
+        <div class="bookclub-cours-box">
+          <div class="book-cours-area">
+            <div class="swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="swiper-head">
+                    <strong>STEP1</strong>
+                    <div class="bookclub-cours-subject">
+                      <span><b>IB PYP 주제</b>우리가 살아가는 세상</span>
+                      <span><b>주제</b>글자나라</span>
+                      <span><b>교과연계</b>글자와 낱말(국어1-1)</span>
+                    </div>
+                  </div>
+                  <div class="swiper-content">
+                    <div class="bookclub-cours-list">
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step1/book_img01.jpg" alt="">
+                          <p class="swiper-txt">배경지식도서</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step1/book_img02.jpg" alt="">
+                          <p class="swiper-txt">창작동화책</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step1/book_img03.jpg" alt="">
+                          <p class="swiper-txt">인물동화책</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step1/book_img04.jpg" alt="">
+                          <p class="swiper-txt">옛이야기책</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="swiper-head">
+                    <strong>STEP2</strong>
+                    <div class="bookclub-cours-subject">
+                      <span><b>IB PYP 주제</b>우리가 살아가는 세상</span>
+                      <span><b>주제</b>세상의 돈</span>
+                      <span><b>교과연계</b>마을(통합-가을)</span>
+                    </div>
+                  </div>
+                  <div class="swiper-content">
+                    <div class="bookclub-cours-list">
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step2/book_img01.jpg" alt="">
+                          <p class="swiper-txt">지식정보동화책</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step2/book_img02.jpg" alt="">
+                          <p class="swiper-txt">창작동화책</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step2/book_img03.jpg" alt="">
+                          <p class="swiper-txt">인물동화책</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step2/book_img04.jpg" alt="">
+                          <p class="swiper-txt">명화동화책</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="swiper-head">
+                    <strong>STEP3</strong>
+                    <div class="bookclub-cours-subject">
+                      <span><b>IB PYP 주제</b>우리가 살아가는 세상</span>
+                      <span><b>주제</b>세계의 친구</span>
+                      <span><b>교과연계</b>상상의 나래, 시(국어2-1)</span>
+                    </div>
+                  </div>
+                  <div class="swiper-content">
+                    <div class="bookclub-cours-list">
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step3/book_img01.jpg" alt="">
+                          <p class="swiper-txt">지식정보동화책</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step3/book_img02.jpg" alt="">
+                          <p class="swiper-txt">창작동화책</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step3/book_img03.jpg" alt="">
+                          <p class="swiper-txt">인물동화책</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step3/book_img04.jpg" alt="">
+                          <p class="swiper-txt">옛이야기책</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="swiper-head">
+                    <strong>STEP4</strong>
+                    <div class="bookclub-cours-subject">
+                      <span><b>IB PYP 주제</b>우리가 살아가는 세상</span>
+                      <span><b>주제</b>돕는 즐거움</span>
+                      <span><b>교과연계</b>존중하는 말(국어3-1)</span>
+                    </div>
+                  </div>
+                  <div class="swiper-content">
+                    <div class="bookclub-cours-list">
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step4/book_img01.png" alt="">
+                          <p class="swiper-txt">주제 중심 독서논술</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step4/book_img02.png" alt="">
+                          <p class="swiper-txt">주제 중심 독서논술</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step4/book_img03.png" alt="">
+                          <p class="swiper-txt">주제 중심 독서논술</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step4/book_img04.png" alt="">
+                          <p class="swiper-txt">주제 중심 독서논술</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="swiper-head">
+                    <strong>STEP5</strong>
+                    <div class="bookclub-cours-subject">
+                      <span><b>IB PYP 주제</b>우리가 살아가는 세상</span>
+                      <span><b>주제</b>세상을 향한 목소리</span>
+                      <span><b>교과연계</b>의견과 이야기(국어4-1)</span>
+                    </div>
+                  </div>
+                  <div class="swiper-content">
+                    <div class="bookclub-cours-list">
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step5/book_img01.png" alt="">
+                          <p class="swiper-txt">주제 중심 독서논술</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step5/book_img02.png" alt="">
+                          <p class="swiper-txt">주제 중심 독서논술</p>
+                        </div>
+                      </div>
+                      <div class="bookclub-cours-item">
+                        <div class="swiper-img-box">
+                          <img src="../../resources/img/web/step5/book_img03.png" alt="">
+                          <p class="swiper-txt">주제 중심 독서논술</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <!--// bookclub-cours-box -->
+
+      </div>
+
+      <!-- bottom banner -->
+      <div class="btm-banner">
+        <div class="in">
+          <p>우리아이 독서습관 지금 바로 시작해보세요!</p>
+          <button type="button" class="btn lg primary">에브리북클럽 시작하기</button>
+        </div>
+      </div>
+      <!--// bottom banner -->
+    </div>
+    <script type="text/javascript" src="../_ui_include/footer.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-container', { 
+          slidesPerView: 1,
+          spaceBetween: 0,
+          autoplay: false,
+          delay: 2500,
+          centeredSlides: true,
+          loop : false,
+          loopAdditionalSlides : 1, 
+          pagination: { 
+            el: ".swiper-pagination",
+            clickable: true,  
+            renderBullet: function(index, className) {
+              return '<li class="' + className + '"><span>'+ 'STEP'+(index+1) +'</span></li>';
+            }
+          }
+        });
+    </script>
+  </div>
+</body>
+</html>

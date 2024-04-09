@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap writing">
+    <div class="writing-head">
+      <div class="writing-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+      <h1 class="writing-tit">글쓰기</h1>
+      <button class="btn-end">종료</button>
+    </div> 
+    <!--// writing-head -->
+
+    <div class="writing-cont">
+      <div class="writing-cont-inner">
+        <div class="writing-cont-cms">
+          <!-- 24.01.26 inner 클래스 태그 추가 -->
+          <div class="inner">
+            위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 상황과 감정에 야기해 보세요.위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 상황과 감정에
+            위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 상황과 감정에 야기해 보세요.위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 상황과 감정에
+            위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 상황과 감정에 야기해 보세요.위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 상황과 감정에
+            위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 상황과 감정에 야기해 보세요.위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 위의 말과 관련해서, 당신의 경험 중에 빠르게 지나간 순간이 있다면그때의 상황과 감정에
+          </div>
+          <!--// -->
+          <!-- 24.02.26 :: 줄바꿈 br태그 추가 -->
+          <button type="button" class="btn-hint">작성이<br>어려울 땐</button>
+        </div>
+        <div class="writing-cont-box">
+          <!-- // -->
+          <!-- 240329 : 문구수정 -->
+          <div class="text-area">
+            <label ><input type="text" class="inp-txt" placeholder="제목을 써 보세요."></label>
+            <textarea placeholder="글쓰기 내용을 작성해 보세요."></textarea>
+          </div>
+          <!-- //240329 : 문구수정 -->
+          <div class="writing-cont-img">
+            <div class="inner">
+              <div class="img-item">
+                <label>
+                  <span class="hide">파일첨부</span>
+                  <input type="file" class="hide">
+                </label>
+                <div class="preview"></div>
+              </div>
+              <div class="img-item">
+                <label>
+                  <span class="hide">파일첨부</span>
+                  <input type="file" class="hide">
+                </label>
+                <div class="preview"></div>
+              </div>
+              <div class="img-item">
+                <label>
+                  <span class="hide">파일첨부</span>
+                  <input type="file" class="hide">
+                </label>
+                <div class="preview"></div>
+              </div>
+            </div>
+            <span>(최대 3장)</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="q-check-btn">
+      <button type="button">미리보기</button>
+      <button type="button">임시저장</button>
+      <button type="button">작성완료</button>
+    </div>
+
+  </div>
+  <script>
+    (function (win, doc) {
+      'use strict';
+
+      let btn = doc.querySelectorAll('input[type="file"]');
+      let previews = doc.querySelectorAll('.preview');
+      let items = doc.querySelectorAll('.img-item label');
+    
+      for(let i=0; i < btn.length; i++) {
+        let btnRemove = doc.createElement('button');
+        let newImg = doc.createElement('img');
+        let reader = new FileReader();
+
+        btn[i].addEventListener('change', function() {
+          btnRemove.type = 'button';
+          btnRemove.classList.add('btn-remove');
+
+          items[i].parentElement.classList.add('active');
+
+          if(btn[i].files && btn[i].files[0]) {
+            reader.onload = (e) => {
+              newImg.src = e.target.result;
+              btnRemove.innerHTML = '<span class="hide">닫기</span>';
+            }
+            reader.readAsDataURL(btn[i].files[0]);
+          } else {
+            newImg.remove();
+          }
+          previews[i].appendChild(newImg);
+          items[i].parentElement.append(btnRemove);
+
+          if(!btnRemove.length) {
+            items[i].parentElement.classList.add('active');
+          }
+        });
+
+        // 삭제버튼
+        btnRemove.addEventListener('click', function() {
+          items[i].parentElement.classList.remove('active');
+          this.remove();
+          newImg.remove();
+        }); 
+      }
+    })(window, document);
+
+    
+  </script>
+</body>
+</html>

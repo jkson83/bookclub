@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <script type="text/javascript" src="../_ui_include/web_header.js"></script>
+    <div id="container" class="container">
+      
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#none" class="home"><span class="hidden">HOME</span></a></li>
+          <li><a href="#none">부모 페이지</a></li>
+          <li><a href="#none">회원정보</a></li>
+          <li><a href="#none">부모 계정관리</a></li>
+          <li class="current"><a href="#none">회원탈퇴 신청</a></li>
+        </ul>
+      </div>
+      
+      <div class="sc-sub-area v1">
+        <h2 class="sc-sub-tit">회원탈퇴 신청</h2>
+        <p>탈퇴 이유를 선택해주시면<br><b>보다 나은 서비스 개선을 위해 노력하겠습니다.</b></p>
+      </div>
+      
+      <div class="section">
+        <div class="tit-box">
+          <h3 class="tit">그동안 에브리북클럽을 이용해주셔서 감사합니다.</h3>
+        </div>
+
+        <div class="inner sm">
+          <div class="radio-wrap">
+            <div class="radio-item">
+              <input type="radio" name="reason" id="rdo-reason1">
+              <label for="rdo-reason1">상품에 대한 가격/품질/서비스 불만</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="reason" id="rdo-reason2">
+              <label for="rdo-reason2">커리큘럼에 대한 불만족</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="reason" id="rdo-reason3">
+              <label for="rdo-reason3">시스템 불안정 및 사이트 에러</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="reason" id="rdo-reason4">
+              <label for="rdo-reason4">이용빈도 낮음</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="reason" id="rdo-reason5">
+              <label for="rdo-reason5">교환/환불/반품 불만</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="reason" id="rdo-reason6">
+              <label for="rdo-reason6">배송 서비스에 대한 불만</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="reason" id="rdo-reason7">
+              <label for="rdo-reason7">개인정보 누출 우려</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="reason" id="rdo-reason8">
+              <label for="rdo-reason8">고객센터 불친절 및 지연</label>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <ul>
+              <li>정기구독 회원인 경우 구독 해지 후 탈퇴가 가능합니다. 센터 등록 회원의 경우 센터 관리자를 통해 탈퇴가 가능합니다.</li>
+              <li>탈퇴 시 학습 내역이 삭제되며, 재가입 후에 기존 학습 내역을 확인할 수 없습니다.</li>
+              <li>탈퇴 신청 시 개인정보, 자녀 학생 개인정보, 학습내역은 즉시 삭제되며 데이터에 대한 복구는 불가합니다. 단, 『전자상거래법』에 의해 기준 기간 동안 주문, 결제 내역은 보존됩니다.</li>
+            </ul>
+          </div>
+
+          <div class="btn-wrap fx-center">
+            <button type="button" class="btn lg second">탈퇴하기</button>
+            <button type="button" class="btn lg primary">취소하기</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom banner -->
+      <div class="btm-banner">
+        <div class="in">
+          <p>우리아이 독서습관 지금 바로 시작해보세요!</p>
+          <button type="button" class="btn lg primary">에브리북클럽 시작하기</button>
+        </div>
+      </div>
+      <!--// bottom banner -->
+
+    </div>
+    <script type="text/javascript" src="../_ui_include/footer.js"></script>
+  </div>
+</body>
+</html>

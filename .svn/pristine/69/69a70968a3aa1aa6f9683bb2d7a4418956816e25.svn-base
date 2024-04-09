@@ -1,0 +1,40 @@
+/*!
+ * [Book Club]
+ * --------------------------------------
+ * ui.main.css 
+ */
+.main .section {
+  overflow: hidden;
+  padding: 0;
+  height: 100vh;
+}
+.main .section:first-child {
+  padding-top: 0;
+}
+.main .section.header-white {
+  background-color: red;
+}
+
+.main-nav {
+  position: fixed;
+  top: 50%;
+  right: 70px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.main-nav__item {
+  margin-top: 20px;
+}
+.main-nav__item:first-child {
+  margin-top: 0;
+}
+.main-nav__item.is-active .main-nav__anchor {
+  background: url("data:image/svg+xml,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0.57735C6.6188 0.220085 7.3812 0.220085 8 0.57735L12.9282 3.42265C13.547 3.77992 13.9282 4.44017 13.9282 5.1547V10.8453C13.9282 11.5598 13.547 12.2201 12.9282 12.5774L8 15.4226C7.3812 15.7799 6.6188 15.7799 6 15.4226L1.0718 12.5774C0.452995 12.2201 0.0717969 11.5598 0.0717969 10.8453V5.1547C0.0717969 4.44017 0.452995 3.77992 1.0718 3.42265L6 0.57735Z' fill='%23111111'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+}
+.main-nav__anchor {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.75 1.87639C6.9047 1.78707 7.0953 1.78707 7.25 1.87639L12.1782 4.72169C12.3329 4.811 12.4282 4.97607 12.4282 5.1547V10.8453C12.4282 11.0239 12.3329 11.189 12.1782 11.2783L7.25 14.1236C7.0953 14.2129 6.9047 14.2129 6.75 14.1236L1.8218 11.2783C1.6671 11.189 1.5718 11.0239 1.5718 10.8453V5.1547C1.5718 4.97607 1.6671 4.811 1.8218 4.72169L6.75 1.87639Z' stroke='%23D5D5D5' stroke-width='3'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+}
+/*# sourceMappingURL=ui.main.css.map */

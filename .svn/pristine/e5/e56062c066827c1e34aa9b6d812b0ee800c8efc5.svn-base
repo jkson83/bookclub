@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap">
+    <script type="text/javascript" src="../_ui_include/web_header.js"></script>
+    <div id="container" class="container">
+      
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#none" class="home"><span class="hidden">HOME</span></a></li>
+          <li><a href="#none">에브리북클럽</a></li>
+          <li class="current"><a href="#none">에브리북클럽이란?</a></li>
+        </ul>
+      </div>
+
+      <div class="sc-sub-area v4">
+        <h2 class="sc-sub-tit">에브리북클럽이란?</h2>
+        <p>한달에 3~4권, 꾸준하게!<br><b>어린이 북클럽 구독형 서비스</b></p>
+      </div>
+      
+      <div class="section">
+        <div class="inner">
+          
+          <div class="bookclub-intro">
+            <h3 class="bookclub-intro-tit">에브리북클럽 서비스 구성</h3>
+            <div class="bookclub-intro-area">
+              <div class="imgs"><img src="../../resources/img/web/bookclub_intro_img01.png" alt=""></div>
+              <div class="imgs"><img src="../../resources/img/web/bookclub_intro_img02.png" alt=""></div>
+            </div>
+
+            <strong class="highlight"><span>정기 구독 서비스란?</span></strong>
+            <p>아이의 독서 레벨에 맞는 책과 프로그램이 정기적으로 자동 결제되어 월별 제공되는 서비스입니다.</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- bottom banner -->
+      <div class="btm-banner">
+        <div class="in">
+          <p>우리아이 독서습관 지금 바로 시작해보세요!</p>
+          <button type="button" class="btn lg primary">에브리북클럽 시작하기</button>
+        </div>
+      </div>
+      <!--// bottom banner -->
+    </div>
+    <script type="text/javascript" src="../_ui_include/footer.js"></script>
+  </div>
+</body>
+</html>

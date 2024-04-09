@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body class="section-m">
+  <div id="wrap" class="wrap">
+    <script type="text/javascript" src="../_ui_include/web_header.js"></script>
+    <div id="container" class="container">
+
+      <section class="section-m-wrap">
+        <a href="#none;" title="에브리북클럽" class="section-m-logo"><h1 class="hidden">에브리북클럽</h1></a>
+        <div class="section-m-area">
+          <div class="section-m-box">
+            <h2>가입 정보 입력 및 약관에 동의해주세요.</h2>
+            
+            <div class="section-m-content">
+ 
+              <div class="inp-list-email">
+                <div class="email-item on">
+                  <div class="inp-list-item">
+                      <input type="text" id="email1" name="" title="이메일" placeholder="이메일" value="">
+                  </div>
+                  <div class="inp-list-item direct">
+                    <input type="text" id="email2" name="" title="도메인 주소" placeholder="직접입력" value="">
+                  </div>
+                  <div class="inp-list-item">
+                      <select class="selectbox" data-id="selectbox1" title="도메인 주소">
+                        <option value="" selected>직접입력</option>  
+                        <option value="naver">naver.com</option>
+                        <option value="hanmail">hanmail.net</option>
+                        <option value="gmail">gmail.com</option>
+                        <option value="nate">nate.com</option>
+                        <option value="hotmail">hotmail.com</option>
+                      </select>
+                  </div>
+                </div>
+                <p class="info-txt error">이메일을 입력해 주세요.</p>
+                <div class="btn-wrap">
+                  <button type="button" class="btn second" disabled>이메일 인증</button>
+                </div>
+                <div class="inp-list complex-v1 disabled">
+                  <div class="inp-list-item">
+                    <label for="lbTit02" class="lb-tit">인증번호</label>
+                    <input type="tel" id="lbTit02" placeholder="6자리 입력" title="6자리 입력" disabled>
+                    <!-- 인증번호 요청 시간 추가 -->
+                    <span class="time">04:45</span>
+                  </div>
+                  <button type="button" class="btn primary">인증하기</button>
+                </div>
+                <p class="info-txt error">인증번호를 입력해 주세요.</p>
+              </div>
+              <!--// inp-list-email -->
+            
+              <div class="inp-list-wrap">
+                <div class="inp-list">
+                  <div class="inp-list-item">
+                    <label for="lbTitPWD1" class="lb-tit">비밀번호</label>
+                    <input type="text" id="lbTitPWD1" placeholder="영문,숫자,특수문자 포함 8자리 이상">
+                  </div>
+                </div>
+                <p class="info-txt error">비밀번호를 입력해 주세요.</p>
+  
+                <div class="inp-list">
+                  <div class="inp-list-item">
+                    <label for="lbTitPWD02" class="lb-tit">비밀번호 확인</label>
+                    <input type="text" id="lbTitPWD02" title="비밀번호 확인">
+                  </div>
+                </div>
+                <p class="info-txt error">비밀번호를 한번 더 입력해 주세요.</p>
+
+                <div class="inp-list">
+                  <div class="inp-list-item">
+                    <label for="lbTitName" class="lb-tit">학부모 이름</label>
+                    <input type="text" id="lbTitName" title="학부모 이름">
+                  </div>
+                </div>
+                <p class="info-txt error">이름을 입력해 주세요.</p>
+  
+                <div class="inp-list complex-v1">
+                  <div class="inp-list-item">
+                    <label for="lbTit02" class="lb-tit">휴대폰번호</label>
+                    <input type="tel" id="lbTit02" placeholder="-없이 입력" title="-없이 입력">
+                  </div>
+                  <button type="button" class="btn primary">인증번호 발송</button>
+                </div>
+                <p class="info-txt error">휴대폰번호를 입력해 주세요.</p>
+
+                <div class="inp-list complex-v1 disabled">
+                  <div class="inp-list-item">
+                    <label for="lbTit03" class="lb-tit">인증번호</label>
+                    <input type="tel" id="lbTit03" placeholder="6자리 입력" title="6자리 입력" disabled>
+                  </div>
+                  <button type="button" class="btn primary" disabled>인증번호 확인</button>
+                </div>
+                <p class="info-txt error">인증번호를 입력해 주세요.</p>
+              </div>
+              <!--// inp-list-wrap -->
+
+              <div class="term-wrap">
+                <div class="check-item ui-all" data-id="all">
+                    <input type="checkbox" id="exInpAll" data-id="all" name="agreeAll">
+                    <label for="exInpAll"><span>모두 동의합니다.</span></label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox" id="exInp1" name="agree" data-name="agree">
+                    <label for="exInp1"><span><em>[필수]</em> 서비스 이용 약관</span></label>
+                    <button type="button" class="btn popup" data-modal-btn="dialogFull">
+                        <span>전체 <i class="hidden">약관 보기</i></span> 
+                    </button>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox" id="exInp2" name="agree" data-name="agree">
+                    <label for="exInp2"><span><em>[필수]</em> 개인정보 수집&middot;제공 동의</span></label>
+                    <button type="button" class="btn popup" data-modal-btn="dialogFull">
+                        <span>전체 <i class="hidden">약관 보기</i></span> 
+                    </button>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox" id="exInp3" name="agree" data-name="agree">
+                    <label for="exInp3"><span><em class="choice">[선택]</em> 마케팅정보 활용 동의</span></label>
+                    <button type="button" class="btn popup" data-modal-btn="dialogFull">
+                        <span>전체 <i class="hidden">약관 보기</i></span> 
+                    </button>
+                </div>
+              </div>
+              <!--// term-wrap -->
+
+              <div class="btn-wrap">
+                <button type="button" class="btn primary">가입하기</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      
+    });
+  </script>
+</body>
+</html>

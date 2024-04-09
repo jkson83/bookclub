@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap setting">
+    <div class="setting-header">
+      <h1 class="title-setting">부모님 페이지</h1>
+
+      <button type="button" class="btn-back">뒤로가기</button> 
+    </div>
+
+    <div class="setting-container">
+      <ul class="tab-link">
+        <li><a href="#">부모 계정 관리</a></li>
+        <li><a href="#">자녀 프로필 관리</a></li>
+        <li><a href="#" class="on">학습 단계 변경</a></li>
+      </ul>
+
+      <div class="setting-box">
+        <h2 class="title-sub-setting">학습 단계 변경</h2>
+
+        <div class="study-step-area">
+          <h3 class="title-sub">자녀 1</h3>
+
+          <div class="change-tb">
+            <table>
+              <caption>이름, 현재학습, 변경학습 항목으로 이루어진 테이블입니다.</caption>
+              <colgroup>
+                <col style="width:16.5%;">
+                <col style="width:16.2%;">
+                <col style="width:25.53%;">
+                <col style="width:16.2%;">
+                <col >
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th colspan="2">이름</th>
+                  <td>정희수</td>
+                </tr>
+                <tr>
+                  <th>현재 학습</th>
+                  <th>Step</th>
+                  <td>1</td>
+                  <th>Book</th>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <th>변경 학습</th>
+                  <th>Step</th>
+                  <td>
+                    <select class="select-type">
+                      <option value="">선택</option>
+                    </select>
+                  </td>
+                  <th>Book</th>
+                  <td>
+                    <select class="select-type">
+                      <option value="">선택</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="change-notice-txt">※ 최대 2번까지 진행 중인 학습의 단계를 변경할 수 있습니다.</p>
+
+          <h3 class="title-sub">변경 내역</h3>
+
+          <div class="tb-list-area">
+            <table>
+              <caption>구분,  지점,  Step,  Book,  변경일시 항목으로 이루어진 테이블입니다.</caption>
+              <colgroup>
+                <col style="width:15.22%;">
+                <col style="width:18.98%;">
+                <col style="width:18.98%;">
+                <col style="width:18.98%;">
+                <col >
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">지점</th>
+                  <th scope="col">Step</th>
+                  <th scope="col">Book</th>
+                  <th scope="col">변경일시</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>변경</td>
+                  <td>MKB_목동점</td>
+                  <td>Step2</td>
+                  <td>Book1</td>
+                  <td>2023-11-05 16:00</td>
+                </tr>
+                <tr>
+                  <td>등록</td>
+                  <td>MKB_대치점</td>
+                  <td>Step1</td>
+                  <td>Book1</td>
+                  <td>2023-11-05 16:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="btn-save-area">
+            <button class="btn-save">저장하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

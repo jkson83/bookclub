@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EVERYBOOKS</title>
+    <link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+    <script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.global.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.common.js"></script>
+    <script type="text/javascript">
+        pageInfo = { mid: '2', sid: '2' };
+    </script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+    <header class="gnb-wrap" id="header">
+        <div>
+            <h1><span class="hide">EVERYBOOKS</span></h1>
+            <div class="links">
+                <a href="#"><span>홈페이지 바로가기</span></a>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </div>
+    </header>
+    <main class="main-wrap" id="content">
+        <div class="sub-nav"></div>
+        <section class="main-conts">
+            <h2>대표 펀드관리</h2>
+            <ul class="page-nav">
+                <li><a href="#">자사 메인 관리</a></li>
+                <li class="current"><a href="#">대표 펀드 관리</a></li>
+            </ul>
+            <div class="tbl-base mgt25">
+                <table>
+                    <colgroup>
+                        <col style="width:290px;">
+                        <col style="width:auto;">
+                        <col style="width:290px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">카테고리</th>
+                            <td>
+                                <select>
+                                    <option>대표펀드</option>
+                                </select>
+                            </td>
+                            <th scope="row">최종 등록일<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td>2022.12.19</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sub-title">
+                <h3>펀드 #1</h3>
+                <p class="msg">* 최대 5개 까지 게시 가능</p>
+            </div>
+            <div class="tbl-base mgt10">
+                <table>
+                    <colgroup>
+                        <col style="width:290px;">
+                        <col style="width:auto;">
+                        <col style="width:160px">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">거래상대방</th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" name="tradingTarget2" id="tradingTarget2" maxlength="100">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="iod-wrap">
+                                    <button class="btn plus" onclick="fnAddRow2();"><span class="hide">추가</span></button>
+                                    <button class="btn minus" onclick="fnAddRow2();"><span class="hide">추가</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">본점주소</th>
+                            <td colspan="2">
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" name="hdofcAdres" id="hdofcAdres" maxlength="100">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">신용등급</th>
+                            <td colspan="2">
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" name="credtGrad" id="credtGrad" maxlength="100">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">장외 파생상품 인가</th>
+                            <td colspan="2">
+                                <div class="frm-area">
+                                    <textarea class="inp-textarea" style="height:60px;" name="outsideDerivGoods" id="outsideDerivGoods" maxlength="1000"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tbl-base mgt10">
+                <table>
+                    <colgroup>
+                        <col style="width:290px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+
+                        <tr>
+                            <th scope="row">펀드코드/명<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" style="width:480px;">
+                                    <input type="text" class="inp-text" style="width:240px;">
+                                    <button class="btn base square"><span>조회</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Flag 노출<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td>
+                                <div class="frm-area multi">
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0101" name="" checked>
+                                        <label for="flag0101" class="lb-checkbox"><span>TDB</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0102" name="" checked disabled>
+                                        <label for="flag0102" class="lb-checkbox"><span>TDB</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0103" name="" disabled>
+                                        <label for="flag0103" class="lb-checkbox"><span>TDB</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0104" name="" >
+                                        <label for="flag0104" class="lb-checkbox"><span>TDB</span></label>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">펀드 특징 요약<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td>
+                                <div class="frm-area">
+                                    <textarea class="inp-textarea"></textarea>
+                                    <p class="note">0 / 40자</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">순서<span class="ico-req">필수</span></th>
+                            <td>
+                                <select>
+                                    <option>1</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sub-title">
+                <h3>분할매수 추가상품(상단 고정 테이블)</h3>
+                <p class="msg">* 최대 5개 까지 게시 가능</p>
+            </div>
+            <div class="ui-tablescroll tbl-base mgt10">
+                <div class="ui-tablescroll-wrap ui-scrollbar" style="height:380px;" data-scroll-id="tblScrollTest1">
+                    <table>
+                        <caption>분할매수상품 추가정보 테이블입니다</caption>
+                        <colgroup>
+                        <col style="width:auto;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:140px;">
+                        <col style="width:140px;">
+                        <col style="width:10%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">일자</th>
+                                <th scope="col">기초자산종가</th>
+                                <th scope="col">환율시가</th>
+                                <th scope="col">원화환산지수</th>
+                                <th scope="col">최근매수밴드</th>
+                                <th scope="col">다음매수상단</th>
+                                <th scope="col">다음매수하단</th>
+                                <th scope="col">분할매수여부</th>
+                                <th scope="col">주식ETF편입비율</th>
+                                <th scope="col">수정기준가</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="txt-c">2023.01.01</td>
+                                <td><input type="text" class="inp-text" title="기초자산종가"></td>
+                                <td><input type="text" class="inp-text" title="환율시가"></td>
+                                <td><input type="text" class="inp-text" title="원화환산지수"></td>
+                                <td><input type="text" class="inp-text" title="최근매수밴드"></td>
+                                <td><input type="text" class="inp-text" title="다음매수상단"></td>
+                                <td><input type="text" class="inp-text" title="다음매수하단"></td>
+                                <td class="txt-c">
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleY" name="buyScale" checked>
+                                        <label for="buyScaleY" class="lb-radio"><span>Y</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleN" name="buyScale">
+                                        <label for="buyScaleN" class="lb-radio"><span>N</span></label>
+                                    </span>
+                                </td>
+                                <td class="txt-c">67.6</td>
+                                <td class="txt-c" >936.59</td>
+                            </tr>
+                            <tr>
+                                <td class="txt-c">2023.01.01</td>
+                                <td><input type="text" class="inp-text" title="기초자산종가"></td>
+                                <td><input type="text" class="inp-text" title="환율시가"></td>
+                                <td><input type="text" class="inp-text" title="원화환산지수"></td>
+                                <td><input type="text" class="inp-text" title="최근매수밴드"></td>
+                                <td><input type="text" class="inp-text" title="다음매수상단"></td>
+                                <td><input type="text" class="inp-text" title="다음매수하단"></td>
+                                <td class="txt-c">
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleY2" name="buyScale2" disabled>
+                                        <label for="buyScaleY2" class="lb-radio"><span>Y</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleN2" name="buyScale2" disabled checked>
+                                        <label for="buyScaleN2" class="lb-radio"><span>N</span></label>
+                                    </span>
+                                </td>
+                                <td class="txt-c">67.6</td>
+                                <td class="txt-c" >936.59</td>
+                            </tr>
+                            <tr>
+                                <td class="txt-c">2023.01.01</td>
+                                <td><input type="text" class="inp-text" title="기초자산종가"></td>
+                                <td><input type="text" class="inp-text" title="환율시가"></td>
+                                <td><input type="text" class="inp-text" title="원화환산지수"></td>
+                                <td><input type="text" class="inp-text" title="최근매수밴드"></td>
+                                <td><input type="text" class="inp-text" title="다음매수상단"></td>
+                                <td><input type="text" class="inp-text" title="다음매수하단"></td>
+                                <td class="txt-c">
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleY" name="buyScale" checked>
+                                        <label for="buyScaleY" class="lb-radio"><span>Y</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleN" name="buyScale">
+                                        <label for="buyScaleN" class="lb-radio"><span>N</span></label>
+                                    </span>
+                                </td>
+                                <td class="txt-c">67.6</td>
+                                <td class="txt-c" >936.59</td>
+                            </tr>
+                            <tr>
+                                <td class="txt-c">2023.01.01</td>
+                                <td><input type="text" class="inp-text" title="기초자산종가"></td>
+                                <td><input type="text" class="inp-text" title="환율시가"></td>
+                                <td><input type="text" class="inp-text" title="원화환산지수"></td>
+                                <td><input type="text" class="inp-text" title="최근매수밴드"></td>
+                                <td><input type="text" class="inp-text" title="다음매수상단"></td>
+                                <td><input type="text" class="inp-text" title="다음매수하단"></td>
+                                <td class="txt-c">
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleY" name="buyScale" checked>
+                                        <label for="buyScaleY" class="lb-radio"><span>Y</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleN" name="buyScale">
+                                        <label for="buyScaleN" class="lb-radio"><span>N</span></label>
+                                    </span>
+                                </td>
+                                <td class="txt-c">67.6</td>
+                                <td class="txt-c" >936.59</td>
+                            </tr>
+                            <tr>
+                                <td class="txt-c">2023.01.01</td>
+                                <td><input type="text" class="inp-text" title="기초자산종가"></td>
+                                <td><input type="text" class="inp-text" title="환율시가"></td>
+                                <td><input type="text" class="inp-text" title="원화환산지수"></td>
+                                <td><input type="text" class="inp-text" title="최근매수밴드"></td>
+                                <td><input type="text" class="inp-text" title="다음매수상단"></td>
+                                <td><input type="text" class="inp-text" title="다음매수하단"></td>
+                                <td class="txt-c">
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleY" name="buyScale" checked>
+                                        <label for="buyScaleY" class="lb-radio"><span>Y</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleN" name="buyScale">
+                                        <label for="buyScaleN" class="lb-radio"><span>N</span></label>
+                                    </span>
+                                </td>
+                                <td class="txt-c">67.6</td>
+                                <td class="txt-c" >936.59</td>
+                            </tr>
+                            <tr>
+                                <td class="txt-c">2023.01.01</td>
+                                <td><input type="text" class="inp-text" title="기초자산종가"></td>
+                                <td><input type="text" class="inp-text" title="환율시가"></td>
+                                <td><input type="text" class="inp-text" title="원화환산지수"></td>
+                                <td><input type="text" class="inp-text" title="최근매수밴드"></td>
+                                <td><input type="text" class="inp-text" title="다음매수상단"></td>
+                                <td><input type="text" class="inp-text" title="다음매수하단"></td>
+                                <td class="txt-c">
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleY" name="buyScale" checked>
+                                        <label for="buyScaleY" class="lb-radio"><span>Y</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleN" name="buyScale">
+                                        <label for="buyScaleN" class="lb-radio"><span>N</span></label>
+                                    </span>
+                                </td>
+                                <td class="txt-c">67.6</td>
+                                <td class="txt-c" >936.59</td>
+                            </tr>
+                            <tr>
+                                <td class="txt-c">2023.01.01</td>
+                                <td><input type="text" class="inp-text" title="기초자산종가"></td>
+                                <td><input type="text" class="inp-text" title="환율시가"></td>
+                                <td><input type="text" class="inp-text" title="원화환산지수"></td>
+                                <td><input type="text" class="inp-text" title="최근매수밴드"></td>
+                                <td><input type="text" class="inp-text" title="다음매수상단"></td>
+                                <td><input type="text" class="inp-text" title="다음매수하단"></td>
+                                <td class="txt-c">
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleY" name="buyScale" checked>
+                                        <label for="buyScaleY" class="lb-radio"><span>Y</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleN" name="buyScale">
+                                        <label for="buyScaleN" class="lb-radio"><span>N</span></label>
+                                    </span>
+                                </td>
+                                <td class="txt-c">67.6</td>
+                                <td class="txt-c" >936.59</td>
+                            </tr>
+                            <tr>
+                                <td class="txt-c">2023.01.01</td>
+                                <td><input type="text" class="inp-text" title="기초자산종가"></td>
+                                <td><input type="text" class="inp-text" title="환율시가"></td>
+                                <td><input type="text" class="inp-text" title="원화환산지수"></td>
+                                <td><input type="text" class="inp-text" title="최근매수밴드"></td>
+                                <td><input type="text" class="inp-text" title="다음매수상단"></td>
+                                <td><input type="text" class="inp-text" title="다음매수하단"></td>
+                                <td class="txt-c">
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleY" name="buyScale" checked>
+                                        <label for="buyScaleY" class="lb-radio"><span>Y</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleN" name="buyScale">
+                                        <label for="buyScaleN" class="lb-radio"><span>N</span></label>
+                                    </span>
+                                </td>
+                                <td class="txt-c">67.6</td>
+                                <td class="txt-c" >936.59</td>
+                            </tr>
+                            <tr>
+                                <td class="txt-c">2023.01.01</td>
+                                <td><input type="text" class="inp-text" title="기초자산종가"></td>
+                                <td><input type="text" class="inp-text" title="환율시가"></td>
+                                <td><input type="text" class="inp-text" title="원화환산지수"></td>
+                                <td><input type="text" class="inp-text" title="최근매수밴드"></td>
+                                <td><input type="text" class="inp-text" title="다음매수상단"></td>
+                                <td><input type="text" class="inp-text" title="다음매수하단"></td>
+                                <td class="txt-c">
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleY" name="buyScale" checked>
+                                        <label for="buyScaleY" class="lb-radio"><span>Y</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="buyScaleN" name="buyScale">
+                                        <label for="buyScaleN" class="lb-radio"><span>N</span></label>
+                                    </span>
+                                </td>
+                                <td class="txt-c">67.6</td>
+                                <td class="txt-c" >936.59</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <!-- 20230120 추가 -->
+            <div class="sub-title">
+                <h3>펀드 #2 <span class="title-info">상품 목록 및 상세화면 상단에 표시되는 항목입니다.</span></h3>
+                <p class="msg">* 최대 5개 까지 게시 가능</p>
+            </div>
+
+
+            <div class="sub-title">
+                <h3>펀드 #2</h3>
+                <p class="msg">* 최대 5개 까지 게시 가능</p>
+            </div>
+            <div class="tbl-base mgt10">
+                <table>
+                    <colgroup>
+                        <col style="width:290px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" style="width:480px;">
+                                    <p class="note">0/7자</p>
+                                </div>
+                                <p class="error-info">상품유형은 최소 1개 이상 등록되어야 합니다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">펀드코드/명<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" style="width:480px;">
+                                    <input type="text" class="inp-text" style="width:240px;">
+                                    <button class="btn base square"><span>조회</span></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Flag 노출<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td>
+                                <div class="frm-area multi">
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0201" name="" checked>
+                                        <label for="flag0201" class="lb-checkbox"><span>TDB</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0202" name="" >
+                                        <label for="flag0202" class="lb-checkbox"><span>TDB</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0203" name="" >
+                                        <label for="flag0203" class="lb-checkbox"><span>TDB</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="checkbox" id="flag0204" name="" >
+                                        <label for="flag0204" class="lb-checkbox"><span>TDB</span></label>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">펀드 특징 요약<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td>
+                                <div class="frm-area">
+                                    <textarea class="inp-textarea"></textarea>
+                                    <p class="note">0 / 40자</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">순서<span class="ico-req">필수</span></th>
+                            <td>
+                                <select title="순서">
+                                    <option>1</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">키자 TV<span class="ico-req">필수</span></th>
+                            <td>
+                                <div class="frm-area add-conts">
+                                    <div><button class="btn base square"><span>콘텐츠 추가</span></button></div>
+                                    <div><span class="btn-text">채권은 뭔가요?<button type="button" class="btn-del"><span>삭제</span></button></span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">키자 TV<span class="ico-req">필수</span></th>
+                            <td>
+                                <div class="frm-area add-conts">
+                                    <div><button class="btn base square"><span>콘텐츠 추가</span></button></div>
+                                    <div><span class="btn-text">채권은 뭔가요? 주식이랑 뭐가 다른가요? 채권은 뭔가요? 주식이랑 주식이랑 뭐가 다른가요? 채권은 뭔가요? 주식이주식이랑 뭐가 다른가요? 채권은 뭔가요? 주식이주식이랑 뭐가 다른가요? 채권은 뭔가요? 주식이뭐가 다른가요?채권은 뭔가요? 채권은 뭔가요? 주식이랑 뭐가 다른가요?채권은 뭔가요? 주식이랑 뭐가 다른가요?채권은 뭔가요? 주식이랑 뭐가 다른가요?주식이랑 뭐가 다른가요?<button type="button" class="btn-del"><span>삭제</span></button></span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">분배금 기준일<span class="ico-req">필수</span></th>
+                            <td>
+                               <div class="ui-date-wrap full">
+                                    <div class="ui-datepicker">
+                                        <input type="text" id="uiDate_1" class="inp-base date" value="" min="2020-12-05" max="2025-05-20" title="날짜입력" readonly="">
+                                        <button type="button" class="ui-datepicker-btn" data-target="uiDate_1">
+                                            <span class="a11y-hidden">년월일 선택</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이미지</th>
+                            <td>
+                                <!-- 첨부파일 1개 -->
+                                <div class="file-wrap">
+                                    <strong class="file-title">PC</strong>
+                                    <div class="input-item">
+                                        <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                        <span class="btn base square">
+                                            <input type="file" title="첨부파일 선택">
+                                            <span>파일추가</span>
+                                        </span>
+                                    </div>
+                                    <!-- 20230120 파일사이즈 수정 -->
+                                    <div class="file-list size">
+                                        <span class="file-info">권장사이즈 : xxx*xxx</span>
+                                        <div class="file">
+                                            <p class="file-name">filename1.png</p>
+                                            <button type="button" class="btn-del"><span>삭제</span></button>
+                                            <span class="file-info">(123 * 123)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- //첨부파일 -->
+                                <!-- 첨부파일 1개 -->
+                                <div class="file-wrap">
+                                    <strong class="file-title">모바일</strong>
+                                    <div class="input-item">
+                                        <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                        <span class="btn base square">
+                                            <input type="file" title="첨부파일 선택">
+                                            <span>파일추가</span>
+                                        </span>
+                                    </div>
+                                    <div class="file-list size">
+                                        <span class="file-info">권장사이즈 : xxx*xxx</span>
+                                        <div class="file">
+                                            <p class="file-name">filename1.png</p>
+                                            <button type="button" class="btn-del"><span>삭제</span></button>
+                                            <span class="file-info">(123 * 123)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- //첨부파일 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일</th>
+                            <td>
+                                <!-- 첨부파일 1개 -->
+                                <div class="file-wrap">
+                                    <div class="input-item">
+                                        <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                        <span class="btn base square">
+                                            <input type="file" title="첨부파일 선택">
+                                            <span>파일추가</span>
+                                        </span>
+                                    </div>
+                                    <div class="file-list">
+                                        <div class="file">
+                                            <p class="file-name">filename1.doc</p>
+                                            <button type="button" class="btn-del"><span>삭제</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- //첨부파일 -->
+                                 <!-- 첨부파일 여러개 -->
+                                <div class="file-wrap multi">
+                                    <div class="input-item">
+                                        <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                        <span class="btn base square">
+                                            <input type="file" title="첨부파일 선택">
+                                            <span>파일추가</span>
+                                        </span>
+                                    </div>
+                                    <div class="file-list">
+                                        <div class="file">
+                                            <p class="file-name">filename1.doc</p>
+                                            <button type="button" class="btn-del"><span>삭제</span></button>
+                                        </div>
+                                        <div class="file">
+                                            <p class="file-name">filename2.doc</p>
+                                            <button type="button" class="btn-del"><span>삭제</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- //첨부파일 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일</th>
+                            <td>
+                                <div class="file-wrap input img">
+                                    <div class="file-ipt">
+                                        <input type="text" class="inp-text" title="유형입력">
+                                        <div class="input-item">
+                                            <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly="">
+                                            <span class="btn base square">
+                                                <input type="file" title="이미지파일 선택">
+                                                <span>이미지 등록</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="file-list">
+                                        <div class="file">
+                                            <p class="file-name">filename1.doc</p>
+                                            <button type="button" class="btn-del"><span>삭제</span></button>
+                                            <span class="file-info">(123 * 123)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상품유형수정</th>
+                            <td>
+                                <!-- 첨부파일 1개 -->
+                                <div class="file-wrap input">
+                                    <div class="file-ipt">
+                                        <input type="text" class="inp-text" title="유형입력">
+                                        <div class="input-item">
+                                            <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                            <span class="btn base square">
+                                                <input type="file" title="첨부파일 선택">
+                                                <span>파일추가</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="file-list">
+                                        <div class="file">
+                                            <p class="file-name">filename1.doc</p>
+                                            <button type="button" class="btn-del"><span>삭제</span></button>
+                                            <span class="file-info">(123 * 123)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- //첨부파일 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">배너링크</th>
+                            <td>
+                                <div class="frm-area">
+                                    <span class="lb-item">
+                                        <input type="radio" id="bnr01" name="bnrLink" checked>
+                                        <label for="bnr01" class="lb-radio"><span>URL</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="bnr02" name="bnrLink">
+                                        <label for="bnr02" class="lb-radio"><span>미적용</span></label>
+                                    </span>
+                                </div>
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">배너링크</th>
+                            <td>
+                                <div class="frm-area">
+                                    <span class="lb-item type2">
+                                        <input type="radio" id="bnr01" name="bnrLink" checked>
+                                        <label for="bnr01" class="lb-radio"><span>URL</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="bnr02" name="bnrLink">
+                                        <label for="bnr02" class="lb-radio"><span>미적용</span></label>
+                                    </span>
+                                </div>
+                                <div class="frm-area type2">
+                                    <span class="name">PC</span>
+                                    <input type="text" class="inp-text">
+                                    <div class="frm-area">
+                                        <input type="checkbox" id="flag0101" name="" checked>
+                                        <label for="flag0101" class="lb-checkbox"><span>외부링크</span></label>
+                                    </div>
+                                </div>
+                                <div class="frm-area type2">
+                                    <span class="name">모바일</span>
+                                    <input type="text" class="inp-text">
+                                    <div class="frm-area">
+                                        <input type="checkbox" id="flag0101" name="" checked>
+                                        <label for="flag0101" class="lb-checkbox"><span>외부링크</span></label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p class="msg error-info">내용을 입력해주세요.</p>
+                                <div style="background:#eee; line-height:300px; text-align:center;">에디터</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tbl-btns">
+                <button class="btn base cancel"><span>삭제</span></button>
+                <div>
+                    <button class="btn base"><span>취소(목록)</span></button>
+                    <button class="btn base primary"><span>저장</span></button>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button class="btn primary"><span>저장</span></button>
+            </div>
+            <div class="sub-title">
+                <p class="count">총 <span>100</span>건</p>
+                <p class="msg">* 최대 5개 까지 게시 가능</p>
+            </div>
+            <div class="tbl-base type2 mgt10">
+                <table>
+                    <colgroup>
+                        <col style="width:88px;">
+                        <col style="width:auto;">
+                        <col style="width:160px;">
+                        <col style="width:104px;">
+                        <col style="width:160px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">타이틀</th>
+                            <th scope="col">등록일</th>
+                            <th scope="col">게시여부</th>
+                            <th scope="col">
+                                게시순서
+                                <button type="button" class="apply-btn">적용</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100</td>
+                            <td>KOSEF 차이나 A50 커넥트 MSCI 상품 1</td>
+                            <td>2022.11.23</td>
+                            <td>Y</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">1</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>KOSEF 차이나 A50 커넥트 MSCI 상품 1</td>
+                            <td>2022.11.23</td>
+                            <td>Y</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">1</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>KOSEF 차이나 A50 커넥트 MSCI 상품 1</td>
+                            <td>2022.11.23</td>
+                            <td>Y</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">1</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>KOSEF 차이나 A50 커넥트 MSCI 상품 1</td>
+                            <td>2022.11.23</td>
+                            <td>Y</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">1</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>KOSEF 차이나 A50 커넥트 MSCI 상품 1</td>
+                            <td>2022.11.23</td>
+                            <td>Y</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">1</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tbl-btns">
+                <div>
+                    <button class="btn base primary"><span>등록</span></button>
+                </div>
+                <div class="pager">
+                    <a href="#" class="btn first"><span class="hide">처음으로</span></a>
+                    <a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+                    <span class="num">
+                        <a href="#">1</a>
+                        <a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                    </span>
+                    <a href="#" class="btn next"><span class="hide">다음으로</span></a>
+                    <a href="#" class="btn end"><span class="hide">마지막으로</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright©2023 <a href="#" target="
+_blank">Everybooks</a>. All rights reserved</p>
+    </footer>
+</div>
+</body>
+</html>

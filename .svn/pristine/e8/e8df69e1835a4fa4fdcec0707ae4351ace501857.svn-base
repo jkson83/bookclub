@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <!-- 23.12.04 wrap-game 클래스 추가, game1-3으로 클래스 변경 -->
+  <div id="wrap" class="wrap wrap-game game1-3">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">아래 이미지를 선택하여 낱말의 뜻을 확인할 수 있어요</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div> 
+
+    <!-- 단어 목록 -->
+    <div class="word-list-area">
+      <div class="swiper word-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic1.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic2.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn-word">실감</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic3.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic4.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn-word">중심문장</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn-word">피곤한</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn-word">인물</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic3.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic4.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic1.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic2.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn-word">실감</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic3.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic4.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn-word">중심문장</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn-word">피곤한</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn-word">인물</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic3.png" alt=""></button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button"><img src="../../resources/img/app/select_pic4.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //단어 목록 -->
+
+    <div>
+      <button class="btn-active">게임 도전 하기!</button>
+    </div>
+  </div>
+
+  <!-- 레이어 팝업 : 낱말확인 팝업 -->
+  <!-- 23.12.04 word 클래스 추가 -->
+  <div class="layer-popup word">
+    <div class="layer-check-word">
+      <p class="title-check-word">낱말확인</p>
+
+      <div class="select-word-area">
+        <span class="select-word">안무가</span>
+        <!-- 이미지 일때 -->
+        <!-- <img src="../../resources/img/app/select_pic1.png" alt=""> -->
+      </div>  
+
+      <!-- 23.12.04 감싸고 있던 div 삭제 -->
+      <p class="word-meaning">
+        콩쥐팥쥐 이야기에는 콩쥐, 팥쥐, 개구리, 참새 등이 나옵니다.<br>
+        콩쥐, 팥쥐, 개구리, 참새는 이야기의 인물입니다.<br>
+        이야기의 인물은 사람이 될 수도 있고, 동물이나 물건이 될 수 도 있습니다.
+      </p>
+
+      <button class="q-sound">질문 듣기</button>
+
+      <div class="close-layer-word">
+        <button class="btn-active">닫기</button>
+      </div>
+    </div>
+  </div>
+  <!-- //레이어 팝업 : 낱말확인 팝업 -->
+  
+  <script>
+    var swiper = new Swiper(".word-swiper", {
+      slidesPerView: 4,
+      freeMode: true,
+      grid: {
+        rows: 3,
+      },
+    });
+  </script>
+</body>
+</html>

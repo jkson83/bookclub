@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+
+
+//svgString 색상변경
+//@ svg 
+//@ background positionX
+//@ background positionY
+//@ svg rotate
+//@ new_color
+// @ find_color
+@mixin background_old($svg, $posx:center, $posy:center, $rotate:0, $new_color:#222, $find_color :'%23xxx'){
+	$svg : str-replace(str-replace($svg, $find_color,  $new_color), '#', '%23');
+	transform : rotate(#{$rotate}deg);
+	background:url($svg) no-repeat $posx $posy; 
+}
+
+//@usage : @include background($svg-pop-close, '%23666', '#fff', 0, 0);;
+@mixin background($svg, $find_color :'%23xxx', $new_color:#222, $posx:0, $posy:0){
+	$svg : str-replace(str-replace($svg, $find_color,  $new_color), '#', '%23');
+	background:url($svg) no-repeat $posx $posy; 
+}
+
+@mixin transition($all:all, $delay : 0s){
+	transition:$all .23s cubic-bezier(0.685, 0.0473, 0.346, 1) $delay;
+}
+
+@mixin boxshadow(){
+	box-shadow: 3px 0px 10px 4px rgba(0, 0, 0, .14),
+	0 1px 10px -5px rgba(#000, 0.12)
+}
+
+// ------------------------------------ 
+// Util : Mixins 
+// ------------------------------------ 
+@mixin blind() {
+	position:absolute;display:inline-block;font-size:1px;width:1px;height:1px;padding:0;margin:-1px;visibility:hidden;overflow:hidden;border:0;clip:rect(0, 0, 0, 0);
+}
+@mixin clearfix() {
+	&::after {display: block; content: ""; clear: both;}
+}
+@mixin clearfix {
+	&::after {display: block; content: ""; clear: both;}
+}
+//중앙정렬
+@mixin middle($width, $height) {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: $width;
+	height: $height;
+	margin-top: (-$height)/2;
+	margin-left: (-$width)/2; 
+}
+
+//메뉴 Hover 색상 변경
+@mixin menu_hover($color:#f7f7f7, $darken:10%) {
+	text-decoration:none;
+	background-color: darken($color, $darken);
+	@include transition(all .25s ease-in-out);
+}
+
+@mixin btn_hover($color:#f7f7f7, $darken:10%) {
+	&:hover, &:focus{
+		text-decoration:none;
+		background-color: darken($color, $darken);
+		@include transition(all .25s ease-in-out);
+	}
+}
+
+@mixin txt_hover($color:#f7f7f7) {
+	text-decoration:none;
+	color: darken($color, 3%);
+	@include transition(all .25s ease-in-out);
+}
+
+

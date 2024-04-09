@@ -1,0 +1,89 @@
+<!-- modal -->
+<section class="ui-modal" id="ADMC0604020301P">
+  <div class="ui-modal-wrap">
+    <div class="ui-modal-header">
+      <h1 class="ui-modal-tit">항목 추가</h1>
+      <button type="button" class="icon-close ui-modal-close" aria-label="close" ><span class="hide">모달 닫기</span></button>
+    </div>
+    <div class="ui-modal-body">
+      <div class="modal-conts">
+        <div class="tbl-base">
+          <table>
+            <colgroup>
+              <col style="width:150px;">
+              <col style="width:auto;">
+            </colgroup>
+            <tbody>
+              <!-- [기획] 10/20 -->
+              <tr>
+                <th scope="row" class="txt-l"><label for="modal_inp01">질문 문구</label><span class="ico-req"><span class="hide">필수</span></span></th>
+                <td>
+                  <div class="frm-area">
+                    <input type="text" id="modal_inp01" class="inp-text">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="txt-l"><label for="modal_inpUpload01">질문 음성 파일</label><span class="ico-req"><span class="hide">필수</span></span></th>
+                <td>
+                  <div class="file-wrap">
+                    <div class="input-item">
+                      <input type="text" class="inp-text" value="" placeholder="" readonly>
+                      <span class="btn base square">
+                        <input type="file" title="첨부파일 선택" id="modal_inpUpload01">
+                        <span>파일 등록</span>
+                      </span>
+                    </div>
+                    <div class="file-list">
+                      <div class="file">
+                        <span class="file-info">※ MP3 파일로만 등록이 가능합니다.</span>
+                        <p class="file-name">파일명.확장자</p>
+                        <button type="button" class="btn-del"><span>삭제</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="txt-l" scope="row">게임 방식<span class="ico-req"><span class="hide">필수</span></span></th>
+                <td class="txt-l">
+                  <div class="frm-area">
+                    <span class="lb-item">
+                      <input type="radio" id="modal_rdo01" name="modal_rdo01" checked="">
+                      <label for="modal_rdo01" class="lb-radio"><span>2x2</span></label>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="txt-l"><label for="modal_inp02">정답</label><span class="ico-req"><span class="hide">필수</span></span></th>
+                <td>
+                  <div class="frm-area">
+                    <input type="text" id="modal_inp02" class="inp-text">
+                    <p class="note">0 / 2자</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="txt-l"><label for="modal_inp03">문항 낱말</label><span class="ico-req"><span class="hide">필수</span></span></th>
+                <td>
+                  <div class="frm-area">
+                    <input type="text" id="modal_inp03" class="inp-text">
+                    <span class="note">낱말 사이를 쉼표(,) 로 구분해 입력해 주세요.</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="ui-modal-footer">
+      <div class="btn-group">
+        <button type="button" class="btn base tertiary"><span>취소</span></button>
+        <button type="button" class="btn base primary"><span>저장</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //modal -->

@@ -1,0 +1,53 @@
+IA : https://192-168-0-10.netive.direct.quickconnect.to:5001/oo/r/vMKQRkWWowNTpCmwAK2zjlDQ2awqXkGF
+WBS : https://192-168-0-10.netive.direct.quickconnect.to:5001/oo/r/vMJl2r4TxFhiP43ZnrfgtaFmYmECcTMG
+
+문서 : 나스 -> Project -> 북클럽 서비스 앱 구축 -> 01.기획
+디자인: 
+  1. Web : https://www.figma.com/file/uGFTI3awci1Me1qVd3P6gk/%E1%84%8B%E1%85%A6%E1%84%87%E1%85[…]?type=design&node-id=1%3A8454&mode=design&t=TsffNxkshOyELuNx-1
+  2. App : https://www.figma.com/file/FverQ22fGzSpRP9fzt7t8K/%E1%84%8B%E1%85%A6%E1%84%87%E1%85[…]8?type=design&node-id=877%3A2&mode=design&t=cWBMi7XLOMjofOBV-1
+
+svn : http://211.217.227.177:1180/svn/bookclub/
+
+일정 : https://netive.direct.quickconnect.to:59327/oo/r/vMKQRkWWowNTpCmwAK2zjlDQ2awqXkGF#tid=11
+
+환경 셋팅 방법은 svn 체크아웃 후 README.md 파일 확인
+
+진행상황
+admin - 완료(b2c - pc , b2b - 반응형) (ADMC0604020500M 설계 없어서 미작업)
+web - 미진행(반응형)
+app - 미진행
+
+샘플은 worklist.guide.html에 초안기준으로 제작해두었음. 
+
+web
+크로스브라우징 브라우저 : 크롬
+
+app (태블릿, 크롬북)
+태블릿 AOS 9.0 이상(삼성 최소 요구 안드로이드 버전), iOS 16.3 이상
+
+
+화면 목록에 하늘색은 2차 오픈 범위이며, 내용 변경시 변경일자로 변경 확인 가능하도록 협의
+
+
+개발 전달 시 webApp폴더만 전달하면 되며,
+어드민은 admin 폴더 내에 resources를 포함하고 있으며,
+web,app은 webApp/resources폴더를 사용한다.
+
+html - _ui_guide, _ui_include는 worklist를 위해 사용하는 폴더이고
+guide는 가이드, sample은 샘플 파일들을 넣는다.
+APP과 WEB은 각각 작업된 html을 넣는다.(실제 서비스 관련 파일)
+
+resources
+audio : 이북 관련 사운드 샘플파일
+fonts : 폰드
+img : 이미지
+js : js
+scss : scss파일
+css : gulp가 scss을 빌드해서 자동으로 생성해줌
+
+css 직접 수정시 scss가 컴파일 되면서 내용이 사라지므로 꼭 scss을 수정해야함
+
+
+이북관련 전달 내용
+리사이즈 문제로 이북에 사용되는 이미지 사이즈의 추가적인 이미지 영역(눈에 보이지 않음)이 필요하여 추가해두었음
+ebook.html 주석 참고

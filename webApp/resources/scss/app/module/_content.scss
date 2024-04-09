@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+
+.icon-sticker{
+	display: inline-block; 
+	width: 3.9vh;
+	height: 3.9vh;
+	background-image: url($star-off);
+	@include text-hide;
+
+	&.on{
+		background-image: url($star-on);
+	}
+}
+
+/* popup */
+.modal-popup {
+	display: none;
+	overflow: hidden;
+
+	&-bg{
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 399;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		opacity: .75;
+		display: none;
+	}
+	&-outer{
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 400;
+		width: 100%;
+		height: 100%;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-align: center;
+		align-items: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	&-container{
+		position: relative;
+		width: 28.75rem;
+		background: #fff;
+		padding: 2rem 1.87rem;
+		opacity: 0;
+		transition: all 0.3s;
+		border-radius: 1.88rem;
+		border: 1px solid #C6C6C6;
+
+		&.item{
+			width: 58.56%;
+			padding: 5.77vh 2.56vw 4.9vh;
+
+			.text-item{
+				font-family: 'Binggrae';
+				font-size: 2.69vh;
+				text-align: center;
+				font-weight: 700;
+			}
+
+			.text-item2{
+				padding-top: 20.19vh;
+				font-family: 'Binggrae';
+				font-size: 2.69vh;
+				text-align: center;
+				font-weight: 700;
+				position: relative;
+
+				&::before{
+					content: "";
+					width: 20.87vh;
+					height: 15.46vh;
+					background-image: url("../../resources/img/app/map_char2.png");
+					background-size: 100%;
+					transform: translateX(-50%);
+					position: absolute;
+					left: 50%;
+					top: 0;
+				}
+			}
+
+			.item-box{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 5.86vw;
+				margin-top: 5vh;
+				padding: 2.69vh 0;
+				border: 4px solid #FFD5A5;
+				border-radius: 30px;
+
+				.item-img{
+					width: 25vh;
+					height: 25vh;
+					padding: 0.96vh 0;
+
+					img{
+						height: 22.98vh;
+						object-fit: contain;
+					}
+				}
+
+				.item-name2{
+					margin-bottom: 3.46vh;
+					font-family: 'CookieRun'; 
+					font-size: 3.85vh;
+					font-weight: 700;
+					text-align: center;
+				}
+
+				.title-discount-sticker{
+					margin-bottom: 2.88vh;
+					font-size: 2.5vh;
+					text-align: center;
+					font-weight: 700;
+				}
+
+				.discount-sticker{
+					display: flex;
+					align-items: center;
+					gap: 0.88vw;
+					height: 7.31vh;
+					padding-left: 0.29vw;
+					padding-right: 1.32vw;
+					margin: 0 auto;
+					background-color: #FFD600;
+					border: 6px solid #fff;
+					box-shadow: 0px 0px 6px rgba(255, 153, 0, 0.5);
+					border-radius: 100px;
+					font-size: 2.88vh;
+					color: #003B71;
+					font-weight: 700;
+					text-align: center;
+					line-height: 5.15vh;
+
+					&::before{
+						content: "";
+						width: 5.38vh;
+						height: 5.38vh;
+						background-image: url($star-on);
+						background-size: 100%;
+					}
+				}
+			}
+		}
+	}
+	&-header{
+		position: relative;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+	&-title {
+		font-family: 'binggrae';
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 1.7rem;
+	}
+	&-txt{
+		margin-top: .5rem;
+		color: #000;
+		font-family: 'pretendard';
+		font-size: .875rem;
+		letter-spacing: -.017rem;
+		line-height: 1.2rem;
+	}
+	&-body {
+		line-height: 1.4;
+		max-height: calc(100vh - 15rem);
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	&-footer {
+		text-align: center;
+		margin-top: 2rem;
+		font-size: 0;
+		
+		.btn-wrap{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 0;
+
+			button{
+				min-width: auto;
+			}
+		}
+
+		button{
+			width: 100%;
+			font-family: 'pretendard';
+			font-weight: 700;
+			font-size: 1.125rem;
+		}
+		button + button{
+			margin-left: .63rem;
+		}
+
+		.layer-f-btn{
+			display: flex;
+			justify-content: center;
+			gap: 1.46vw;
+			margin-top:3.9vw;
+
+			button{
+				width: 17.56vw;
+			}
+		}
+	}
+	&-close{
+		transform: translateY(0);
+		position: absolute;
+		top: -0.3rem;
+		right: -0.3rem;
+
+		&::before{
+			display: none;
+		}
+
+		span{
+			display: inline-block;
+			width: 1.56rem;
+			height: 1.56rem;
+			background: url('../../resources/img/web/ico_close.png') 50% no-repeat;
+			font-size: 0;
+			background-size: contain;
+			transform: translateY(-50%);
+		}
+	}
+
+	/* 알럿 */
+	.alert{
+		width: 43.92%;
+		padding-bottom: 7.69vh;
+
+		.alert-txt{
+			padding-top: 1.84vh;
+			font-family: 'Binggrae';
+			font-size: 2.69vh;
+			font-weight: 700;
+			line-height: 1.3;
+			text-align: center;
+		}
+
+		.modal-popup-footer{
+			button{
+				width: 40%;
+				height: 6.44vh;
+				border-radius: 100px;
+				line-height: 6.44vh;
+			}
+		}
+	}
+
+	&.loading{
+		display: block;
+
+		.modal-popup-bg{
+			display: block;
+		}
+	}
+
+	.loading-img{
+		transform: translate(-50%, -50%);
+		position: fixed;
+		left: 50%;
+		top: 50%;
+
+		img{
+			width: auto;
+			height: 23.17vh;
+		}
+	}
+}
+
+.active {
+	.modal-popup-container {
+		opacity: 1;
+	}
+}

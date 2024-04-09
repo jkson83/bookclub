@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <!-- 23.12.04 wrap-game 클래스 추가 -->
+  <div id="wrap" class="wrap wrap-game game2">
+    <div class="question-top">
+      <div class="q-sticker-area">
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker on">스티커</span>
+        <span class="icon-sticker">스티커</span>
+      </div>
+
+      <div class="q-descript-area">
+        <p class="q-descript">글자를 선택해 뜻에 알맞은 단어를 완성해 보세요.</p>
+
+        <button type="button" class="descript-sound">지시문 듣기</button>
+      </div>
+
+      <button class="btn-end">종료</button>
+    </div> 
+
+    <!-- 질문 영역 -->
+    <!-- 23.12.04 game-box-area div 추가, game-box-top로 클래스 변경 -->
+    <div class="game-box-area">
+      <div class="game-box-top">
+        무슨 영문인지 잘 몰라서 어떨떨 하다<br>
+        무슨 영문인지 잘 몰라서 어떨떨 하다
+
+        <button class="q-sound">질문 듣기</button>
+
+        <p class="q-time">58초</p>
+      </div>
+    </div>
+
+    <!-- 단어 박스 -->
+    <div class="word-box-area">
+      <p class="word-box2">?</p>
+      <p class="word-box2">?</p>
+      <p class="word-box2">?</p>
+      <p class="word-box2">?</p>
+    </div>
+    <!-- //단어 박스 -->
+
+    <div class="syllable-box">
+      <div class="syllable-area">
+        <!-- 선택 됐을 경우 on 클래스 추가 -->
+        <button type="button" class="btn-syllable on">어</button>
+        <button type="button" class="btn-syllable">음</button>
+        <button type="button" class="btn-syllable on">리</button>
+        <button type="button" class="btn-syllable">체</button>
+        <button type="button" class="btn-syllable">활</button>
+        <button type="button" class="btn-syllable">사</button>
+        <button type="button" class="btn-syllable on">절</button>
+        <button type="button" class="btn-syllable">진</button>
+        <button type="button" class="btn-syllable">려</button>
+        <button type="button" class="btn-syllable">트</button>
+        <button type="button" class="btn-syllable on">둥</button>
+        <button type="button" class="btn-syllable">임</button>
+      </div>
+    </div>
+
+    <div class="q-paging-area">
+      <a href="#" class="on">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+    </div>
+  </div>
+
+  <!-- 레이어 팝업 : 정답확인 팝업 -->
+  <!-- 23.12.04 클래스 추가 -->
+  <div class="layer-popup check-answer">
+    <!-- 정답 일 경우 -->
+    <div class="layer-content modal">
+      <!-- 23.12.04 div 추가 -->
+      <div class="check-answer-area">
+        <p class="text-answer-check correct">정답입니다! <br>다음 문제도 도전해 볼까요?</p>
+      </div>
+    </div>
+    <!-- //정답 일 경우 -->
+
+    <!-- 오답 일 경우 -->
+    <div class="layer-content modal" style="display:none">
+      <!-- 23.12.04 div 추가 -->
+      <div class="check-answer-area">
+        <p class="text-answer-check wrong">아쉽지만, 정답이 아니에요. <br>다음 문제도 풀어볼까요?</p>
+      </div>
+    </div>
+    <!-- //오답 일 경우 -->
+
+    <!-- 시간 종료 일 경우 -->
+    <div class="layer-content modal" style="display:none">
+      <!-- 23.12.04 div 추가 -->
+      <div class="check-answer-area">
+        <p class="text-answer-check time">게임의 도전 시간이 종료되었어요. <br>다음 문제로 넘어갈께요</p>
+      </div>
+    </div>
+    <!-- //시간 종료 일 경우 -->
+
+    <!-- 모든 게임 끝났을 경우 -->
+    <div class="layer-content modal" style="display:none">
+      <!-- 23.12.04 div 추가 -->
+      <div class="check-answer-area">
+        <p class="text-answer-check finish">모든 게임 도전이 끝났습니다!</p>
+      </div>
+    </div>
+    <!-- //모든 게임 끝났을 경우 -->
+  </div>
+  <!-- //레이어 팝업 : 정답확인 팝업 -->
+
+  <script>
+    var swiper = new Swiper(".word-box-swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</body>
+</html>

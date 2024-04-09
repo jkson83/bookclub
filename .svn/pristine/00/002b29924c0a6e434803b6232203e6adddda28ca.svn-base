@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EVERYBOOKS</title>
+    <link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+    <script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.global.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.common.js"></script>
+    <script type="text/javascript">
+        pageInfo = { mid: '2', sid: '2' }; 
+    </script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+    <header class="gnb-wrap" id="header">
+        <div>
+            <h1><span class="hide">EVERYBOOKS</span></h1>
+            <div class="links">
+                <a href="#"><span>홈페이지 바로가기</span></a>
+                <button type="button" class="logout">로그아웃</button>
+            </div> 
+        </div>
+    </header>
+    <main class="main-wrap" id="content">
+        <div class="sub-nav"></div>
+        <section class="main-conts">
+            <h2>메인 팝업</h2>
+            <ul class="page-nav">
+                <li><a href="#">KOSEF 메인 관리</a></li>
+                <li class="current"><a href="#">메인 팝업</a></li>
+            </ul>
+            <div class="tbl-base mgt25">
+                <table>                   
+                    <colgroup>
+                        <col style="width:290px;">
+                        <col style="width:auto;">     
+                        <col style="width:290px;">
+                        <col style="width:auto;">                      
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">등록일</th>
+                            <td>2022.12.19</td>
+                            <th scope="row">게시여부</th>
+                            <td>                              
+                                <div class="frm-area multi">
+                                    <span class="lb-item">
+                                        <input type="radio" id="yon01" name="yonBtn" checked>
+                                        <label for="yon01" class="lb-radio"><span>Y</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="yon02" name="yonBtn">
+                                        <label for="yon02" class="lb-radio"><span>N</span></label>
+                                    </span>
+                                </div>   
+                            </td>
+                        </tr>   
+                        <tr>
+                            <th scope="row">유형</th>
+                            <td colspan="3">
+                                <div class="frm-area multi">
+                                    <span class="lb-item">
+                                        <input type="radio" id="pupty01" name="pupty" checked>
+                                        <label for="pupty01" class="lb-radio"><span>레이어 팝업</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="pupty02" name="pupty">
+                                        <label for="pupty02" class="lb-radio"><span>띠 배너 팝업</span></label>
+                                    </span>
+                                </div> 
+                            </td>
+                        </tr>    
+                        <tr>
+                            <th scope="row">제목<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td colspan="3">
+                                <div class="frm-area">
+                                    <input type="text" class="inp-text" title="제목 입력">
+                                    <p class="note">0 / 30자</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이미지<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td colspan="3">   
+                                <div class="file-wrap">
+                                    <strong class="file-title">PC</strong>     
+                                    <div class="input-item">   
+                                        <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                        <span class="btn base square">
+                                            <input type="file" title="첨부파일 선택">
+                                            <span>파일추가</span>
+                                        </span>
+                                    </div>
+                                    <div class="file-list">
+                                        <div class="file">
+                                            <span class="file-info">권장사이즈 : xxx*xxx</span>
+                                            <p class="file-name">filename1.png</p>
+                                            <button type="button" class="btn-del"><span>삭제</span></button>
+                                            <!-- 
+                                                23.02.24 수정반영:: 텍스트 삭제
+                                                <span class="file-info">(123 * 123)</span> 
+                                            -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="file-wrap">
+                                    <strong class="file-title">모바일</strong>     
+                                    <div class="input-item">   
+                                        <input type="text" id="inpUpload" name="inpUpload" class="inp-text" value="" placeholder="" readonly>
+                                        <span class="btn base square">
+                                            <input type="file" title="첨부파일 선택">
+                                            <span>파일추가</span>
+                                        </span>
+                                    </div>
+                                    <div class="file-list">
+                                        <div class="file">
+                                            <span class="file-info">권장사이즈 : xxx*xxx</span>
+                                            <p class="file-name">filename1.png</p>
+                                            <button type="button" class="btn-del"><span>삭제</span></button>
+                                            <!-- 
+                                                23.02.24 수정반영:: 텍스트 삭제
+                                                <span class="file-info">(123 * 123)</span>
+                                            -->
+                                        </div>
+                                    </div>
+                                </div>                         
+                            </td> 
+                        </tr>       
+                        <tr>
+                            <th scope="row">대체 텍스트<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td colspan="3">
+                                <div class="frm-area">
+                                    <!-- 23.02.24 기획 수정반영:: placeholder 제거 -->
+                                    <textarea class="inp-textarea"></textarea>
+                                    <p class="note">0 / 50자</p>
+                                </div>
+                            </td>
+                        </tr>   
+                        <tr>
+                            <th scope="row">팝업 링크<span class="ico-req"><span class="hide">필수</span></span></th>
+                            <td colspan="3">                                
+                                <div class="frm-area multi">
+                                    <span class="lb-item type2">
+                                        <input type="radio" id="pup01" name="pupBtn" checked>
+                                            <label for="pup01" class="lb-radio"><span>URL</span></label>
+                                    </span>
+                                    <span class="lb-item">
+                                        <input type="radio" id="pup02" name="pupBtn">
+                                        <label for="pup02" class="lb-radio"><span>미적용</span></label>
+                                    </span>
+                                </div>   
+                                <div class="frm-area type2 mgt8">
+                                    <span class="name">PC</span>
+                                    <input type="text" class="inp-text" title="PC 링크">
+                                    <div class="frm-area">
+                                        <input type="checkbox" id="pupLink01" name="">
+                                        <label for="pupLink01" class="lb-checkbox"><span>외부링크</span></label>
+                                    </div>
+                                </div>    
+                                <div class="frm-area type2 mgt8">
+                                    <span class="name">모바일</span>
+                                    <input type="text" class="inp-text" title="모바일 링크">
+                                    <div class="frm-area">
+                                        <input type="checkbox" id="pupLink02" name="" checked>
+                                        <label for="pupLink02" class="lb-checkbox"><span>외부링크</span></label>
+                                    </div>
+                                </div>    
+                            </td> 
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tbl-btns">
+                <button class="btn base tertiary"><span>삭제</span></button>
+                <div>
+                    <button class="btn base secondary"><span>취소(목록)</span></button>
+                    <button class="btn base primary"><span>저장</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright©2023 <a href="#" target="
+_blank">Everybooks</a>. All rights reserved</p>
+    </footer>
+</div>
+</body>
+</html>

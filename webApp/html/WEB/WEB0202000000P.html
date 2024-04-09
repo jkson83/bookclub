@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <script type="text/javascript" src="../_ui_include/web_head.js"></script><!-- //Include: head -->
+</head>
+<body class="">
+  <div id="wrap" class="wrap">
+    <div id="container" class="container">
+
+      <div style="margin: 2rem">
+        <button class="btn primary" onclick="modal.open($(this), '#findPW');" title="레이어 팝업 열기">비밀번호 찾기</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 팝업 // -->
+  <div class="modal-popup" id="findPW">
+    <div class="modal-popup-outer">
+      <section class="modal-popup-container">
+        <article class="modal-popup-header">
+          <h3 class="modal-popup-title">비밀번호 찾기</h3>
+          <p class="modal-popup-txt">회원정보에 등록한 아이디와 휴대폰번호를 입력해 주세요.</p>
+          <button type="button" class="modal-popup-close only-icon">
+            <span><i class="hidden">닫기</i></span>
+          </button>
+        </article>
+        <article class="modal-popup-body">
+          <!-- content // -->
+
+          <div class="inp-list">
+            <div class="inp-list-item">
+              <label for="lbTit01" class="lb-tit">이름</label>
+              <input type="text" id="lbTit01" title="이름">
+            </div>
+          </div>
+          <p class="info-txt error">이름을 입력해 주세요.</p>
+
+          <div class="inp-list">
+            <div class="inp-list-item">
+              <label for="lbTit02" class="lb-tit">아이디</label>
+              <input type="text" id="lbTit02" title="아이디">
+            </div>
+          </div>
+          <p class="info-txt error">아이디를 입력해 주세요.</p>
+
+          <div class="inp-list complex-v1">
+            <div class="inp-list-item">
+              <label for="lbTit03" class="lb-tit">휴대폰번호</label>
+              <input type="tel" id="lbTit03" placeholder="-없이 입력" title="-없이 입력">
+            </div>
+            <button type="button" class="btn primary">인증번호 발송</button>
+          </div>
+          <p class="info-txt error">휴대폰번호를 입력해 주세요.</p>
+
+          <div class="inp-list complex-v1 disabled">
+            <div class="inp-list-item">
+              <label for="lbTit04" class="lb-tit">인증번호</label>
+              <input type="tel" id="lbTit04" placeholder="6자리 입력" title="6자리 입력" disabled>
+            </div>
+            <button type="button" class="btn primary" disabled>인증번호 확인</button>
+          </div>
+          <p class="info-txt error">인증번호를 입력해 주세요.</p>
+          <!-- // content -->
+        </article>
+        <article class="modal-popup-footer">
+          <button type="button" class="btn primary" onclick="modal.close($(this))">확인</button>
+        </article>
+      </section>
+    </div>
+  </div>
+  <!-- // 팝업 -->
+</body>
+</html>

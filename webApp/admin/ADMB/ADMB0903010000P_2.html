@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>EVERYBOOKS 어드민</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '8' };
+	</script>
+</head>
+
+<body class="b2b">
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2b"></div>
+		<section class="main-conts">
+			<h2>커뮤니티</h2>
+			<ul class="page-nav">
+				<li class="current"><a href="#">커뮤니티</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">STEP</th>
+							<td>STEP1</td>
+							<th scope="row">BOOK</th>
+							<td>BOOK3</td>
+						</tr>
+						<tr>
+							<th scope="row">도서명</th>
+							<td>프린세스</td>
+							<th scope="row">학습자</th>
+							<td>홍길동</td>
+						</tr>
+						<tr>
+							<th scope="row">제목</th>
+							<td colspan="3">글쓰기 제목을 표시</td>
+						</tr>
+						<tr>
+							<th scope="row">조회수</th>
+							<td>11</td>
+							<th scope="row">등록일</th>
+							<td>YYYY.MM.DD HH:MM</td>
+						</tr>
+						<tr>
+							<td colspan="4" class="txt-c community-cont">
+								내용을 표시합니다. 내용을 표시합니다. 내용을 표시합니다. 내용을 표시합니다.<br>
+								내용을 표시합니다. 내용을 표시합니다. 내용을 표시합니다. 내용을 표시합니다.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="sub-title">
+				<h3>신고내역</h3>
+			</div>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">신고수</th>
+							<td>11건</td>
+							<th scope="row">신고 상세 내역</th>
+							<td>
+								· 부적절한 내용 게시 : 7건<br>
+								· 부적절한 사진 게시 : 3건
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="sub-title">
+				<h3>비공개 내역</h3>
+			</div>
+			<div class="tbl-base type2 mgt10">
+				<table>
+					<colgroup>
+						<col style="width:120px;">
+						<col style="width:auto;">
+						<col style="width:200px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">상태</th>
+							<th scope="col" colspan="2">내역</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="3">내역이 존재하지 않습니다.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<button class="btn base tertiary"><span>비공개</span></button>
+				<div>
+					<button class="btn base primary"><span>목록</span></button>
+				</div>
+			</div>
+			<div class="tbl-base type2 mgt10">
+				<table>
+					<colgroup>
+						<col style="width:120px;">
+						<col style="width:auto;">
+						<col style="width:200px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">상태</th>
+							<th scope="col" colspan="2">내역</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>비공개</td>
+							<td class="txt-l">· 관리자(관리자ID)가 사유(부적절한 내용 게시)로 인해 비공개 처리하였습니다.</td>
+							<td>YYYY.MM.DD HH:MM</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<button class="btn base tertiary"><span>공개</span></button>
+				<div>
+					<button class="btn base primary"><span>목록</span></button>
+				</div>
+			</div>
+			<div class="tbl-base type2 mgt10">
+				<table>
+					<colgroup>
+						<col style="width:120px;">
+						<col style="width:auto;">
+						<col style="width:200px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">상태</th>
+							<th scope="col" colspan="2">내역</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>공개</td>
+							<td class="txt-l">· 관리자(관리자ID)가 상태를 공개로 변경하였습니다.</td>
+							<td>YYYY.MM.DD HH:MM</td>
+						</tr>
+						<tr>
+							<td>비공개</td>
+							<td class="txt-l">· 관리자(관리자ID)가 사유(부적절한 내용 게시)로 인해 비공개 처리하였습니다.</td>
+							<td>YYYY.MM.DD HH:MM</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<button class="btn base tertiary"><span>비공개</span></button>
+				<div>
+					<button class="btn base primary"><span>목록</span></button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+<script>
+    (() => {
+        'use strict';
+        // 모달 확인 호출
+        BOOK.modal.show({
+            id:"ADMB0903010000P",
+            src:"ADMB0903010000P.html"
+        });
+    })();
+</script>
+</body>
+</html>

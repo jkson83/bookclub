@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EVERYBOOKS</title>
+    <link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+    <script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.global.js"></script>
+    <script type="text/javascript" src="../resource/js/ui.common.js"></script>
+    <script type="text/javascript">
+        pageInfo = { mid: '2', sid: '2' }; 
+    </script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+    <header class="gnb-wrap" id="header">
+        <div>
+            <h1><span class="hide">EVERYBOOKS</span></h1>
+            <div class="links">
+                <a href="#"><span>홈페이지 바로가기</span></a>
+                <button type="button" class="logout">로그아웃</button>
+            </div> 
+        </div>
+    </header>
+    <main class="main-wrap" id="content">
+        <div class="sub-nav">
+            <ul class="nav">
+                <li><a href="#" id="menu1" class="mMenu">자사메인관리</a>
+                    <ul class="sub">
+                        <li><a href="#">대표펀드관리</a></li>
+                        <li><a href="#">배너관리</a></li>
+                        <li><a href="#">팝업관리</a></li>
+                        <li><a href="#">추천검색어관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="menu2" class="mMenu">KOSEF 메인 관리</a>
+                    <ul class="sub">
+                        <li><a href="#">대표펀드관리</a></li>
+                        <li><a href="#">배너관리</a></li>
+                        <li><a href="#">팝업관리</a></li>
+                        <li><a href="#">추천검색어관리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="menu3" class="mMenu">상품정보 관리</a>
+                    <ul class="sub">
+                        <li><a href="#">대표펀드관리</a></li>
+                        <li><a href="#">배너관리</a></li>
+                        <li><a href="#">팝업관리</a></li>
+                        <li><a href="#">추천검색어관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section class="main-conts">
+            <h2>어드민 팝업</h2>
+            <!-- 모달 사이즈 넓이 - 기본 720px, type-small 560px, type-large 960px -->
+            <style>
+                .modal-area { margin-top:40px; }
+                .modal-area > div:first-child { margin-top:0; }
+                .modal-area > div { margin-top:20px; border:2px solid #eee; padding:40px; }
+                .modal-area dt { padding:0 0 20px 0; font-size:20px; font-weight:700;  }
+            </style>    
+            <dl class="modal-area">
+                <div>
+                    <dt>ETF 상품 조회</dt>
+                    <dd>
+                        <button type="button" class="btn base btn-modal" data-id="ADM03010201P" data-src="ADM03010201P.html"><span>ADM03010201P</span></button>
+                    </dd>
+                </div>  
+                <div>
+                    <dt>alert 확인</dt>
+                    <dd>
+                        <button type="button" class="btn base" onclick="
+                        BOOK.modal.show({
+                        type : 'alert', 
+                        sMessage: '<p class='+ 'alert-msg' + '><span class=' + 'info' +'>삭제 시 데이터 복구가 되지 않습니다.</span><strong class=' + 'txts' +'>정말로 삭제하시겠습니까?</strong></p>', 
+                        sBtnConfirmTxt: '확인',
+                        sClass: 'type-alert',
+                        sConfirmCallback: function(){
+                            BOOK.modal.hideSystem();
+                            //document.querySelector('#testEndFocus').focus();
+                        }
+                        });"><span>alert system</span></button> 
+                    </dd>
+                </div> 
+                <div>
+                    <dt>alert 수정</dt>
+                    <dd>
+                        <button type="button" class="btn base" onclick="
+                        BOOK.modal.show({
+                            type : 'confirm',
+                            sMessage: '<p class='+ 'alert-msg' + '><span class=' + 'info' +'>정렬 순서 중복입니다. </span><strong class=' + 'txts' +'>수정 후 저장하세요.</strong></p>', 
+                            sBtnConfirmTxt: '확인',
+                            sBtnCancelTxt: '취소',
+                            sClass: 'type-confirm',
+                            sConfirmCallback: function(){                           
+                                BOOK.modal.hideSystem();
+                            },
+                            sCancelCallback: function(){                              
+                                BOOK.modal.hideSystem();                             
+                            }
+                    });"><span>confirm system</span></button>
+                    </dd>
+                </div> 
+                <div>
+                    <dt>필수값 입력</dt>
+                    <dd>
+                        <button type="button" class="btn base" onclick="
+                        BOOK.modal.show({
+                            type : 'confirm',
+                            sMessage: '<p class='+ 'alert-msg' + '><strong class=' + 'txts' +'><em>필수값</em>을 입력 해 주세요.</strong></p>', 
+                            sBtnConfirmTxt: '확인',
+                            sBtnCancelTxt: '취소',
+                            sClass: 'type-confirm',
+                            sConfirmCallback: function(){
+                                //console.log('confirm ok');
+                                BOOK.modal.hideSystem();
+                            },
+                            sCancelCallback: function(){
+                                //console.log('confirm cancel');
+                                BOOK.modal.hideSystem();
+                                //document.querySelector('#testEndFocus').focus();
+                            }
+                    });"><span>confirm system</span></button>
+                    </dd>
+                </div>  
+                <div>
+                    <dt>ETF 상품유형 수정</dt>
+                    <dd>
+                        <button type="button" class="btn base btn-modal" data-id="ADM04030101P" data-src="ADM04030101P.html"><span>ADM04030101P</span></button>
+                    </dd>
+                </div>   
+                <div>
+                    <dt>분배금지급현황 추가</dt>
+                    <dd>
+                        <button type="button" class="btn base btn-modal" onclick="BOOK.modal.show({
+                            id:'ADM08040101P', 
+                            src:'ADM08040101P.html',
+                            callback:() => {  
+                                BOOK.datepicker.init();
+                            } 
+                        });" 
+                        ><span>ADM08040101P</span></button>
+                    </dd>
+                </div>  
+                <div>
+                    <dt>대표 펀드 카테고리 수정</dt>
+                    <dd>
+                        <button type="button" class="btn base btn-modal" data-id="ADM02010201P" data-src="ADM02010201P.html"><span>ADM02010201P</span></button>
+                    </dd>
+                </div>      
+                <div>
+                    <dt>자산운용보고서 등록/수정</dt>
+                    <dd>
+                        <button type="button" class="btn base btn-modal" data-id="ADM04060203P" data-src="ADM04060203P.html"><span>ADM04060203P</span></button>
+                    </dd>
+                </div>         
+                <div>
+                    <dt>정상 미입력</dt>
+                    <dd>
+                        <button type="button" class="btn base" onclick="
+				    BOOK.modal.show({
+                    type : 'alert', 
+                    sMessage: '<p class='+ 'alert-msg' + '><strong class=' + 'txts' +'>펀드를 선택해 주세요.</strong></p>', 
+                    sBtnConfirmTxt: '확인',
+					sClass: 'type-alert',
+					sConfirmCallback: function(){
+						BOOK.modal.hideSystem();
+						//document.querySelector('#testEndFocus').focus();
+					}
+			        });"><span>등록</span></button> 
+                    </dd>
+                </div>        
+                
+
+                <div>
+                    <dt>저장 버튼</dt>
+                    <dd>
+                        <button type="button" class="btn base" onclick="
+                        BOOK.modal.show({
+                            type : 'confirm',
+                            sMessage: '<p class='+ 'alert-msg' + '><strong class=' + 'txts' +'>입력한 내용을 저장할까요?</strong></p>', 
+                            sBtnConfirmTxt: '확인',
+                            sBtnCancelTxt: '취소',
+                            sClass: 'type-confirm',
+                            sConfirmCallback: function(){
+                                //console.log('confirm ok');
+                                BOOK.modal.hideSystem();
+                            },
+                            sCancelCallback: function(){
+                                //console.log('confirm cancel');
+                                BOOK.modal.hideSystem();
+                                //document.querySelector('#testEndFocus').focus();
+                            }
+                    });"><span>저장</span></button>
+                    </dd>
+                </div> 
+                <div>
+                    <dt>삭제 버튼</dt>
+                    <dd>
+                        <button type="button" class="btn base" onclick="
+                        BOOK.modal.show({
+                            type : 'confirm',
+                            sMessage: '<p class='+ 'alert-msg' + '><strong class=' + 'txts' +'>해당 정보를 삭제할까요?</strong></p>', 
+                            sBtnConfirmTxt: '확인',
+                            sBtnCancelTxt: '취소',
+                            sClass: 'type-confirm',
+                            sConfirmCallback: function(){
+                                //console.log('confirm ok');
+                                BOOK.modal.hideSystem();
+                            },
+                            sCancelCallback: function(){
+                                //console.log('confirm cancel');
+                                BOOK.modal.hideSystem();
+                                //document.querySelector('#testEndFocus').focus();
+                            }
+                    });"><span>삭제</span></button>
+                    </dd>
+                </div> 
+                <div>
+                    <dt>취소(목록)</dt>
+                    <dd>
+                        <button type="button" class="btn base" onclick="
+                        BOOK.modal.show({
+                            type : 'confirm',
+                            sMessage: '<p class='+ 'alert-msg' + '><span class=' + 'info' +'>입력중인 내용이 저장되지 않습니다.</span><strong class=' + 'txts' +'>취소할까요?</strong></p>', 
+                            sBtnConfirmTxt: '확인',
+                            sBtnCancelTxt: '취소',
+                            sClass: 'type-confirm',
+                            sConfirmCallback: function(){
+                                //console.log('confirm ok');
+                                BOOK.modal.hideSystem();
+                            },
+                            sCancelCallback: function(){
+                                //console.log('confirm cancel');
+                                BOOK.modal.hideSystem();
+                                //document.querySelector('#testEndFocus').focus();
+                            }
+                    });"><span>취소(목록)</span></button>
+                    </dd>
+                </div> 
+            </dl>                  
+        </section>
+    </main>
+    <footer>
+        <p>Copyright©2023 <a href="#" target="
+_blank">Everybooks</a>. All rights reserved</p>
+    </footer>
+</div>
+<script>
+    (() => {
+        'use strict';
+
+        //모달 확인 호출
+        BOOK.modal.show({
+            id:"ADM02010201P",
+            src:"ADM02010201P.html"
+        });
+
+        //모달 닫기 
+        // BOOK.modal.hide({ 
+        //     id: 'ADM08040100P', 
+        //     remove: false,
+        //     callback: function(v){ console.log(v) }
+        // });
+    })();
+    
+</script>
+</body>
+</html>

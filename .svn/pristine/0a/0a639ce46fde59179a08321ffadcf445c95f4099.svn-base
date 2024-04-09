@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap study-select">
+    <!-- 23.11.29 x 버튼 삭제, 뒤로가기 버튼 추가 -->
+    <button type="button" class="btn-back">뒤로가기</button> 
+
+    <p class="title-study-start">즐거운 독서 여행 시작해 볼까요?</p>
+
+    <p class="text-study-descript">단계를 다 마친 후 재도전하면 스티커를 더 받을 수 있어요!</p>
+
+    <div class="book-process-area">
+      <div class="book-area">
+        <div class="one-book-area one-book5">
+          <!-- 23.11.14 p태그로 이미지 감싸기 -->
+          <p class="book-img"><img src="../../resources/img/app/book_img5.png" alt=""></p>
+
+          <!-- 23.11.22 진행률 수정 -->
+          <p class="read-percent">
+            <span class="progress-bg" style="width:30%;"></span>
+            <span class="progress-text">학습 진행률(30%)</span>
+          </p>
+        </div>
+
+        <p class="book-name">양파공주, 텔레비전에 나온 날</p>
+      </div>
+
+      <!-- 23.11.14 sticker-box안에 a 태그 추가 -->
+      <div class="sticker-box-area">
+        <div class="sticker-box">
+          <a href="#">
+            <p class="title-sticker">책읽기</p>
+
+            <div class="sticker-area">
+              <span class="icon-sticker on">스티커</span>
+              <span class="icon-sticker on">스티커</span>
+              <span class="icon-sticker">스티커</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="sticker-box">
+          <a href="#">
+            <p class="title-sticker">오디오북</p>
+
+            <div class="sticker-area">
+              <span class="icon-sticker on">스티커</span>
+              <span class="icon-sticker on">스티커</span>
+              <span class="icon-sticker">스티커</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="sticker-box disabled standby"><!-- 24.01.31 standby 클래스 추가  -->
+          <a href="#">
+            <p class="title-sticker">소리내어 읽기</p>
+
+            <div class="sticker-area">
+              <span class="icon-sticker">스티커</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="sticker-box">
+          <a href="#">
+            <p class="title-sticker">독서확인 학습</p>
+
+            <div class="sticker-area">
+              <span class="icon-sticker on">스티커</span>
+              <span class="icon-sticker on">스티커</span>
+              <span class="icon-sticker">스티커</span>
+              <span class="icon-sticker">스티커</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="sticker-box disabled standby"><!-- 24.01.31 standby 클래스 추가  -->
+          <a href="#">
+            <p class="title-sticker">글쓰기</p>
+
+            <div class="sticker-area">
+              <span class="icon-sticker on">스티커</span>
+              <span class="icon-sticker">스티커</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="sticker-box standby"><!-- 24.01.31 standby 클래스 추가  -->
+          <a href="#">
+            <p class="title-sticker">문해력 게임</p>
+
+            <div class="sticker-area">
+              <span class="icon-sticker on">스티커</span>
+              <span class="icon-sticker on">스티커</span>
+              <span class="icon-sticker">스티커</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

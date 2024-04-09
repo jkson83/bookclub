@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap setting">
+    <div class="setting-header">
+      <h1 class="title-setting">칭찬 스티커</h1>
+
+      <button type="button" class="btn-back">뒤로가기</button> 
+    </div>
+
+    <div class="setting-container fullpage">
+      <div class="get-sticker-box">
+        <h2 class="title-get-sticker">받은 스티커 수</h2>
+
+        <p class="get-sticker-num">120개</p>
+      </div>
+
+      <div class="tb-list-area sticker">
+        <table>
+          <caption>번호, 유형, 사유, 스티커 수, 발생일 항목으로 이루어진 테이블입니다.</caption>
+          <colgroup>
+            <col style="width:12.92%;">
+            <col style="width:18.29%;">
+            <col style="width:19.42%;">
+            <col style="width:19.42%;">
+            <col >
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">유형</th>
+              <th scope="col">사유</th>
+              <th scope="col">스티커 수</th>
+              <th scope="col">발생일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>100</td>
+              <td><span class="saving">적립</span></td>
+              <td>이북</td>
+              <td>1</td>
+              <td>2023.10.30</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td><span class="minus">차감</span></td>
+              <td>학용품 지급</td>
+              <td>1</td>
+              <td>2023.10.30</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 23.11.22 페이징 추가 -->
+      <div class="paging" aria-label="pagination">
+        <ul>
+          <li><button type="button" class="prev"><span class="hide">이전페이지</span></button></li>
+          <li><a href="#" class="current">1<span class="hide">현재페이지</span></a></li>
+          <li><a href="#">2<span class="hide">페이지</span></a></li>
+          <li><a href="#">3<span class="hide">페이지</span></a></li>
+          <li><a href="#">4<span class="hide">페이지</span></a></li>
+          <li><a href="#">5<span class="hide">페이지</span></a></li>
+          <li><button type="button" class="next"><span class="hide">다음페이지</span></button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

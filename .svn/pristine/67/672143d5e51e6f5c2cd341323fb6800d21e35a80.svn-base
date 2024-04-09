@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* colorbox 재정의 */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {display:none !important;}
+#cboxLoadedContent{margin-bottom:0px !important;}
+
+#cboxTitle{display: none !important;}
+#cboxMiddleLeft, #cboxMiddleRight{display: none !important;}
+#cboxTopLeft, #cboxTopCenter, #cboxTopRight{display: none !important;}
+#cboxBottomLeft, #cboxBottomCenter, #cboxBottomRight{display: none !important;}
+#cboxContent{border:10px solid #333; border-radius:5px;}

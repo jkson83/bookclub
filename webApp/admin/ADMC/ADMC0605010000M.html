@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EVERYBOOKS</title>
+	<link rel="stylesheet" href="../resource/css/admin.css" type="text/css">
+	<script type="text/javascript" src="../resource/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.global.js"></script>
+	<script type="text/javascript" src="../resource/js/ui.common.js"></script>
+	<script type="text/javascript">
+		pageInfo = { mid: '5', sid: '1' };
+	</script>
+</head>
+
+<body>
+<div class="bookclub-amin-wrap">
+	<header class="gnb-wrap" id="header">
+		<div>
+			<h1><span class="hide">EVERYBOOKS</span></h1>
+			<div class="links">
+				<!-- 24.01.04 홈페이지 바로가기 삭제 -->
+				<button type="button" class="logout">로그아웃</button>
+			</div>
+		</div>
+	</header>
+	<main class="main-wrap" id="content">
+		<div class="sub-nav b2c"></div>
+		<section class="main-conts">
+			<h2>도서</h2>
+			<ul class="page-nav">
+				<li><a href="#">CMS(컨텐츠 관리)</a></li>
+				<li class="current"><a href="#">도서</a></li>
+			</ul>
+			<div class="tbl-base mgt10">
+				<table>
+					<colgroup>
+						<col style="width:290px;">
+						<col style="width:auto;">
+						<col style="width:290px;">
+						<col style="width:auto;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">서비스 분류</th>
+							<td style="padding-left:0;padding-right:0;">
+								<div class="frm-area">
+									<span class="lb-item">
+										<input type="radio" id="rp01" name="rpBtn" checked="">
+										<label for="rp01" class="lb-radio"><span>전체</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp02" name="rpBtn">
+										<label for="rp02" class="lb-radio"><span>구독도서</span></label>
+									</span>
+									<span class="lb-item">
+										<input type="radio" id="rp03" name="rpBtn">
+										<label for="rp03" class="lb-radio"><span>연계도서</span></label>
+									</span>
+								</div>
+							</td>
+							<th scope="row"><label for="select01">STEP</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select01">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="select02">BOOK</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select02">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+							<th scope="row"><label for="select03">분류</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select03">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<!-- [기획] 10/20 -->
+							<th scope="row"><label for="inp01">도서 제목</label></th>
+							<td colspan="3">
+								<div class="frm-area">
+									<input type="text" name="" id="inp01" class="inp-text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<!-- [기획] 10/20 -->
+							<th scope="row"><label for="select04">IB 주제</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select04">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+							<!-- [기획] 10/20 -->
+							<th scope="row"><label for="select05">주제</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select05">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="inp02">작가</label></th>
+							<td>
+								<div class="frm-area">
+									<input type="text" name="" id="inp02" class="inp-text">
+								</div>
+							</td>
+							<th scope="row"><label for="select06">장르</label></th>
+							<td>
+								<div class="frm-area">
+									<select name="" id="select06">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base secondary"><span>조회</span></button>
+				</div>
+			</div>
+			<div class="sub-title">
+				<p class="count">총 <span>100</span>건</p>
+			</div>
+			<div class="tbl-base type2 mgt10">
+				<table>
+					<colgroup>
+						<col style="width:90px;">
+						<col style="width:90px;">
+						<col style="width:120px;">
+						<col style="width:auto;">
+						<col style="width:120px;">
+						<col style="width:130px;">
+						<col style="width:120px;">
+						<col style="width:90px;">
+						<col style="width:90px;">
+						<col style="width:90px;">
+						<col style="width:90px;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<!-- [기획] 10/20 -->
+							<th scope="col">서비스 분류</th>
+							<th scope="col">STEP</th>
+							<th scope="col">제목</th>
+							<th scope="col">분류</th>
+							<!-- [기획] 10/20 -->
+							<th scope="col">IB 주제</th>
+							<th scope="col">주제</th>
+							<th scope="col">작가</th>
+							<th scope="col">장르</th>
+							<th scope="col">등록자</th>
+							<th scope="col">등록일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>100</td>
+							<!-- [기획] 10/20 -->
+							<td>구독도서</td>
+							<td>STEP1</td>
+							<td class="txt-l"><a href="#">이북 도서명 1</a></td>
+							<td>지식정보</td>
+							<td class="txt-l">나 그리고 우리</td>
+							<td>소주제명</td>
+							<td>이미도</td>
+							<td>인물</td>
+							<td>관리자A</td>
+							<td>2022.11.23</td>
+						</tr>
+						<tr>
+							<td>99</td>
+							<!-- [기획] 10/20 -->
+							<td>구독도서</td>
+							<td>STEP1</td>
+							<td class="txt-l"><a href="#">이북 도서명 1</a></td>
+							<td>지식정보</td>
+							<td class="txt-l">나 그리고 우리</td>
+							<td>소주제명</td>
+							<td>이미도</td>
+							<td>인물</td>
+							<td>관리자A</td>
+							<td>2022.11.23</td>
+						</tr>
+						<tr>
+							<td>98</td>
+							<!-- [기획] 10/20 -->
+							<td>구독도서</td>
+							<td>STEP1</td>
+							<td class="txt-l"><a href="#">이북 도서명 1</a></td>
+							<td>지식정보</td>
+							<td class="txt-l">나 그리고 우리</td>
+							<td>소주제명</td>
+							<td>이미도</td>
+							<td>인물</td>
+							<td>관리자A</td>
+							<td>2022.11.23</td>
+						</tr>
+						<tr>
+							<td>97</td>
+							<!-- [기획] 10/20 -->
+							<td>구독도서</td>
+							<td>STEP1</td>
+							<td class="txt-l"><a href="#">이북 도서명 1</a></td>
+							<td>지식정보</td>
+							<td class="txt-l">우리가 살아가는 세상</td>
+							<td>소주제명</td>
+							<td>이미도</td>
+							<td>인물</td>
+							<td>관리자A</td>
+							<td>2022.11.23</td>
+						</tr>
+						<tr>
+							<td>96</td>
+							<!-- [기획] 10/20 -->
+							<td>구독도서</td>
+							<td>STEP1</td>
+							<td class="txt-l"><a href="#">이북 도서명 1</a></td>
+							<td>지식정보</td>
+							<td class="txt-l">나를 표현하는 방법</td>
+							<td>소주제명</td>
+							<td>이미도</td>
+							<td>인물</td>
+							<td>관리자A</td>
+							<td>2022.11.23</td>
+						</tr>
+						<tr>
+							<td>95</td>
+							<!-- [기획] 10/20 -->
+							<td>구독도서</td>
+							<td>STEP1</td>
+							<td class="txt-l"><a href="#">이북 도서명 1</a></td>
+							<td>지식정보</td>
+							<td class="txt-l">나 그리고 우리</td>
+							<td>소주제명</td>
+							<td>이미도</td>
+							<td>인물</td>
+							<td>관리자A</td>
+							<td>2022.11.23</td>
+						</tr>
+						<tr>
+							<td>94</td>
+							<!-- [기획] 10/20 -->
+							<td>구독도서</td>
+							<td>STEP1</td>
+							<td class="txt-l"><a href="#">이북 도서명 1</a></td>
+							<td>지식정보</td>
+							<td class="txt-l">나 그리고 우리</td>
+							<td>소주제명</td>
+							<td>이미도</td>
+							<td>인물</td>
+							<td>관리자A</td>
+							<td>2022.11.23</td>
+						</tr>
+						<tr>
+							<td>93</td>
+							<!-- [기획] 10/20 -->
+							<td>구독도서</td>
+							<td>STEP1</td>
+							<td class="txt-l"><a href="#">이북 도서명 1</a></td>
+							<td>지식정보</td>
+							<td class="txt-l">나 그리고 우리</td>
+							<td>소주제명</td>
+							<td>이미도</td>
+							<td>인물</td>
+							<td>관리자A</td>
+							<td>2022.11.23</td>
+						</tr>
+						<tr>
+							<td>92</td>
+							<!-- [기획] 10/20 -->
+							<td>구독도서</td>
+							<td>STEP1</td>
+							<td class="txt-l"><a href="#">이북 도서명 1</a></td>
+							<td>지식정보</td>
+							<td class="txt-l">나 그리고 우리</td>
+							<td>소주제명</td>
+							<td>이미도</td>
+							<td>인물</td>
+							<td>관리자A</td>
+							<td>2022.11.23</td>
+						</tr>
+						<tr>
+							<td>91</td>
+							<!-- [기획] 10/20 -->
+							<td>구독도서</td>
+							<td>STEP1</td>
+							<td class="txt-l"><a href="#">이북 도서명 1</a></td>
+							<td>지식정보</td>
+							<td class="txt-l">나 그리고 우리</td>
+							<td>소주제명</td>
+							<td>이미도</td>
+							<td>인물</td>
+							<td>관리자A</td>
+							<td>2022.11.23</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl-btns">
+				<div>
+					<button class="btn base primary"><span>등록</span></button>
+				</div>
+				<div class="pager">
+					<a href="#" class="btn prev"><span class="hide">이전으로</span></a>
+					<span class="num">
+						<a href="#">1</a>
+						<a href="#" class="on"><span class="hide">현재 페이지:</span>2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+					</span>
+					<a href="#" class="btn next"><span class="hide">다음으로</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright©2023 <a href="#" target="_blank">Everybooks</a>. All rights reserved</p>
+	</footer>
+</div>
+</body>
+</html>

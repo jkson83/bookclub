@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+  <title>에브리북클럽</title>
+  <link rel="stylesheet" href="../../resources/css/app/ui.ebook.css">
+  <script type="text/javascript" src="../_ui_include/app_head.js"></script><!-- //Include: head -->
+</head>
+<body>
+  <div id="wrap" class="wrap main map">
+    <!-- 23.12.21 로고, user정보 메뉴버튼 삭제 / 뒤로가기 버튼 추가 -->
+    <button type="button" class="btn-back">뒤로가기</button> 
+
+    <p class="text-map">우리 함께 마을을 꾸며볼까요?</p>
+
+    <!-- 23.12.27 map-obj-area 추가 -->
+    <div class="map-obj-area">
+      <!-- 마을 꾸미는 오브젝트 -->
+      <!-- 오브젝트 생성 후 on 클래스 추가해주면 outerglow 효과 들어감 -->
+      <!-- 1. 메가몰 -->
+      <p class="item megamall">
+        <img src="../../resources/img/app/item_megamall.png" alt="">
+      </p>
+
+      <!-- 2. 아파트 -->
+      <p class="item apart">
+        <img src="../../resources/img/app/item_apart.png" alt="">
+      </p>
+
+      <!-- 3. 학교 -->
+      <p class="item school">
+        <img src="../../resources/img/app/item_school.png" alt="">
+      </p>
+
+      <!-- 4. 분수 -->
+      <p class="item fountain">
+        <img src="../../resources/img/app/item_fountain.png" alt="">
+      </p>
+
+      <!-- 5. 수영장 -->
+      <p class="item pool">
+        <img src="../../resources/img/app/item_pool.png" alt="">
+      </p>
+
+      <!-- 6. 경찰서 -->
+      <p class="item police">
+        <img src="../../resources/img/app/item_police.png" alt="">
+      </p>
+
+      <!-- 7. 과일가게 -->
+      <p class="item fruit">
+        <img src="../../resources/img/app/item_fruit.png" alt="">
+      </p>
+
+      <!-- 8. 집 -->
+      <p class="item house">
+        <img src="../../resources/img/app/item_house2.png" alt="">
+      </p>
+
+      <!-- 9. 지하철 -->
+      <p class="item subway">
+        <img src="../../resources/img/app/item_subway.png" alt="">
+      </p>
+
+      <!-- 10. 비행기 -->
+      <p class="item airplane">
+        <img src="../../resources/img/app/item_plane.png" alt="">
+      </p>
+
+      <!-- 11. 빌딩 -->
+      <p class="item building">
+        <img src="../../resources/img/app/item_building.png" alt="">
+      </p>
+
+      <!-- 12. 나무 -->
+      <p class="item tree1">
+        <img src="../../resources/img/app/item_tree.png" alt="">
+      </p>
+
+      <!-- 13. 나무2 -->
+      <p class="item tree4">
+        <img src="../../resources/img/app/item_tree2.png" alt="">
+      </p>
+
+      <!-- 14. 가게 -->
+      <p class="item parkstore">
+        <img src="../../resources/img/app/item_park_store.png" alt="">
+      </p>
+
+      <!-- 15. 트럭 -->
+      <p class="item truck">
+        <img src="../../resources/img/app/item_truck.png" alt="">
+      </p>
+
+      <!-- 16. 테이블세트 -->
+      <p class="item table-chair">
+        <img src="../../resources/img/app/item_table_chair.png" alt="">
+      </p>
+
+      <!-- 17. 파라솔 -->
+      <p class="item parasol">
+        <img src="../../resources/img/app/item_parasol.png" alt="">
+      </p>
+
+      <!-- 18. 차 -->
+      <p class="item car">
+        <img src="../../resources/img/app/item_car.png" alt="">
+      </p>
+
+      <!-- 19. 벤치 -->
+      <p class="item bench">
+        <img src="../../resources/img/app/item_bench2.png" alt="">
+      </p>
+
+      <!-- 20. 가로등 -->
+      <p class="item streetlamp">
+        <img src="../../resources/img/app/item_streetlamp.png" alt="">
+      </p>
+      <!-- //마을 꾸미는 오브젝트 -->
+
+      <p class="map_tree2">
+        <img src="../../resources/img/app/item_tree.png" alt="">
+      </p>
+  
+      <p class="map_tree3">
+        <img src="../../resources/img/app/item_tree.png" alt="">
+      </p>
+  
+      <p class="map_tree4">
+        <img src="../../resources/img/app/item_tree2.png" alt="">
+      </p>
+      
+      <p class="map_car1">
+        <img src="../../resources/img/app/item_car.png" alt="">
+      </p>
+  
+      <p class="map_car2">
+        <img src="../../resources/img/app/item_car2.png" alt="">
+      </p>
+    </div>
+
+    <p class="map_sun">
+      <img src="../../resources/img/app/item_sun.png" alt="">
+    </p>
+
+    <p class="map_char">
+      <img src="../../resources/img/app/map_char.png" alt="">
+    </p>
+
+    <p class="map_tree">
+      <img src="../../resources/img/app/item_tree.png" alt="">
+    </p>
+
+    <!-- 아이템 목록 영역 -->
+    <div class="item-list-area">
+      <!-- 23.12.26 나의 스티커 개수 추가 -->
+      <div class="my-sticker-area">
+        나의 스티커 <span>3000개</span>
+      </div>
+      <!-- //23.12.26 나의 스티커 개수 추가 -->
+
+      <ul class="tab-link">
+        <li class="on"><button data-tab="itemlist1">나무, 거리</button></li>
+        <li><button data-tab="itemlist2">차, 시설</button></li>
+        <li><button data-tab="itemlist3">건물</button></li>
+      </ul>
+
+      <!-- 23.12.27 아이템 목록 수정 -->
+      <!-- 비활성화일 경우 swiper-slide에 disabled클래스 추가 -->
+      <!-- 나무, 거리 -->
+      <div class="tab-content on" id="itemlist1">
+        <!-- 아이템 목록 슬라이드 -->
+        <div class="item-swiper-area">
+          <div class="swiper itemSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="item-img-area" onclick="modal.open($(this), '#itempop');">
+                  <img src="../../resources/img/app/item_tree.png" alt="">
+
+                  <p class="item-point">5</p>
+                </div>
+
+                <p class="item-name">나무</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_tree2.png" alt="">
+
+                  <p class="item-point">5</p>
+                </div>
+
+                <p class="item-name">가로수</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_park_store.png" alt="">
+
+                  <p class="item-point">5</p>
+                </div>
+
+                <p class="item-name">가판대</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_table_chair.png" alt="">
+
+                  <p class="item-point">5</p>
+                </div>
+
+                <p class="item-name">테이블</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_bench.png" alt="">
+
+                  <p class="item-point">5</p>
+                </div>
+
+                <p class="item-name">벤치</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_parasol.png" alt="">
+
+                  <p class="item-point">5</p>
+                </div>
+
+                <p class="item-name">파라솔</p>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_streetlamp.png" alt="">
+
+                  <p class="item-point">5</p>
+                </div>
+
+                <p class="item-name">가로등</p>
+              </div>
+            </div>
+
+            <div class="swiper-btn next"></div>
+            <div class="swiper-btn prev"></div>
+          </div>
+        </div>
+        <!-- //아이템 목록 슬라이드 -->
+      </div>
+      <!-- //나무, 거리 -->
+
+      <!-- 차, 시설 -->
+      <div class="tab-content" id="itemlist2">
+        <!-- 아이템 목록 슬라이드 -->
+        <div class="item-swiper-area">
+          <div class="swiper itemSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_police.png" alt="">
+
+                  <p class="item-point">30</p>
+                </div>
+
+                <p class="item-name">경찰서 </p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_truck.png" alt="">
+
+                  <p class="item-point">30</p>
+                </div>
+
+                <p class="item-name">푸드트럭</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_fruit.png" alt="">
+
+                  <p class="item-point">30</p>
+                </div>
+
+                <p class="item-name">가게</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_subway.png" alt="">
+
+                  <p class="item-point">30</p>
+                </div>
+
+                <p class="item-name">지하철</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_car.png" alt="">
+
+                  <p class="item-point">30</p>
+                </div>
+
+                <p class="item-name">자동차</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_fountain.png" alt="">
+
+                  <p class="item-point">30</p>
+                </div>
+
+                <p class="item-name">분수대</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_airplain.png" alt="">
+
+                  <p class="item-point">30</p>
+                </div>
+
+                <p class="item-name">비행기</p>
+              </div>
+              
+            </div>
+
+            <div class="swiper-btn next"></div>
+            <div class="swiper-btn prev"></div>
+          </div>
+        </div>
+        <!-- //아이템 목록 슬라이드 -->
+      </div>
+      <!-- //차, 시설 -->
+
+      <!-- 건물 -->
+      <div class="tab-content" id="itemlist3">
+        <!-- 아이템 목록 슬라이드 -->
+        <div class="item-swiper-area">
+          <div class="swiper itemSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_pool.png" alt="">
+
+                  <p class="item-point">50</p>
+                </div>
+
+                <p class="item-name">수영장</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_building.png" alt="">
+
+                  <p class="item-point">50</p>
+                </div>
+
+                <p class="item-name">빌딩</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_house.png" alt="">
+
+                  <p class="item-point">50</p>
+                </div>
+
+                <p class="item-name">단독주택</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_school.png" alt="">
+
+                  <p class="item-point">50</p>
+                </div>
+
+                <p class="item-name">학교</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_megamall.png" alt="">
+
+                  <p class="item-point">200</p>
+                </div>
+
+                <p class="item-name">백화점</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="item-img-area">
+                  <img src="../../resources/img/app/item_apart1.png" alt="">
+
+                  <p class="item-point">200</p>
+                </div>
+
+                <p class="item-name">아파트</p>
+              </div>
+            </div>
+
+            <div class="swiper-btn next"></div>
+            <div class="swiper-btn prev"></div>
+          </div>
+        </div>
+        <!-- //아이템 목록 슬라이드 -->
+      </div>
+      <!-- //건물 -->
+    </div>
+    <!-- //아이템 목록 영역 -->
+  </div>
+
+  <!-- 팝업 -->
+  <div class="modal-popup" id="itempop">
+    <div class="modal-popup-outer">
+      <!-- 교환 가능 -->
+      <section class="modal-popup-container item">
+        <article class="modal-popup-body">
+          <p class="text-item">선택한 아이템으로 교환해서 마을을 꾸며볼까요?</p>
+
+          <div class="item-box">
+            <p class="item-img"><img src="../../resources/img/app/item_apart1.png" alt=""></p>
+
+            <div class="item-name-sticker">
+              <p class="item-name2">아파트</p>
+
+              <p class="title-discount-sticker">차감 스티커 수</p>
+
+              <p class="discount-sticker">200</p>
+            </div>
+          </div>
+        </article>
+        <article class="modal-popup-footer">
+          <div class="layer-f-btn">
+            <button class="btn-line" onclick="modal.close($(this))">취소</button>
+            <button class="btn-full blue">교환할게요</button>
+          </div>
+        </article>
+      </section>
+      <!-- //교환 가능 -->
+
+      <!-- 교환 불가능 -->
+      <section class="modal-popup-container item" style="display: none;">
+        <article class="modal-popup-body">
+          <p class="text-item2">
+            아이템으로 교환 할 수 있는 스티커가 부족해요.<br>
+            학습을 좀 더 열심히 해서 스티커를 모아보세요.
+          </p>
+        </article>
+        <article class="modal-popup-footer">
+          <div class="layer-f-btn">
+            <button class="btn-full blue" onclick="modal.close($(this))">닫기</button>
+          </div>
+        </article>
+      </section>
+      <!-- //교환 불가능 -->
+    </div>
+  </div>
+  <!-- //팝업 --> 
+
+  <script>
+    $(".tab-link li button").on("click", function(e){
+      e.preventDefault();
+
+      var activeTab = $(this).attr("data-tab");
+      $(".tab-link li button").parent().removeClass("on");
+      $(".tab-content").removeClass("on");
+      $(this).parent().addClass("on");
+      $('#' + activeTab).addClass("on");
+    });
+
+    var swiper = new Swiper(".itemSwiper", {
+      slidesPerView: 5,
+      navigation: {
+        nextEl: ".swiper-btn.next",
+        prevEl: ".swiper-btn.prev",
+      },
+    });
+  </script>
+</body>
+</html>
