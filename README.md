@@ -72,3 +72,5 @@ UI External: http://localhost:3001
 브라우저에서 http://localhost:3000 으로 접속후 개발을 시작하세요.
 
 > port 번호는 개발 환경에 따라 달라질 수 있습니다.
+
+### 2024.04.12 업로드 테스트
