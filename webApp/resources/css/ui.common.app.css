@@ -8985,6 +8985,43 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 .wrap .q-paging-area a.on {
   background-color: #089FFF;
 }
+.wrap .answer-word-area + .q-paging-area {
+  bottom: 7.5vh;
+}
+.wrap .q-drag-check-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.17vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.96vh;
+}
+.wrap .q-drag-check-btn button {
+  width: auto;
+  height: 5.76vh;
+  padding: 0 2.92vw;
+  background-color: #FF6B00;
+  -webkit-box-shadow: -5px -5px 8px 0px rgba(233, 70, 0, 0.5019607843) inset, 0px 4px 6px 0px rgba(255, 255, 255, 0.4) inset, 0px 2px 5px 0px rgba(255, 255, 255, 0.1607843137);
+          box-shadow: -5px -5px 8px 0px rgba(233, 70, 0, 0.5019607843) inset, 0px 4px 6px 0px rgba(255, 255, 255, 0.4) inset, 0px 2px 5px 0px rgba(255, 255, 255, 0.1607843137);
+  border-radius: 100px;
+  font-family: "Binggrae";
+  font-size: 2.69vh;
+  color: #fff;
+  line-height: 5.76vh;
+  font-weight: 700;
+  text-align: center;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  position: static;
+}
 .wrap .word-box-area {
   display: -webkit-box;
   display: -ms-flexbox;

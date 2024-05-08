@@ -5563,6 +5563,42 @@
 		}
 	}
 
+	.answer-word-area + .q-paging-area {
+		bottom: 7.5vh;
+	}
+
+	// .word-3x3 + .q-paging-area {
+	// 	bottom: 7.5vh;
+	// }
+
+	.q-drag-check-btn {
+		display: flex;
+		gap: 1.17vw;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0.96vh;
+
+		button {
+			width: auto;
+			height: 5.76vh;
+			padding: 0 2.92vw;
+			background-color: #FF6B00;
+			box-shadow: -5px -5px 8px 0px #E9460080 inset, 0px 4px 6px 0px #FFFFFF66 inset, 0px 2px 5px 0px #FFFFFF29;
+			border-radius: 100px;
+			font-family: 'Binggrae';
+			font-size: 2.69vh;
+			color: #fff;
+			line-height: 5.76vh;
+			font-weight: 700;
+			text-align: center;
+			transform: translateY(0);
+			position: static;
+		}
+	}
+
 	.word-box-area{
 		display: flex;
 		align-items: center;
